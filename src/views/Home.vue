@@ -1,18 +1,37 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-container fluid>
+    <ul v-for="message in messages">
+      <li>{{ message }}</li>
+    </ul>
+  </v-container>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+<script lang="ts">
+  import Vue from 'vue'
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  export default Vue.extend({
+    name: 'Home',
+
+    data: () => ({
+      messages: [
+        'The world we need.',
+        'Neutrality without coersion.',
+        'Hardfork humanity.',
+        'Knowledge discovery.',
+        'Unstoppable publication.',
+        'Collaborative investigation.',
+        'The medium is the message.',
+        'Federated blockchains.',
+        'Your own space.',
+        'Level playing field.',
+        'Eradicate corruption?',
+        'Discover our history.',
+        'Ungameable metrics.',
+        'Re-genesis.'
+      ]
+    }),
+
+    computed: {
+    },
+  })
 </script>

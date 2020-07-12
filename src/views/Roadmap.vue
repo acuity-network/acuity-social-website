@@ -1,5 +1,5 @@
 <template>
-  <v-timeline :dense="dense">
+  <v-timeline :dense="dense" style="margin: 0 20px;">
     <v-timeline-item v-for="(item, i) in items" :key="i">
       <template v-slot:opposite>
         {{ item.when }}
@@ -23,7 +23,7 @@
       items: [
         {
           when: '26th November 2015',
-          title: 'Work starts on BlobStore',
+          title: 'Work started on BlobStore',
           text: 'The Ethereum mainnet had just been launched over the summer. This was the first technology that could be used to build a fully autonomous and permanent social media platform. The primary Acuity smart contract, ItemStore was originally called BlobStore and the first version was only <a href="https://github.com/acuity-social/mix-item-store/blob/6f0c4f3f87ba2571fd8f5e00c74f006194abe749/blobstore.sol">23 lines long</a>.',
         },
         {
@@ -77,14 +77,14 @@
           text: 'The MIX Acuity desktop browser for Windows, Mac and Linux was released. It is fully autonomous, doesn\'t connect to any servers and has rich functionaity such as profile creation, image publishing, feeds, topics and trust network - all implemented as <a href="https://docs.mix-blockchain.org/en/latest/smart_contracts.html">smart contracts</a>. It also has in-app mining.',
         },
         {
-          when: '20th January 2020',
-          title: 'Video publishing functionality',
-          text: 'The desktop app could transcoded the video to multiple resolutions and video could be streamed from IPFS in both the web app and the desktop app. Additionally a command line utility could synchronize video from YouTube to Acuity. Here\'s the <a href="https://www.youtube.com/watch?v=K_NSdHzQFdk">video</a>.',
-        },
-        {
           when: 'November 2019',
           title: 'MIX Acuity web app',
           text: 'The MIX Acuity browser was very powerful, but it had a problem - installing it was a huge barrier to entry. Having it available as a web app meant content could be linked to directly from other web sites. Because the desktop app had been built with Electron and web technologies, creating a web app build was fairly easy.',
+        },
+        {
+          when: '20th January 2020',
+          title: 'Video publishing functionality',
+          text: 'The desktop app could transcoded the video to multiple resolutions and video could be streamed from IPFS in both the web app and the desktop app. Additionally a command line utility could synchronize video from YouTube to Acuity. Here\'s the <a href="https://www.youtube.com/watch?v=K_NSdHzQFdk">video</a>.',
         },
         {
           when: '8th June 2020',
