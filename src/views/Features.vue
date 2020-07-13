@@ -34,7 +34,7 @@
       cards: [
         {
           title: 'Permanent',
-          text: '<p>Exiting centralized social media platforms are highly unreliable as an historical record. Blockchain based social media platforms solve this problem. Everytime a content item is published or updated on Acuity it is timestamped and the IPFS hash is stored in contract state. This is an extremely powerful property of the system. In hundreds of years time people will be able to examine the blockchain and know who said what when and to whom.</p>',
+          text: '<p>Existing centralized social media platforms are highly unreliable as an historical record. Blockchain based social media platforms solve this problem. Everytime a content item is published or updated on Acuity it is timestamped and the IPFS hash is stored in contract state. This is an extremely powerful property of the system. In hundreds of years time people will be able to examine the blockchain and know who said what when and to whom.</p>',
           contract: 'https://github.com/acuity-social/acuity-contracts/blob/master/src/mix-item-store/MixItemStoreIpfsSha256.sol',
         },
 /*        {
