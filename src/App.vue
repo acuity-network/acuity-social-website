@@ -66,21 +66,14 @@ export default Vue.extend({
     menu: [
       {
         to: '/',
-        icon: 'mdi-timeline-text',
-        title: 'Roadmap',
-      },
-/*
-      {
-        to: '/',
-        icon: 'mdi-home',
-        title: 'Home',
-      },
-      {
-        to: '/features',
         icon: 'mdi-feature-search',
         title: 'Features',
       },
-*/
+      {
+        to: '/roadmap',
+        icon: 'mdi-timeline-text',
+        title: 'Roadmap',
+      },
       {
         to: '/tech-stack',
         icon: 'mdi-server-network',

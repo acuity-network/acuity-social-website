@@ -13,7 +13,7 @@ const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'home',
-    component: Roadmap,
+    component: Features,
   },
   {
     path: '/features',
