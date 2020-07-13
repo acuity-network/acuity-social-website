@@ -34,7 +34,7 @@
           title: 'Substrate',
           text: 'Acuity is migrating from an Ethereum-based proof-of-work blockchain called MIX. The new platform is being built with a blockchain construction kit called <a href="https://www.substrate.io/">Substrate</a>. This has many advantages:<ul> \
           <li>Improved economic security - no 51% attacks</li>\
-          <li>Increased transaction throughout</li>\
+          <li>Increased transaction throughput</li>\
           <li>Cheaper transactions</li>\
           <li>Incredible flexibility - Substrate has many <a href="https://substrate.dev/docs/en/knowledgebase/runtime/frame">pallets</a> that can be plugged together to create a custom blockchain.</li>\
           <li>Autonomous upgradabilty - built in governance mechanisms so blockchains can decide to hardfork without the drama.</li>\
