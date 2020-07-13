@@ -5,11 +5,12 @@
         <v-card>
           <v-card-title>Support Acuity</v-card-title>
           <v-card-text>
-            <p>Development of Acuity is funded by a revenue smart contract that releases MIX over a 2000 day period at an ever-decreasing rate. After the Acuity re-genesis occurs on 1st September 2020, this process will continue, except that ACUITY will be released instead of MIX. This funding mechanism comes to an end on 18th October 2022.</p>
+            <p>Development of Acuity is funded by a revenue smart contract that releases <a href="https://www.coingecko.com/en/coins/mix">MIX</a> over a 2000 day period at an ever-decreasing rate. On 1st September 2020 the Acuity re-genesis occurs with all MIX being replaced 1:1 with ACUITY on the new Substrate-based blockchain.</p>
+            <p>After this, the revenue process will continue, except that ACUITY will be released instead of MIX. This funding mechanism comes to an end on 18th October 2022.</p>
             <p>Check out the MIX <a href="https://docs.mix-blockchain.org/en/latest/issuance.html">issuance documentation</a>.</p>
             <p>Obtaining MIX is currently the best way to support Acuity financially. There are three main ways to do this.</p>
           </v-card-text>
-          <v-card-title>Buy MIX on this website</v-card-title>
+          <v-card-title>Buy MIX directly</v-card-title>
           <v-card-text>
             <p>Email <a href="mailto:purchase@mix-blockchain.org">purchase@mix-blockchain.org</a></p>
           </v-card-text>
