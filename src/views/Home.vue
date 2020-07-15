@@ -29,7 +29,7 @@
         'Eradicate corruption?',
         'Discover our history.',
         'Ungameable metrics.',
-        'Re-genesis.'
+        'Regenesis.'
       ]
     }),
 

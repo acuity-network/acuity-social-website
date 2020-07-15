@@ -72,6 +72,16 @@ export default Vue.extend({
         title: 'Home',
       },
       {
+        to: '/features',
+        icon: 'mdi-feature-search',
+        title: 'Features',
+      },
+      {
+        to: '/regenesis',
+        icon: 'mdi-rocket-launch',
+        title: 'Regenesis',
+      },
+      {
         to: '/roadmap',
         icon: 'mdi-timeline-text',
         title: 'Roadmap',
@@ -86,11 +96,6 @@ export default Vue.extend({
         to: '/comparison',
         icon: 'mdi-compare',
         title: 'Platform Comparison',
-      },
-      {
-        to: '/regenesis',
-        icon: 'mdi-rocket-launch',
-        title: 'Regenesis',
       },
 */
       {
