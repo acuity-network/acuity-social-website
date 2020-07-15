@@ -17,6 +17,7 @@
           <v-card-actions>
             <v-btn v-if="card.video" :href="card.video" text color="#E6007A">Video</v-btn>
             <v-btn v-if="card.contract" :href="card.contract" text color="#E6007A">Smart Contract</v-btn>
+            <v-btn v-if="card.sourceCode" :href="card.sourceCode" text color="#E6007A">Source Code</v-btn>
       </v-card-actions>
         </v-card>
       </v-col>
@@ -109,6 +110,12 @@
           title: 'Low Latency Complex Blockchain Queries',
           text: '<p>Complex dapps such as Acuity Browser need to make many blockchain queries before content can be rendered. Often these queries cannot be parallelized. If an individual query takes 200ms and 20 queries need to be made in series then it will take 4 seconds before the screen can be updated. This is far to long. The solution is to implement complex query logic in stateless smart contracts.</p>',
           contract: 'https://github.com/acuity-social/acuity-contracts/blob/master/src/mix-stateless/MixStateless.sol',
+        },
+        {
+          title: 'Acuity Browser',
+          text: '<p>The primary way to interact with the Acuity platform is via the Acuity Browser. Much like a web browser, Acuity Browser does not connect to any centralized service and it enables the user to browse any content that has been published. All of the base functionality of Acuity is available in the Browser. It is available as a web app, a desktop app and an Android app.</p>',
+          video: 'https://www.youtube.com/watch?v=eXWDjq6pkSg',
+          sourceCode: 'https://github.com/acuity-social/acuity-browser',
         },
       ]
     }),
