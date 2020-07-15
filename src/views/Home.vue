@@ -1,8 +1,10 @@
 <template>
-  <v-container fluid>
-    <ul v-for="message in messages">
-      <li>{{ message }}</li>
-    </ul>
+  <v-container>
+    <v-row align="center" justify="center">
+      <v-col cols="6">
+        <v-img src="images/acuity-logo.svg" alt="Acuity logo" contain height="200" id="acuity-animation"></v-img>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -35,3 +37,21 @@
     },
   })
 </script>
+
+<style>
+
+#acuity-animation {
+    transition-property: transform;
+    transition-duration: 1s;
+    animation-name: rotate;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+</style>
