@@ -103,13 +103,13 @@
         },
         {
           when: '',
-          title: 'Creator Tokens Relaunch',
-          text: 'Creator Tokens are a means for content creators to get paid without paywalls or advertising. Fans can conspicuously burn tokens issued by creators to prove they are real supporters. The Acuity project will also have a creator token, ACUITYFUND.',
+          title: 'Connect to Kusama',
+          text: '<a href="https://kusama.network/">Kusama</a> is the experimental version of Polkadot. It will enable greater security, inter-blockchain communication and access to decentralized exchanges.',
         },
         {
           when: '',
-          title: 'Connect to Kusama',
-          text: '<a href="https://kusama.network/">Kusama</a> is the experimental version of Polkadot. It will enable greater security, inter-blockchain communication and access to decentralized exchanges.',
+          title: 'Creator Tokens Relaunch',
+          text: 'Creator Tokens are a means for content creators to get paid without paywalls or advertising. Fans can conspicuously burn tokens issued by creators to prove they are real supporters. The Acuity project will also have a creator token, ACUITYFUND.',
         },
         {
           when: '',
