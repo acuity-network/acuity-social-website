@@ -39,7 +39,9 @@
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title style="color: #3cc3db; font-family: Raleway">ACUITY</v-toolbar-title><v-spacer></v-spacer><v-img src="images/acuity-logo.svg" alt="Acuity logo" height="30" max-width="30" contain></v-img>
+      <v-toolbar-title style="color: #3cc3db; font-family: Raleway">ACUITY</v-toolbar-title>
+      <v-breadcrumbs :items="breadcrumbs" large></v-breadcrumbs>
+      <v-spacer></v-spacer><v-img src="images/acuity-logo.svg" alt="Acuity logo" height="30" max-width="30" contain></v-img>
     </v-app-bar>
 
     <v-main>
@@ -66,8 +68,8 @@ export default Vue.extend({
     menu: [
       {
         to: '/',
-        icon: 'mdi-feature-search',
-        title: 'Features',
+        icon: 'mdi-home',
+        title: 'Home',
       },
       {
         to: '/roadmap',
@@ -86,9 +88,9 @@ export default Vue.extend({
         title: 'Platform Comparison',
       },
       {
-        to: '/re-genesis',
+        to: '/regenesis',
         icon: 'mdi-rocket-launch',
-        title: 'Re-genesis',
+        title: 'Regenesis',
       },
 */
       {
@@ -138,7 +140,15 @@ export default Vue.extend({
 
   computed: {
     showFab() {
-        return this.$route.name != 'support'
+      return this.$route.name != 'support'
+    },
+    breadcrumbs() {
+      return [
+        {
+          text: this.$route.meta.title,
+          disabled: true,
+        },
+      ]
     },
   },
 

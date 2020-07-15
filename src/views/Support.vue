@@ -3,7 +3,6 @@
     <v-row>
       <v-col cols="12" md="6">
         <v-card>
-          <v-card-title>Support Acuity</v-card-title>
           <v-card-text>
             <p>Development of Acuity is funded by a revenue smart contract that releases <a href="https://www.mix-blockchain.org/">MIX</a> over a 2000 day period at an ever-decreasing rate. On 1st September 2020 the Acuity re-genesis occurs with all MIX being replaced 1:1 with ACUITY on the new Substrate-based blockchain.</p>
             <p>After this, the revenue process will continue, except that ACUITY will be released instead of MIX. This funding mechanism comes to an end on 18th October 2022.</p>
