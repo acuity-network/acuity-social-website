@@ -61,7 +61,7 @@
         'Federated blockchains. ',
         'Your own space. ',
         'Eradicate corruption? ',
-        'Discover our history. ',
+        'Record our history. ',
         'Ungameable metrics. ',
         '1) They came for the journalists. 2) ? ',
         'Combat logical fallacies. ',
@@ -70,6 +70,19 @@
         'Follow the money. ',
         'Reclaim the Web. ',
         'Break the wheel. ',
+        'Self-organise. ',
+        'Kill the noise. Hear the signal. ',
+        'War is a racket. ',
+        'Embrace abundance. ',
+        'Protocols instead of platforms. ',
+        'Chaos is a ladder. ',
+        'Voluntary interaction. ',
+        'You have no sovereignty where we gather. ',
+        'Facilitate productive discussion. ',
+        'Information is power. ',
+        'Will you join us? ',
+        'Truth distillation. ',
+        'Consent-based solutions. ',
       ],
       row: 0,
       column: 0,
@@ -82,11 +95,10 @@
     }),
 
     created() {
+      this.messages = shuffle(this.messages)
       setInterval(this.updateMessage, 100)
       setInterval(this.updateTimeLeft, 1000)
       this.updateTimeLeft()
-
-      this.messages = shuffle(this.messages)
     },
 
     methods: {
