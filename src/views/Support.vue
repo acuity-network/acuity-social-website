@@ -14,10 +14,8 @@
               <li><a href="https://mycrypto.com/account?network=MIX">MyCrypto</a></li>
               <li><a href="https://support.ledger.com/hc/en-us/articles/360011558494-MIX-Blockchain-MIX-">Ledger</a></li>
             </ul></div>
-            <div class="body-2 mb-4">Obtaining MIX is currently the best way to support Acuity financially. There are three main ways to do this:</div>
+            <div class="body-2 mb-4">Obtaining MIX is currently the best way to support Acuity financially. There are two main ways to do this:</div>
             <div class="ml-4">
-              <div class="text-h6 mb-1">Buy MIX directly</div>
-              <div class="body-2 mb-4">Email <a href="mailto:purchase@mix-blockchain.org">purchase@mix-blockchain.org</a></div>
               <div class="text-h6 mb-1">Buy MIX on an exchange</div>
               <div class="body-2 mb-4">MIX is currently trading on two exchanges:
                 <ul>
