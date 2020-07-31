@@ -39,7 +39,7 @@
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title style="color: #3cc3db; font-family: Raleway">ACUITY</v-toolbar-title>
+      <v-toolbar-title style="color: #3cc3db; font-family: Raleway;">ACUITY</v-toolbar-title>
       <v-breadcrumbs :items="breadcrumbs" large></v-breadcrumbs>
       <v-spacer></v-spacer><v-img src="images/acuity-logo.svg" alt="Acuity logo" height="30" max-width="30" contain></v-img>
     </v-app-bar>
@@ -103,13 +103,11 @@ export default Vue.extend({
         icon: 'mdi-gift',
         title: 'Support Acuity',
       },
-/*
       {
         to: '/ambassador',
         icon: 'mdi-account-heart',
         title: 'Ambassador Program',
       },
-*/
     ],
     socialLinks: [
       {

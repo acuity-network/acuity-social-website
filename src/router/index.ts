@@ -8,6 +8,7 @@ import TechStack from '../views/TechStack.vue'
 import Roadmap from '../views/Roadmap.vue'
 import Support from '../views/Support.vue'
 import Regenesis from '../views/Regenesis.vue'
+import Ambassador from '../views/Ambassador.vue'
 
 Vue.use(VueRouter)
 
@@ -53,6 +54,12 @@ const routes: Array<RouteConfig> = [
     name: 'regenesis',
     component: Regenesis,
     meta: { title: 'Regenesis' },
+  },
+  {
+    path: '/ambassador',
+    name: 'ambassador',
+    component: Ambassador,
+    meta: { title: 'Ambassador' },
   },
 ]
 
