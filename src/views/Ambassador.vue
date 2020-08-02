@@ -24,8 +24,8 @@
                 <li>Swag - hosting an event? We will send you Acuity branded stuff to give out for free.</li>
               </ul>
             </div>
-            <div class="text-h6 mb-1">How to become an Ambassador?</div>
-            <div class="body-2 mb-4">We're really excited you want to join - please ask in the <a href="https://discordapp.com/invite/GxD7adN">Discord</a> channel to get started with your application.</div>
+            <div class="text-h6 mb-1">How do I become an Ambassador?</div>
+            <div class="body-2 mb-4">We're really excited that you want to join - please ask in the ambassador-program channel on <a href="https://discordapp.com/invite/GxD7adN">Discord</a> to get started with your application.</div>
             <div class="text-h6 mb-1">Migration to a DAO</div>
             <div class="body-2 mb-4">Once the new Substrate-based blockchain is live we can migrate the Ambassador Program to a <a href="https://en.wikipedia.org/wiki/Decentralized_autonomous_organization">decentralized autonomous organization</a>, using the <a href="https://substrate.dev/rustdocs/v2.0.0-rc5/pallet_society/index.html">Society</a> pallet.</div>
           </v-card-text>
