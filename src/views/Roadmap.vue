@@ -92,13 +92,18 @@
           text: 'An independent Ethereum PoW blockchain had been an excellent technology to develop the platform on. Now MIX is moving to the Polkadot eco-system as a Substrate PoS blockchain. This has many advantages: increased economic security, cheaper transactions, greater capacity, autonomous communication with other blockchains, standardized tooling, extensibile functionality, autonomous upgrades. Additionally the MIX name is being droped entirely in favour of ACUITY. Here\'s the <a href="https://www.youtube.com/watch?v=IQqgqCEQW9o">video announcement</a>.',
         },
         {
-          when: '1st August 2020',
+          when: '31st July 2020',
+          title: 'Acuity Ambassador Program Launched',
+          text: 'As we migrate Acuity to Polkadot we need to bootstrap the social media platform. The purpose of the <a href="/ambassador">Ambassador Program</a> is to foster growth in a diversity of communities.',
+        },
+        {
+          when: '8th August 2020',
           title: 'Acuity Browser on Substrate Testnet',
-          text: 'Because it is technically quite easy to deploy the existing Solidity smart contracts that already run the platform to the new Acuity blockchain and update the desktop and web app, it makes sense to have a demo of everything running on a Substrate testnet.',
+          text: 'In the run up to the Regenesis it is important for MIX holders to ensure they can claim their ACUITY on the new blockchain and try staking.',
         },
         {
           when: '1st September 2020',
-          title: 'Substrate Re-genesis',
+          title: 'Substrate Regenesis',
           text: 'The new Substrate-based Acuity blockchain will be launched. All MIX account balances will be converted to ACUITY balances. Updated smart contracts will be deployed and the web and desktop apps will be released.',
         },
         {
