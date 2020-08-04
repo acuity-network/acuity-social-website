@@ -85,7 +85,10 @@
         'Incandescent incredulity. ',
         'Have eyes to see. ',
         'Engage in debate. ',
-        'I know that I know nothing. '
+        'I know that I know nothing. ',
+        'Believe in the ripple effect. ',
+        'Abandon political correctness. ',
+        'A big tent. ',
       ],
       row: 0,
       column: 0,
