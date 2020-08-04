@@ -28,6 +28,17 @@
             <div class="body-2 mb-4">We're really excited that you want to join - please ask in the ambassador-program channel on <a href="https://discordapp.com/invite/GxD7adN">Discord</a> to get started with your application.</div>
             <div class="text-h6 mb-1">Migration to a DAO</div>
             <div class="body-2 mb-4">Once the new Substrate-based blockchain is live we can migrate the Ambassador Program to a <a href="https://en.wikipedia.org/wiki/Decentralized_autonomous_organization">decentralized autonomous organization</a>, using the <a href="https://substrate.dev/rustdocs/v2.0.0-rc5/pallet_society/index.html">Society</a> pallet.</div>
+            <v-row align="center" class="fill-height">
+              <v-col cols="6" sm="4" md="2">
+                <v-avatar size="100%">
+                  <v-img src="/vang.jpeg"></v-img>
+                </v-avatar>
+              </v-col>
+              <v-col cols="12" sm="8" md="10">
+                <div class="text-h6 mb-1">Vang Nguyen</div>
+                <div class="body-2 mb-4">Vang is a software engineer, entrepreneur, and dirtbag. For the past decade, he’s split his time between working and chasing surf, sun, and powder. Just as he seeks freedom through his outdoor pursuits, Vang is interested in technologies that drive societal change and promote individual agency. He sees misinformation and fake news as one of the leading problems of our times and wants to find a solution which ensures the truthfulness and accuracy of the content we consume.</div>
+              </v-col>
+            </v-row>
           </v-card-text>
         </v-card>
       </v-col>
