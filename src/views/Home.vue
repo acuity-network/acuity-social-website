@@ -89,6 +89,12 @@
         'Believe in the ripple effect. ',
         'Abandon political correctness. ',
         'A big tent. ',
+        'True skepticism. ',
+        'Be undeniable. ',
+        'Do your own research. ',
+        'Permissionless innovation. ',
+        'A way out. ',
+        'Governance governance. '
       ],
       row: 0,
       column: 0,
