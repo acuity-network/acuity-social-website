@@ -20,7 +20,7 @@
               <div class="body-2 mb-4">MIX is currently trading on two exchanges:
                 <ul>
                   <li><a href="https://app.stex.com/en/trade/pair/ETH/MIX">STEX</a></li>
-                  <li><a href="https://www.citex.io/#/trade/MIX_ETH">CITEX</a></li>
+                  <li><a href="https://www.citex.me/#/trade/MIX_ETH">CITEX</a></li>
                 </ul>
               </div>
               <div class="text-h6 mb-1">Mine MIX</div>
