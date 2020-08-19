@@ -51,6 +51,7 @@
     data: () => ({
       message: '',
       messages: [
+        'Keenness of perception. ',
         'The world we need. ',
         'Neutrality without coersion. ',
         'Hardfork humanity. ',
@@ -94,7 +95,11 @@
         'Do your own research. ',
         'Permissionless innovation. ',
         'A way out. ',
-        'Governance governance. '
+        'Governance governance. ',
+        'Fund the commons. ',
+        'Explore ancient civilizations. ',
+        'Check your assumptions. ',
+        'Emergent property rights. ',
       ],
       row: 0,
       column: 0,
