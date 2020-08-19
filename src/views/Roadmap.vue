@@ -97,7 +97,7 @@
           text: 'As we migrate Acuity to Polkadot we need to bootstrap the social media platform. The purpose of the <a href="/ambassador">Ambassador Program</a> is to foster growth in a diversity of communities.',
         },
         {
-          when: '15th August 2020',
+          when: '22th August 2020',
           title: 'Acuity Browser on Substrate Testnet',
           text: 'In the run up to the Regenesis it is important for MIX holders to ensure they can claim their ACUITY on the new blockchain and try staking.',
         },
