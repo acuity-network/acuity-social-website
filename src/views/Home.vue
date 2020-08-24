@@ -9,8 +9,8 @@
       <v-col>
         <div style="color: #3cc3db; font-family: Raleway; text-align: center; font-size: 24px;">
           {{ message }}<span class="blink-me">|</span><br /> <br />
-          <router-link to="/regenesis">Regenesis</router-link> in: {{ days }} {{ $tc('days', days) }}, {{ hours }} {{ $tc('hours', hours) }}, {{ minutes }} {{ $tc('minutes', minutes) }}, {{ seconds }} {{ $tc('seconds', seconds) }}<br />
-          MIX => ACUITY
+          <router-link to="/regenesis">Regenesis</router-link> in {{ days }} {{ $tc('days', days) }}, {{ hours }} {{ $tc('hours', hours) }}, {{ minutes }} {{ $tc('minutes', minutes) }}, {{ seconds }} {{ $tc('seconds', seconds) }}<br />
+          MIX => ACU
         </div>
       </v-col>
     </v-row>
