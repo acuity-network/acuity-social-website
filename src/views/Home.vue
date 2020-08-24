@@ -149,7 +149,7 @@
         }
       },
       updateTimeLeft() {
-        let msLeft = 1598918400000 - Date.now()
+        let msLeft = 1598936400000 - Date.now()
         this.days = Math.floor(msLeft / 86400000)
         msLeft %= 86400000
         this.hours = Math.floor(msLeft / 3600000)

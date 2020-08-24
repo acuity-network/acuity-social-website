@@ -38,7 +38,7 @@
               </ul>
             </div>
             <div class="text-h5 mb-1">How will the migration happen?</div>
-            <div class="body-2 mb-4">On 1st September 2020 a snapshot of all balances on MIX blockchain will occur and the new Acuity blockchain will launch. All MIX holders will be allocated the same amount of ACUITY as they held in MIX at the time of the snapshot.</div>
+            <div class="body-2 mb-4">On 1st September 2020 at 5am UTC a snapshot of all balances on MIX blockchain will occur and the new Acuity blockchain will launch. All MIX holders will be allocated the same amount of ACUITY as they held in MIX at the time of the snapshot.</div>
             <div class="body-2 mb-4">ACUITY can be claimed by signing a message from a MIX address using MyCrypto, MyEtherWallet or Coinomi in a similar procedure</a> to how DOTs can be claimed. See the <a href="https://www.youtube.com/watch?v=rjhWfKXJTCg">video</a> from Polkadot.</div>
             <div class="text-h5 mb-1">Will any extra ACUITY be created during Regenesis?</div>
             <div class="body-2 mb-4">No. Only ACUITY that can be claimed 1:1 from MIX balances will come into existence during Regenesis.</div>
