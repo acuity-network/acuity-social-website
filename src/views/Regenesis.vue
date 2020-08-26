@@ -1,11 +1,11 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="10">
         <v-card>
           <v-card-text>
             <div class="text-h5 mb-1">Why is Acuity having a Regenesis?</div>
-            <div class="body-2 mb-4">Acuity is a fully decentralized social media platform that has been in development for five years, but it began as an independent Ethereum blockchain called <a href="https://www.mix-blockchain.org/">MIX</a>. The project is now migrating to a new <a href="https://polkadot.network/">Polkadot</a> blockchain. This has a number of advantages:
+            <div class="body-2 mb-4">Acuity is a fully decentralized social media platform that has been in development for five years, but it began as an independent Ethereum blockchain called <a href="https://www.mix-blockchain.org/">MIX</a>. The project is now migrating to a new <a href="https://polkadot.network/">Polkadot</a> blockchain with native cryptocurrency ACU. This has a number of advantages:
             </div>
             <div class="ml-4">
               <div class="text-h6 mb-1">Blockchain Interoperability</div>
@@ -18,17 +18,11 @@
               <div class="body-2 mb-4">Using the Democracy pallet the Acuity community can agree when to upgrade the blockchain and this will happen automatically without node software having to be manually upgraded.</div>
               <div class="text-h6 mb-1">Reduced Supply Inflation</div>
               <div class="body-2 mb-4">Currently 30k MIX is mined everyday, inflating the MIX supply about 14% per year. After regenesis the ACUITY supply will inflate due to staking rewards by 10% per year.</div>
-              <div class="text-h6 mb-1">EVM Upgrade</div>
-              <div class="body-2 mb-4">MIX currently uses the Byzantium EVM. The <a href="https://substrate.dev/docs/en/knowledgebase/smart-contracts/evm-pallet">EVM pallet</a> in Substrate runs the newer Istanbul EVM.</div>
+              <div class="text-h6 mb-1">Wasm Smart Contracts</div>
+              <div class="body-2 mb-4">The Substrate <a href="https://www.substrate.io/kb/smart-contracts">Contracts</a> pallet uses a Wasm VM instead of the Ethereum VM. This greatly increases processing capacity.</div>
             </div>
-          </v-card-text>
-        </v-card>
-      </v-col>
-      <v-col cols="12" md="6">
-        <v-card>
-          <v-card-text>
-            <div class="text-h5 mb-1">What is ACUITY for?</div>
-            <div class="body-2 mb-4">The ACUITY cryptocurrency has the following utilization:
+            <div class="text-h5 mb-1">What is ACU for?</div>
+            <div class="body-2 mb-4">The ACU cryptocurrency has the following utilization:
               <ul>
                 <li>Pay for transactions</li>
                 <li>Validate the network</li>
@@ -38,12 +32,14 @@
               </ul>
             </div>
             <div class="text-h5 mb-1">How will the migration happen?</div>
-            <div class="body-2 mb-4">On 1st September 2020 at 5am UTC a snapshot of all balances on MIX blockchain will occur and the new Acuity blockchain will launch. All MIX holders will be allocated the same amount of ACUITY as they held in MIX at the time of the snapshot.</div>
-            <div class="body-2 mb-4">ACUITY can be claimed by signing a message from a MIX address using MyCrypto, MyEtherWallet or Coinomi in a similar procedure</a> to how DOTs can be claimed. See the <a href="https://www.youtube.com/watch?v=rjhWfKXJTCg">video</a> from Polkadot.</div>
-            <div class="text-h5 mb-1">Will any extra ACUITY be created during Regenesis?</div>
-            <div class="body-2 mb-4">No. Only ACUITY that can be claimed 1:1 from MIX balances will come into existence during Regenesis.</div>
-            <div class="text-h5 mb-1">Can I just leave my MIX on an exchange?</div>
-            <div class="body-2 mb-4">No. in order to claim your ACUITY your MIX must be held by you directly on 1st September, i.e. in MyCrypto, MyEtherWallet, or Coinomi. MIX left on an exchange will not be able to be converted into ACUITY.</div>
+            <div class="body-2 mb-4">On 1st September 2020 at 5am UTC a snapshot of all balances on MIX blockchain will occur and the new Acuity blockchain will launch. All MIX holders will be allocated the same amount of ACU as they held in MIX at the time of the snapshot.</div>
+            <div class="body-2 mb-4">ACUITY can be claimed by signing a message from a MIX address using MyCrypto, MyEtherWallet, Metamask or Coinomi in a similar procedure</a> to how DOTs can be claimed. See the <a href="https://www.youtube.com/watch?v=rjhWfKXJTCg">video</a> from Polkadot.</div>
+            <div class="text-h5 mb-1">Will any extra ACU be created during Regenesis?</div>
+            <div class="body-2 mb-4">No. Only ACU that can be claimed 1:1 from MIX balances will come into existence during Regenesis.</div>
+            <div class="text-h5 mb-1">Can I leave my MIX on an exchange?</div>
+            <div class="body-2 mb-4">No. In order to claim your ACU, your MIX must be withdrawen from the exchange before 1st September. MIX left on an exchange will not be able to be converted into ACU.</div>
+            <div class="text-h5 mb-1">Can I leave my MIX in the Acuity Browser app?</div>
+            <div class="body-2 mb-4">No. MIX must be withdrawn from the Acuity Browser app in order for it to be converted to ACU.</div>
             <div class="text-h5 mb-1">Will content published via MIX be available on the new Acuity blockchain?</div>
             <div class="body-2 mb-4">No. Only MIX balances will be transferred.</div>
             <div class="text-h5 mb-1">How can I acquire MIX prior to Regenesis?</div>
