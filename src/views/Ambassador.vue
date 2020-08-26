@@ -60,6 +60,19 @@
                 Location: Chennai, India</div>
               </v-col>
             </v-row>
+            <v-row align="center" class="fill-height">
+              <v-col cols="6" sm="4" md="2">
+                <v-avatar size="100%">
+                  <v-img src="/jake.jpeg"></v-img>
+                </v-avatar>
+              </v-col>
+              <v-col cols="12" sm="8" md="10">
+                <div class="text-h6 mb-1">Jake Stone
+                </div>
+                <div class="body-2 mb-4">Jake is an active cryptocurrency miner, trader, and investor.  He has worked on multiple large scale fintech infrastructure deployments and has contributed to multiple crypto/defi projects over the years.  He is an ardent supporter of digital privacy and detests censorship.<br />
+                Location: Pork Chop Express on Discord</div>
+              </v-col>
+            </v-row>
           </v-card-text>
         </v-card>
       </v-col>
