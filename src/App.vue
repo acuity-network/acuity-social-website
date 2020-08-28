@@ -82,6 +82,11 @@ export default Vue.extend({
         title: 'Regenesis',
       },
       {
+        to: '/wacu',
+        icon: 'mdi-swap-horizontal-bold',
+        title: 'Wrapped ACU',
+      },
+      {
         to: '/roadmap',
         icon: 'mdi-timeline-text',
         title: 'Roadmap',

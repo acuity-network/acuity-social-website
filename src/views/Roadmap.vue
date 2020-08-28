@@ -97,14 +97,14 @@
           text: 'As we migrate Acuity to Polkadot we need to bootstrap the social media platform. The purpose of the <a href="/ambassador">Ambassador Program</a> is to foster growth in a diversity of communities.',
         },
         {
-          when: '22th August 2020',
-          title: 'Acuity Browser on Substrate Testnet',
-          text: 'In the run up to the Regenesis it is important for MIX holders to ensure they can claim their ACUITY on the new blockchain and try staking.',
-        },
-        {
           when: '1st September 2020',
           title: 'Substrate Regenesis',
-          text: 'The new Substrate-based Acuity blockchain will be launched. All MIX account balances will be converted to ACUITY balances. Updated smart contracts will be deployed and the web and desktop apps will be released.',
+          text: 'The new Substrate-based Acuity blockchain will be launched. All MIX account balances will be converted to ACU balances. Updated smart contracts will be deployed and the web and desktop apps will be released.',
+        },
+        {
+          when: '8th September 2020',
+          title: 'WACU Launches',
+          text: 'To failitate trading ACU on Ethereum, the WACU ERC20 token will be launched.',
         },
         {
           when: '',
