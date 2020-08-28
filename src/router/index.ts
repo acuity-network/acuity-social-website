@@ -60,7 +60,7 @@ const routes: Array<RouteConfig> = [
     path: '/wacu',
     name: 'wacu',
     component: WACU,
-    meta: { title: 'Wrapped ACU' },
+    meta: { title: 'WACU' },
   },
   {
     path: '/ambassador',
