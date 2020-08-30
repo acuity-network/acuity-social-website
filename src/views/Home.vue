@@ -105,6 +105,8 @@
         'Uncover conflict of interest. ',
         'Resistance is fertile. ',
         'Social cash. ',
+        'There\'s so many that don\'t know. ',
+        'If you\'re listening to this you are the resistance. ',
       ],
       row: 0,
       column: 0,
