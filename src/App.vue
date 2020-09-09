@@ -20,7 +20,9 @@
       </v-list>
 
       <v-divider></v-divider>
+
       <v-container>
+        <v-btn block color="#E6007A" href="https://polkadot.acuity.social/" target="_blank">Access Blockchain</v-btn>
         <v-switch v-model="darkMode" label="Dark mode"></v-switch>
         <v-btn
           v-for="socialLink in socialLinks"
@@ -46,9 +48,11 @@
 
     <v-main>
       <router-view></router-view>
+<!--
       <v-btn v-if="showFab" fixed dark fab bottom right color="#E6007A" to="/support">
         <v-icon>mdi-gift</v-icon>
       </v-btn>
+-->
     </v-main>
   </v-app>
 </template>
@@ -102,12 +106,12 @@ export default Vue.extend({
         icon: 'mdi-compare',
         title: 'Platform Comparison',
       },
-*/
       {
         to: '/support',
         icon: 'mdi-gift',
         title: 'Support Acuity',
       },
+*/
       {
         to: '/ambassador',
         icon: 'mdi-account-heart',

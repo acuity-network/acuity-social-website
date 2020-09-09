@@ -4,8 +4,8 @@
       <v-col cols="12" md="10">
         <v-card>
           <v-card-text>
-            <div class="text-h5 mb-1">Why is Acuity having a Regenesis?</div>
-            <div class="body-2 mb-4">Acuity is a fully decentralized social media platform that has been in development for five years, but it began as an independent Ethereum blockchain called <a href="https://www.mix-blockchain.org/">MIX</a>. The project is now migrating to a new <a href="https://polkadot.network/">Polkadot</a> blockchain with native cryptocurrency ACU. This has a number of advantages:
+            <div class="text-h5 mb-1">Why did Acuity have a Regenesis?</div>
+            <div class="body-2 mb-4">Acuity is a fully decentralized social media platform that has been in development for five years, but it began as an independent Ethereum blockchain called MIX. The project has now migrated to a new <a href="https://polkadot.network/">Polkadot</a> blockchain with native cryptocurrency ACU. This has a number of advantages:
             </div>
             <div class="ml-4">
               <div class="text-h6 mb-1">Blockchain Interoperability</div>
@@ -31,19 +31,11 @@
                 <li>Bond parachains or parathreads (eventually)</li>
               </ul>
             </div>
-            <div class="text-h5 mb-1">How will the migration happen?</div>
-            <div class="body-2 mb-4">On 1st September 2020 at 5am UTC a snapshot of all balances on MIX blockchain will occur and the new Acuity blockchain will launch. All MIX holders will be allocated the same amount of ACU as they held in MIX at the time of the snapshot.</div>
-            <div class="body-2 mb-4">ACUITY can be claimed by signing a message from a MIX address using MyCrypto, MyEtherWallet, Metamask or Coinomi in a similar procedure</a> to how DOTs can be claimed. See the <a href="https://www.youtube.com/watch?v=rjhWfKXJTCg">video</a> from Polkadot.</div>
-            <div class="text-h5 mb-1">Will any extra ACU be created during Regenesis?</div>
+            <div class="text-h5 mb-1">How did the migration happen?</div>
+            <div class="body-2 mb-4">On 1st September 2020 at 5am UTC a snapshot of all balances on MIX blockchain occured. On 3rd September the new Acuity blockchain launched. All MIX holders have be allocated the same amount of ACU as they held in MIX at the time of the snapshot.</div>
+            <div class="body-2 mb-4">ACU can be claimed by signing a message from a MIX address using MyCrypto, MyEtherWallet, Metamask or Coinomi. Acuity ambassador Arun Goutham has published some excellent <a href="https://www.youtube.com/channel/UCbAIcinwIejHlpMAYHEA9dg">tutorials</a> on his YouTube channel.</div>
+            <div class="text-h5 mb-1">Was any extra ACU be created during Regenesis?</div>
             <div class="body-2 mb-4">No. Only ACU that can be claimed 1:1 from MIX balances will come into existence during Regenesis.</div>
-            <div class="text-h5 mb-1">Can I leave my MIX on an exchange?</div>
-            <div class="body-2 mb-4">No. In order to claim your ACU, your MIX must be withdrawen from the exchange before 1st September. MIX left on an exchange will not be able to be converted into ACU.</div>
-            <div class="text-h5 mb-1">Can I leave my MIX in the Acuity Browser app?</div>
-            <div class="body-2 mb-4">No. MIX must be withdrawn from the Acuity Browser app in order for it to be converted to ACU.</div>
-            <div class="text-h5 mb-1">Will content published via MIX be available on the new Acuity blockchain?</div>
-            <div class="body-2 mb-4">No. Only MIX balances will be transferred.</div>
-            <div class="text-h5 mb-1">How can I acquire MIX prior to Regenesis?</div>
-            <div class="body-2 mb-4">The <router-link to="/support">Support Acuity</router-link> section lists several ways to acquire MIX.</div>
           </v-card-text>
         </v-card>
       </v-col>

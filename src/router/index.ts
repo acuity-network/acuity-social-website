@@ -44,12 +44,14 @@ const routes: Array<RouteConfig> = [
     component: Roadmap,
     meta: { title: 'Roadmap' },
   },
+/*
   {
     path: '/support',
     name: 'support',
     component: Support,
     meta: { title: 'Support' },
   },
+*/
   {
     path: '/regenesis',
     name: 'regenesis',

@@ -27,7 +27,7 @@
         {
           image: '/polkadot.png',
           title: 'Polkadot',
-          text: 'Acuity is migrating from the <a href="https://www.mix-blockchain.org/">MIX</a> blockchain to the <a href="https://polkadot.network/">Polkadot</a> ecosystem. This presents a massive opportunity for the project to thrive. Polkadot is a federated blockchain alternative to Ethereum 2.0 - created by Ethereum co-founder Gavin Wood.',
+          text: 'Acuity has migrated from the MIX blockchain to the <a href="https://polkadot.network/">Polkadot</a> ecosystem. This presents a massive opportunity for the project to thrive. Polkadot is a federated blockchain alternative to Ethereum 2.0 - created by Ethereum co-founder Gavin Wood.',
         },
         {
           image: '/substrate.png',
