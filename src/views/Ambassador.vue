@@ -70,7 +70,24 @@
                 <div class="text-h6 mb-1">Jake Stone
                 </div>
                 <div class="body-2 mb-4">Jake is an active cryptocurrency miner, trader, and investor.  He has worked on multiple large scale fintech infrastructure deployments and has contributed to multiple crypto/defi projects over the years.  He is an ardent supporter of digital privacy and detests censorship.<br />
-                Location: Pork Chop Express on Discord</div>
+                Discord: Pork Chop Express</div>
+              </v-col>
+            </v-row>
+            <v-row align="center" class="fill-height">
+              <v-col cols="6" sm="4" md="2">
+                <v-avatar size="100%">
+                  <v-img src="/spisak.jpeg"></v-img>
+                </v-avatar>
+              </v-col>
+              <v-col cols="12" sm="8" md="10">
+                <div class="text-h6 mb-1">Mike Spisak
+                  <v-btn class="mx-4" href="https://t.me/MSpeeze" icon>
+                    <v-icon size="20px">mdi-telegram</v-icon>
+                  </v-btn>
+                </div>
+                <div class="body-2 mb-4">Mike is an active cryptocurrency miner, trader, and investor. He is a Project Operations Manager at Urban Outfitters Fulfillment Center in Gap, PA. His expertise in project management and centralized planning led to the successful start up during the opening and throughout the ongoing operation of the Gap Fulfillment Center. He is active on the Acuity Social discord and telegram groups and enjoys working with the community. Mike's goal is to continue to improve community involvement and communication in the project as it continues to evolve.<br />
+                Location: Lancaster, PA<br />
+                Discord: MSpeeze</div>
               </v-col>
             </v-row>
           </v-card-text>
