@@ -100,6 +100,11 @@ export default Vue.extend({
         icon: 'mdi-server-network',
         title: 'Tech Stack',
       },
+      {
+        to: '/blog',
+        icon: 'mdi-format-quote-open',
+        title: 'Blog',
+      },
 /*
       {
         to: '/comparison',

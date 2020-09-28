@@ -9,6 +9,7 @@ import Roadmap from '../views/Roadmap.vue'
 import Support from '../views/Support.vue'
 import Regenesis from '../views/Regenesis.vue'
 import WACU from '../views/WACU.vue'
+import Blog from '../views/Blog.vue'
 import Ambassador from '../views/Ambassador.vue'
 
 Vue.use(VueRouter)
@@ -63,6 +64,12 @@ const routes: Array<RouteConfig> = [
     name: 'wacu',
     component: WACU,
     meta: { title: 'WACU' },
+  },
+  {
+    path: '/blog',
+    name: 'blog',
+    component: Blog,
+    meta: { title: 'Blog' },
   },
   {
     path: '/ambassador',
