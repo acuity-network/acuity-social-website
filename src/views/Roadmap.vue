@@ -124,9 +124,14 @@
           completed: true,
         },
         {
-          when: '22nd September 2020',
+          when: '17th October 2020',
+          title: 'Proof-of-stake Begins',
+          text: 'If it passes, the <a href="https://polkadot.acuity.social/#/democracy">referendum</a> to switch from PoA to PoS will be enacted.',
+        },
+        {
+          when: '31st October 2020',
           title: 'WACU Launches',
-          text: 'To failitate trading ACU on Ethereum, the WACU ERC20 token will be launched.',
+          text: 'If it passes, the referendum to upgrade the Acuity runtime will be enacted. This update will include the <a href="/wacu">WACU</a> pallet. A UI will provided at this time so ACU can be freely moved back and forth from Acuity to Ethereum.',
         },
         {
           when: '',
