@@ -40,8 +40,10 @@
                     <v-icon size="20px">mdi-twitter</v-icon>
                   </v-btn>
                 </div>
-                <div class="body-2 mb-4">Vang is a software engineer, entrepreneur, and dirtbag. For the past decade, he’s split his time between working and chasing surf, sun, and powder. Just as he seeks freedom through his outdoor pursuits, Vang is interested in technologies that drive societal change and promote individual agency. He sees misinformation and fake news as one of the leading problems of our times and wants to find a solution which ensures the truthfulness and accuracy of the content we consume.<br />
-                Location: In his van</div>
+                <div class="body-2 mb-4">
+                  <p>Vang is a software engineer, entrepreneur, and dirtbag. For the past decade, he’s split his time between working and chasing surf, sun, and powder. Just as he seeks freedom through his outdoor pursuits, Vang is interested in technologies that drive societal change and promote individual agency. He sees misinformation and fake news as one of the leading problems of our times and wants to find a solution which ensures the truthfulness and accuracy of the content we consume.</p>
+                  <p>Location: In his van</p>
+                </div>
               </v-col>
             </v-row>
             <v-row align="center" class="fill-height">
@@ -56,8 +58,10 @@
                     <v-icon size="20px">mdi-twitter</v-icon>
                   </v-btn>
                 </div>
-                <div class="body-2 mb-4">Arun is a Cloud/DevOps Engineer with experience of 4 years. He got into crypto as a miner in 2017 and is hodling ever since. He is very interested in the idea of censorship resistant social media platform and decentralised exchanges (DEX).<br />
-                Location: Chennai, India</div>
+                <div class="body-2 mb-4">
+                  <p>Arun is a Cloud/DevOps Engineer with experience of 4 years. He got into crypto as a miner in 2017 and is hodling ever since. He is very interested in the idea of censorship resistant social media platform and decentralised exchanges (DEX).</p>
+                  <p>Location: Chennai, India<br />Discord: thecoinmaniac</p>
+                </div>
               </v-col>
             </v-row>
             <v-row align="center" class="fill-height">
@@ -69,8 +73,10 @@
               <v-col cols="12" sm="8" md="10">
                 <div class="text-h6 mb-1">Jake Stone
                 </div>
-                <div class="body-2 mb-4">Jake is an active cryptocurrency miner, trader, and investor.  He has worked on multiple large scale fintech infrastructure deployments and has contributed to multiple crypto/defi projects over the years.  He is an ardent supporter of digital privacy and detests censorship.<br />
-                Discord: Pork Chop Express</div>
+                <div class="body-2 mb-4">
+                  <p>Jake is an active cryptocurrency miner, trader, and investor.  He has worked on multiple large scale fintech infrastructure deployments and has contributed to multiple crypto/defi projects over the years.  He is an ardent supporter of digital privacy and detests censorship.</p>
+                  <p>Discord: Pork Chop Express</p>
+                </div>
               </v-col>
             </v-row>
             <v-row align="center" class="fill-height">
@@ -85,9 +91,10 @@
                     <v-icon size="20px">mdi-telegram</v-icon>
                   </v-btn>
                 </div>
-                <div class="body-2 mb-4">Mike is an active cryptocurrency miner, trader, and investor. He is a Project Operations Manager at Urban Outfitters Fulfillment Center in Gap, PA. His expertise in project management and centralized planning led to the successful start up during the opening and throughout the ongoing operation of the Gap Fulfillment Center. He is active on the Acuity Social discord and telegram groups and enjoys working with the community. Mike's goal is to continue to improve community involvement and communication in the project as it continues to evolve.<br />
-                Location: Lancaster, PA<br />
-                Discord: MSpeeze</div>
+                <div class="body-2 mb-4">
+                  <p>Mike is an active cryptocurrency miner, trader, and investor. He is a Project Operations Manager at Urban Outfitters Fulfillment Center in Gap, PA. His expertise in project management and centralized planning led to the successful start up during the opening and throughout the ongoing operation of the Gap Fulfillment Center. He is active on the Acuity Social discord and telegram groups and enjoys working with the community. Mike's goal is to continue to improve community involvement and communication in the project as it continues to evolve.</p>
+                  <p>Location: Lancaster, PA<br />Discord: MSpeeze</p>
+                </div>
               </v-col>
             </v-row>
             <v-row align="center" class="fill-height">
@@ -105,7 +112,29 @@
                     <v-icon size="20px">mdi-github</v-icon>
                   </v-btn>
                 </div>
-                <div class="body-2 mb-4">Brian is a Blockchain enthusiast with four years of experience in the field. His draw to Acuity is creating a censorship resistant publishing platform as an alternative to the centralized systems that are currently in place today. Outside of Blockchain development he has eight years of experience as a backend software developer.</div>
+                <div class="body-2 mb-4">
+                  <p>Brian is a Blockchain enthusiast with four years of experience in the field. His draw to Acuity is creating a censorship resistant publishing platform as an alternative to the centralized systems that are currently in place today. Outside of Blockchain development he has eight years of experience as a backend software developer.</p>
+                  <p>Discord: Heish</p>
+                </div>
+              </v-col>
+            </v-row>
+            <v-row align="center" class="fill-height">
+              <v-col cols="6" sm="4" md="2">
+                <v-avatar size="100%">
+                  <v-img src="/cmalize.jpeg"></v-img>
+                </v-avatar>
+              </v-col>
+              <v-col cols="12" sm="8" md="10">
+                <div class="text-h6 mb-1">Chris Malize
+                  <v-btn class="mx-4" href="https://twitter.com/chrismalize3" icon>
+                    <v-icon size="20px">mdi-twitter</v-icon>
+                  </v-btn>
+                </div>
+                <div class="body-2 mb-4">
+                  <p>Izuchukwu Christian Malize is a professional content writer in blockchain and cryptocurrency space. He has written many concise and educative articles to his credit. He has over three years of experience in the industry, as a crypto trader. He has also worked as ambassador and content manager for Wanchain, Celsius Network and Polkadot Network respectively.</p>
+                  <p>In 2019, Chris in collaboration with other blockchain veterans organized a symposium for Polkadot Network which had about 66 participants in attendance. He belongs to so many blockchain communities in Africa such as Blockchain Nigeria User Group by Chimezie Chuta, Crypto Syndicate by Ayuba Mohammed, and Bitcoin Technocrats by Andrew Ameh. He has contributed immensely to the industry basically in the area of education for the global adoption of the new emerging technology.</p>
+                  <p>Location: Nigeria<br/>Discord: cmalize</p>
+                </div>
               </v-col>
             </v-row>
           </v-card-text>
