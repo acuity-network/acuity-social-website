@@ -90,6 +90,24 @@
                 Discord: MSpeeze</div>
               </v-col>
             </v-row>
+            <v-row align="center" class="fill-height">
+              <v-col cols="6" sm="4" md="2">
+                <v-avatar size="100%">
+                  <v-img src="/brian.jpeg"></v-img>
+                </v-avatar>
+              </v-col>
+              <v-col cols="12" sm="8" md="10">
+                <div class="text-h6 mb-1">Brian Heishman
+                  <v-btn class="mx-4" href="https://twitter.com/ethericsol" icon>
+                    <v-icon size="20px">mdi-twitter</v-icon>
+                  </v-btn>
+                  <v-btn class="mx-4" href="https://github.com/ethericsol" icon>
+                    <v-icon size="20px">mdi-github</v-icon>
+                  </v-btn>
+                </div>
+                <div class="body-2 mb-4">Brian is a Blockchain enthusiast with four years of experience in the field. His draw to Acuity is creating a censorship resistant publishing platform as an alternative to the centralized systems that are currently in place today. Outside of Blockchain development he has eight years of experience as a backend software developer.</div>
+              </v-col>
+            </v-row>
           </v-card-text>
         </v-card>
       </v-col>
