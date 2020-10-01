@@ -34,6 +34,13 @@
         >
           <v-icon size="24px">{{ socialLink.icon }}</v-icon>
         </v-btn>
+
+        <v-list dense>
+          <v-list-item href="https://github.com/acuity-social/acuity-logo" target="_blank">
+            Brand Assets
+          </v-list-item>
+        </v-list>
+
       </v-container>
     </v-navigation-drawer>
 
