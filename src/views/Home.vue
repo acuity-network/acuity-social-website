@@ -8,7 +8,8 @@
     <v-row style="margin: 40px 0;">
       <v-col>
         <div style="color: #3cc3db; font-family: Raleway; text-align: center; font-size: 24px;">
-          {{ message }}<span class="blink-me">|</span>
+          {{ message }}<span class="blink-me">|</span><br /> <br />
+          Staking begins in {{ days }} {{ $tc('days', days) }}, {{ hours }} {{ $tc('hours', hours) }}, {{ minutes }} {{ $tc('minutes', minutes) }}, {{ seconds }} {{ $tc('seconds', seconds) }}.
         </div>
       </v-col>
     </v-row>
@@ -157,7 +158,7 @@
         }
       },
       updateTimeLeft() {
-        let msLeft = Math.max(1598936400000 - Date.now(), 0)
+        let msLeft = Math.max(1602896346000 - Date.now(), 0)
         this.days = Math.floor(msLeft / 86400000)
         msLeft %= 86400000
         this.hours = Math.floor(msLeft / 3600000)
