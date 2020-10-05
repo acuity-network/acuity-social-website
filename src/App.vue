@@ -41,6 +41,8 @@
           </v-list-item>
         </v-list>
 
+        <div class="text-h4 mb-1" style="text-align: center;">#{{ blockNumber }}</div>
+
       </v-container>
     </v-navigation-drawer>
 
@@ -67,6 +69,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { ApiPromise, WsProvider } from '@polkadot/api'
 
 export default Vue.extend({
   name: 'App',
@@ -156,11 +159,21 @@ export default Vue.extend({
         icon: 'mdi-email',
         url: 'mailto:contact@mix-blockchain.org',
       },
-    ]
+    ],
+    blockNumber: null,
   }),
 
-  created() {
+  async created() {
     this.darkMode = this.$vuetify.theme.dark = true
+
+    let wsProvider = new WsProvider('wss://acuity.social:9961')
+    ApiPromise.create({ provider: wsProvider }).then(async api => {
+      this.$api = api
+      await this.$api.isReady
+      this.$api.rpc.chain.subscribeNewHeads((lastHeader: any) => {
+        this.blockNumber = lastHeader.number.toString()
+      })
+    })
   },
 
   computed: {
