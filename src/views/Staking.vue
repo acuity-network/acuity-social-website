@@ -5,11 +5,11 @@
         <v-card>
           <v-card-text>
             <div class="body-2 mb-4">Acuity uses standard <a href="https://wiki.polkadot.network/docs/en/learn-consensus" target="_blank">Polkadot Consensus</a>. Assuming the <a href="https://polkadot.acuity.social/#/democracy" target="_blank">current referendum</a> passes, at block 619,200 on Saturday 17th October the Acuity network will automatically migrate from Proof-of-Authority to <a href="https://wiki.polkadot.network/docs/en/learn-staking" target="_blank">Nominated Proof-of-Stake</a>.</div>
-            <div class="text-h5 mb-1">Nominators</div>
-            <div class="body-2 mb-4"><a href="https://wiki.polkadot.network/docs/en/learn-nominator" target="_blank">Nominators</a> vote for which potential validators get to produce blocks. This is a much less involved process than running a validator. A nominator that does a good job of choosing validators will be rewarded. A nominator that does a bad job will be slashed.</div>
-            <div class="text-h5 mb-1">Validators</div>
-            <div class="body-2 mb-4"><a href="https://wiki.polkadot.network/docs/en/learn-validator" target="_blank">Validators</a> maintain node infrastructure to produce blocks. A validator operating correctly will generate revenue. If a validator makes a mistake it will be slashed and funds will be lost. Acuity is currently configured to have a maximum of 50 validators. In order to secure the network we need to have validators assembled before NPoS activates.</div>
-            <div class="text-h4 mb-1">Getting started</div>
+            <div class="text-h6 mb-1">Nominators</div>
+            <div class="body-2 mb-4"><a href="https://wiki.polkadot.network/docs/en/learn-nominator" target="_blank">Nominators</a> vote for which potential validators get to produce blocks. This is a much less involved process than running a validator. A nominator that does a good job of choosing validators will be rewarded with more ACU. A nominator that does a bad job will loose some of their stake.</div>
+            <div class="text-h6 mb-1">Validators</div>
+            <div class="body-2 mb-4"><a href="https://wiki.polkadot.network/docs/en/learn-validator" target="_blank">Validators</a> maintain node infrastructure to produce blocks. A validator operating correctly will be rewarded with more ACU. A validator that makes a mistake will loose some of their stake. Acuity is currently configured to have a maximum of 50 validators. In order to secure the network we need to have validators assembled before NPoS activates.</div>
+            <div class="text-h5 mb-1">Getting started</div>
             <div class="body-2 mb-4">In the <a href="https://polkadot.acuity.social/#/staking/actions" target="_blank">Staking Actions</a> section of the Acuity Polkadot Portal you can bond ACU to both set up a validator and start nominating validators.</div>
             <div class="body-2 mb-4">There are many guides for staking with Polkadot and Kusama that are applicable to Acuity:
               <ul>
@@ -21,7 +21,7 @@
                 <li><a href="https://www.youtube.com/watch?v=QqlUYCrhKWw" target="_blank">Staking on Polkadot UI, Everything you need to know!</a> (video)</li>
               </ul>
             </div>
-            <div class="body-2 mb-4">In order to run a validator you will need to built the Acuity binary from the <a href="https://github.com/acuity-social/acuity-substrate-old" target="_blank">acuity-substrate-old</a> repo. This will soon be replaced by the acuity-substrate repo.</div>
+            <div class="body-2 mb-4">In order to run a validator you will need to build the Acuity binary from the <a href="https://github.com/acuity-social/acuity-substrate-old" target="_blank">acuity-substrate-old</a> repo. This will soon be replaced by the acuity-substrate repo.</div>
             <div class="body-2 mb-4">Please join the Staking channel on <a href="https://discordapp.com/invite/GxD7adN" target="_blank">Acuity Discord</a> to discuss!</div>
           </v-card-text>
         </v-card>
