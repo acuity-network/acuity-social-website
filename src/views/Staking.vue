@@ -21,7 +21,7 @@
                 <li><a href="https://www.youtube.com/watch?v=QqlUYCrhKWw" target="_blank">Staking on Polkadot UI, Everything you need to know!</a> (video)</li>
               </ul>
             </div>
-            <div class="body-2 mb-4">In order to run a validator you will need to build the Acuity binary from the <a href="https://github.com/acuity-social/acuity-substrate-old" target="_blank">acuity-substrate-old</a> repo. This will soon be replaced by the acuity-substrate repo.</div>
+            <div class="body-2 mb-4">In order to run a validator you will need to build the Acuity binary from the <a href="https://github.com/acuity-social/acuity-substrate" target="_blank">acuity-substrate</a> repo.</div>
             <div class="body-2 mb-4">Please join the Staking channel on <a href="https://discordapp.com/invite/GxD7adN" target="_blank">Acuity Discord</a> to discuss!</div>
           </v-card-text>
         </v-card>
