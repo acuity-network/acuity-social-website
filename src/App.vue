@@ -97,6 +97,11 @@ export default Vue.extend({
         title: 'Regenesis',
       },
       {
+        to: '/staking',
+        icon: 'mdi-cash-lock',
+        title: 'Staking',
+      },
+      {
         to: '/wacu',
         icon: 'mdi-swap-horizontal-bold',
         title: 'Wrapped ACU',

@@ -8,6 +8,7 @@ import TechStack from '../views/TechStack.vue'
 import Roadmap from '../views/Roadmap.vue'
 import Support from '../views/Support.vue'
 import Regenesis from '../views/Regenesis.vue'
+import Staking from '../views/Staking.vue'
 import WACU from '../views/WACU.vue'
 import Blog from '../views/Blog.vue'
 import Ambassador from '../views/Ambassador.vue'
@@ -58,6 +59,12 @@ const routes: Array<RouteConfig> = [
     name: 'regenesis',
     component: Regenesis,
     meta: { title: 'Regenesis' },
+  },
+  {
+    path: '/staking',
+    name: 'staking',
+    component: Staking,
+    meta: { title: 'Staking' },
   },
   {
     path: '/wacu',
