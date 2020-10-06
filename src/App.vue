@@ -30,6 +30,7 @@
           :key="socialLink.icon"
           class="mx-4"
           :href="socialLink.url"
+          target="_blank"
           icon
         >
           <v-icon size="24px">{{ socialLink.icon }}</v-icon>
@@ -161,8 +162,8 @@ export default Vue.extend({
         url: 'https://discordapp.com/invite/GxD7adN',
       },
       {
-        icon: 'mdi-email',
-        url: 'mailto:contact@mix-blockchain.org',
+        icon: 'mdi-reddit',
+        url: 'https://www.reddit.com/r/AcuitySocial/',
       },
     ],
     blockNumber: null,
