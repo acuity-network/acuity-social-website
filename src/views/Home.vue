@@ -113,6 +113,7 @@
         'If the news is fake, what about history? ',
         'The statist quo. ',
         'Awakening wizards. ',
+        'What you have heard is true. ',
       ],
       row: 0,
       column: 0,
