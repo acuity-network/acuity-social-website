@@ -22,7 +22,7 @@
               </ul>
             </div>
             <div class="body-2 mb-4">In order to run a validator you will need to build the Acuity binary from the <a href="https://github.com/acuity-social/acuity-substrate" target="_blank">acuity-substrate</a> repo.</div>
-            <div class="body-2 mb-4">Please join the Staking channel on <a href="https://discordapp.com/invite/GxD7adN" target="_blank">Acuity Discord</a> to discuss!</div>
+            <div class="body-2 mb-4">Please join the Staking channel on <a href="https://discordapp.com/invite/GxD7adN" target="_blank">Acuity Discord</a> to discuss! Use the OTC channel if you need to buy ACU.</div>
           </v-card-text>
         </v-card>
       </v-col>
