@@ -114,6 +114,7 @@
         'The statist quo. ',
         'Awakening wizards. ',
         'What you have heard is true. ',
+        'Live and let live. ',
       ],
       row: 0,
       column: 0,
