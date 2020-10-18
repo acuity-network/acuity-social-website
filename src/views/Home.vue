@@ -115,6 +115,8 @@
         'Awakening wizards. ',
         'What you have heard is true. ',
         'Live and let live. ',
+        'All we have to do is walk away. ',
+        'Stuff just keeps on getting older... ',
       ],
       row: 0,
       column: 0,
