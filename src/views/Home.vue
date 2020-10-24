@@ -8,8 +8,7 @@
     <v-row style="margin: 40px 0;">
       <v-col>
         <div style="color: #3cc3db; font-family: Raleway; text-align: center; font-size: 24px;">
-          {{ message }}<span class="blink-me">|</span><br /><br />
-          <router-link to="/staking">Staking</router-link> begins in {{ days }} {{ $tc('days', days) }}, {{ hours }} {{ $tc('hours', hours) }}, {{ minutes }} {{ $tc('minutes', minutes) }}, {{ seconds }} {{ $tc('seconds', seconds) }}.
+          {{ message }}<span class="blink-me">|</span>
         </div>
       </v-col>
     </v-row>
@@ -116,7 +115,8 @@
         'What you have heard is true. ',
         'Live and let live. ',
         'All we have to do is walk away. ',
-        'Stuff just keeps on getting older... ',
+        'Stuff just keeps on getting older… ',
+        'Who will fact-check the fact-checkers? ',
       ],
       row: 0,
       column: 0,

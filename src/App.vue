@@ -52,7 +52,7 @@
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title style="color: #3cc3db; font-family: Raleway;">ACUITY</v-toolbar-title>
+      <v-toolbar-title><router-link to="/" style="color: #3cc3db; font-family: Raleway; text-decoration: none;">ACUITY</router-link></v-toolbar-title>
       <v-breadcrumbs :items="breadcrumbs" large></v-breadcrumbs>
       <v-spacer></v-spacer><v-img src="images/acuity-logo.svg" alt="Acuity logo" height="30" max-width="30" contain></v-img>
     </v-app-bar>
@@ -83,9 +83,9 @@ export default Vue.extend({
     darkMode: false,
     menu: [
       {
-        to: '/',
-        icon: 'mdi-home',
-        title: 'Home',
+        to: '/about',
+        icon: 'mdi-information',
+        title: 'About',
       },
       {
         to: '/features',
@@ -98,14 +98,9 @@ export default Vue.extend({
         title: 'Regenesis',
       },
       {
-        to: '/staking',
-        icon: 'mdi-cash-lock',
-        title: 'Staking',
-      },
-      {
-        to: '/wacu',
-        icon: 'mdi-swap-horizontal-bold',
-        title: 'Wrapped ACU',
+        to: '/acu',
+        icon: 'mdi-cash-usd',
+        title: 'ACU',
       },
       {
         to: '/roadmap',

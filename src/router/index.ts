@@ -2,14 +2,14 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import goTo from 'vuetify/es5/services/goto'
 import Home from '../views/Home.vue'
+import About from '../views/About.vue'
 import Features from '../views/Features.vue'
 import TechStack from '../views/TechStack.vue'
 //import Comparison from '../views/Comparison.vue'
 import Roadmap from '../views/Roadmap.vue'
 import Support from '../views/Support.vue'
 import Regenesis from '../views/Regenesis.vue'
-import Staking from '../views/Staking.vue'
-import WACU from '../views/WACU.vue'
+import ACU from '../views/ACU.vue'
 import Blog from '../views/Blog.vue'
 import Ambassador from '../views/Ambassador.vue'
 
@@ -21,6 +21,12 @@ const routes: Array<RouteConfig> = [
     name: 'home',
     component: Home,
     meta: { title: '' },
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: About,
+    meta: { title: 'About' },
   },
   {
     path: '/features',
@@ -61,16 +67,10 @@ const routes: Array<RouteConfig> = [
     meta: { title: 'Regenesis' },
   },
   {
-    path: '/staking',
-    name: 'staking',
-    component: Staking,
-    meta: { title: 'Staking' },
-  },
-  {
-    path: '/wacu',
-    name: 'wacu',
-    component: WACU,
-    meta: { title: 'WACU' },
+    path: '/acu',
+    name: 'acu',
+    component: ACU,
+    meta: { title: 'ACU' },
   },
   {
     path: '/blog',
