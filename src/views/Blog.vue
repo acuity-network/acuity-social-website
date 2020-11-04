@@ -4,8 +4,14 @@
       <v-col cols="12" md="10">
         <v-card elevation="10" outlined>
           <v-card-text>
-            <div class="text-h5 mb-1">Acuity Social October 2020 Project Update</div>
-            <div class="subtitle-2 mb-4">24th October 2020 by Jonathan Brown</div>
+            <div class="text-h5 mb-1">Acuity Social November 2020 Project Update</div>
+            <div class="subtitle-2 mb-4">1st November 2020 by Jonathan Brown</div>
+            <div class="text-h6 mb-1">Sharding</div>
+            <div class="body-2 mb-4">I've made a major architecture design decision for Acuity: each community built with Acuity can be its own parachain, with the Acuity chain as its parent. This has a number of advantages:
+              <ul>
+                <li>scalabilty - while a substrate blockchain does have </li>
+              </ul>
+            </div>
             <div class="text-h6 mb-1">Migration from PoA to NPoS</div>
             <div class="body-2 mb-4">The referendum to transition Acuity from Proof-of-authority to Nominated Proof-of-stake passed and was automatically enacted on 17th October.</div>
             <div class="body-2 mb-4">It is now possible become a nominator and stake your ACU by choosing which validators you think will perform well. Unfortunately it is still not possible to become a validator. The transaction to set validator session keys does not succeed. The four original PoA validators remain as the only validators. Enabling anyone to become a validator will require further investigation.</div>
