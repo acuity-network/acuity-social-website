@@ -6,11 +6,11 @@
           <v-card-text>
             <div class="body-2 mb-4">ACU is the base cryptocurrency for the Acuity platform. It existed as MIX for 1225 days before the <router-link to="/regenesis">Regenesis</router-link> on 1st September 2020. ACU has a number of purposes.</div>
             <div class="text-h4 mb-1">Publishing Transactions</div>
-            <div class="body-2 mb-4">A very small network fee to needs to be paid for each transaction. Publishing content on Acuity is a transaction like any other. This is why you can always publish - you are paying to write to a permisssionless database.</div>
+            <div class="body-2 mb-4">A very small network fee to needs to be paid for each transaction. Publishing content on Acuity is a transaction like any other. This is why you can always publish - you are paying to write to a permissionless database.</div>
             <div class="text-h4 mb-1">Funding</div>
             <div class="body-2 mb-4">Revenue for the project is provided by a slow release of the ACU cryptocurrency ending on October 18th 2022. This is a continuation of the <a href="https://docs.mix-blockchain.org/en/latest/issuance.html" target="_blank">issuance model</a> on MIX.</div>
             <div class="body-2 mb-4">Acuity has a permissionless treasury. Anyone can propose a motion for how treasury funds should be spent. Currently revenue from the four authority validators is automatically deposited into the treasury. Once permissionless validation is activated this will no longer be the case. Project revenue will be partially diverted into the treasury so the community can decide on how best to spend it.</div>
-            <div class="body-2 mb-4">Content creators will also be able to be crowdfunded through the issuance of a brand token that can be conspiculously burned by fans - <a href="https://www.youtube.com/watch?v=wY8pAahyIw4" target="_blank">see video</a>.</div>
+            <div class="body-2 mb-4">Content creators will also be able to be crowdfunded through the issuance of a brand token that can be conspicuously burned by fans - <a href="https://www.youtube.com/watch?v=wY8pAahyIw4" target="_blank">see video</a>.</div>
             <div class="body-2 mb-4"></div>
             <div class="text-h4 mb-1">Trading</div>
             <div class="body-2 mb-4">Acuity has the currency code ACU and can be freely transferred and traded. Current market value can be found on <a href="https://www.coingecko.com/en/coins/acuity-token" target="_blank">CoinGecko</a>. There are currently two mains ways to trade ACU:

@@ -129,11 +129,6 @@
           text: 'If it passes, the <a href="https://polkadot.acuity.social/#/democracy">referendum</a> to switch from PoA to PoS will be enacted.',
         },
         {
-          when: 'November 2020',
-          title: 'WACU Launches',
-          text: 'If it passes, the referendum to upgrade the Acuity runtime will be enacted. This update will include the <a href="/wacu">WACU</a> pallet. A UI will provided at this time so ACU can be freely moved back and forth from Acuity to Ethereum.',
-        },
-        {
           when: '',
           title: 'Connect to Kusama',
           text: '<a href="https://kusama.network/">Kusama</a> is the experimental version of Polkadot. It will enable greater security, inter-blockchain communication and access to decentralized exchanges.',
