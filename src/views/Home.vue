@@ -126,6 +126,7 @@
         'Grow together. ',
         'Problem, reaction, solution. ',
         'Wag the dog. ',
+        'What you see is all there is. ',
       ],
       row: 0,
       column: 0,
