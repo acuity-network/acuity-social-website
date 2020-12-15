@@ -2,6 +2,11 @@
   <v-container>
     <v-row>
       <v-col cols="12" md="10">
+        <div class="body-2">
+          Older blog posts can be found on <a target="_blank" href="https://medium.com/mix-blockchain">Medium</a>.
+        </div>
+      </v-col>
+      <v-col cols="12" md="10">
         <v-card elevation="10" outlined>
           <v-card-text>
             <div class="text-h5 mb-1">ACU / ETH atomic swap exchange under development</div>

@@ -150,8 +150,8 @@ export default Vue.extend({
         url: 'https://github.com/acuity-social',
       },
       {
-        icon: 'mdi-alpha-m-box',
-        url: 'https://medium.com/mix-blockchain',
+        icon: 'mdi-telegram',
+        url: 'https://t.me/acuity_social',
       },
       {
         icon: 'mdi-discord',
