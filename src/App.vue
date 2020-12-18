@@ -22,9 +22,10 @@
       <v-divider></v-divider>
 
       <v-container>
+        <v-btn block color="#35893e" href="/Acuity Deck.pdf" target="_blank" style="margin-bottom: 10px;">View Deck</v-btn>
+        <v-btn block color="rgb(33, 150, 243)" href="https://app.stex.com/en/trade/pair/ETH/ACU" target="_blank" style="margin-bottom: 10px;">Trade ACU</v-btn>
         <v-btn block color="#E6007A" href="https://polkadot.acuity.social/" target="_blank" style="margin-bottom: 10px;">Access Blockchain</v-btn>
         <v-btn block href="https://telemetry.polkadot.io/#list/Acuity" target="_blank" style="margin-bottom: 10px;">View Telemetry</v-btn>
-        <v-btn block color="rgb(33, 150, 243)" href="https://app.stex.com/en/trade/pair/ETH/ACU" target="_blank" style="margin-bottom: 10px;">Trade ACU</v-btn>
         <v-switch v-model="darkMode" label="Dark mode"></v-switch>
         <v-btn
           v-for="socialLink in socialLinks"
