@@ -10,6 +10,7 @@ import Roadmap from '../views/Roadmap.vue'
 import Support from '../views/Support.vue'
 import Regenesis from '../views/Regenesis.vue'
 import ACU from '../views/ACU.vue'
+import AtomicSwap from '../views/AtomicSwap.vue'
 import Blog from '../views/Blog.vue'
 import Ambassador from '../views/Ambassador.vue'
 
@@ -71,6 +72,12 @@ const routes: Array<RouteConfig> = [
     name: 'acu',
     component: ACU,
     meta: { title: 'ACU' },
+  },
+  {
+    path: '/atomic-swap',
+    name: 'atomic-swap',
+    component: AtomicSwap,
+    meta: { title: 'Atomic Swap' },
   },
   {
     path: '/blog',

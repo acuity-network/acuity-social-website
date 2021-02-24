@@ -105,6 +105,11 @@ export default Vue.extend({
         title: 'ACU',
       },
       {
+        to: '/atomic-swap',
+        icon: 'mdi-atom-variant',
+        title: 'Atomic Swap',
+      },
+      {
         to: '/roadmap',
         icon: 'mdi-timeline-text',
         title: 'Roadmap',
