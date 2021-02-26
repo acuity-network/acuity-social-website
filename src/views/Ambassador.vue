@@ -137,6 +137,27 @@
                 </div>
               </v-col>
             </v-row>
+            <v-row align="center" class="fill-height">
+              <v-col cols="6" sm="4" md="2">
+                <v-avatar size="100%">
+                  <v-img src="/suraj.jpeg"></v-img>
+                </v-avatar>
+              </v-col>
+              <v-col cols="12" sm="8" md="10">
+                <div class="text-h6 mb-1">Crypto Dentist
+                  <v-btn class="mx-4" href="https://twitter.com/Suraj_Crypto" icon>
+                    <v-icon size="20px">mdi-twitter</v-icon>
+                  </v-btn>
+                  <v-btn class="mx-4" href="https://viksurajshk.medium.com/" icon>
+                    <v-icon size="20px">mdi-pen</v-icon>
+                  </v-btn>
+                </div>
+                <div class="body-2 mb-4">
+                  <p>Crypto Trader , Blockchain Enthusiast , Making Money work to achieve financial freedom.</p>
+                  <p>Location: India<br/>Discord: Suraj#8489</p>
+                </div>
+              </v-col>
+            </v-row>
           </v-card-text>
         </v-card>
       </v-col>
