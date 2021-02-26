@@ -68,7 +68,7 @@
         },
         {
           title: 'Deploy contracts on Ethereum',
-          text: 'Production contracts',
+          text: 'While it is quite expensive to deploy contracts on Ethereum, this only has to be done once.',
           completed: false,
         },
         {
@@ -78,7 +78,7 @@
         },
         {
           title: 'Price and volume service',
-          text: 'A Service will be written to monitor the blockchains and maintain price and volume information. This will be able to be queried by external services such as Coin Gecko, etc',
+          text: 'A service will be written to monitor the blockchains and maintain price and volume information. This will be able to be queried by external services such as Coin Gecko, etc',
           completed: false,
         },
         {

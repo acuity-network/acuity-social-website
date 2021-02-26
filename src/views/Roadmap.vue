@@ -127,9 +127,19 @@
           completed: true,
         },
         {
-          when: '17th October 2020',
-          title: 'Proof-of-stake Begins',
-          text: 'If it passes, the <a href="https://polkadot.acuity.social/#/democracy">referendum</a> to switch from PoA to PoS will be enacted.',
+          when: '',
+          title: 'Acuity DEX',
+          text: 'Acuity will have its very own decentralized <a href="/atomic-swap">atomic swap exchange</a>. Using the Polkadot and Metamask browser plugins it will be possible to trade permissionlessly between ACU and ETH / ETC.',
+        },
+        {
+          when: '',
+          title: 'Re-launch social networking functionality',
+          text: 'All of the existing social networking functionality from MIX will be brought to the Acuity web app. The same Solidity smart contracts that powered MIX will be deployed on Acuity. The frontend of the app will be ported.',
+        },
+        {
+          when: '',
+          title: 'Desktop app',
+          text: 'On MIX, the app was available both as a web app and a desktop app for Windows, Mac and Linux. The Acuity web app will be ported to the desktop and also be available on Apple M1.',
         },
         {
           when: '',
