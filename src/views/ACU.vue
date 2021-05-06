@@ -8,19 +8,18 @@
             <div class="text-h4 mb-1">Publishing Transactions</div>
             <div class="body-2 mb-4">A very small network fee to needs to be paid for each transaction. Publishing content on Acuity is a transaction like any other. This is why you can always publish - you are paying to write to a permissionless database.</div>
             <div class="text-h4 mb-1">Funding</div>
-            <div class="body-2 mb-4">Revenue for the project is provided by a slow release of the ACU cryptocurrency ending on October 18th 2022. This is a continuation of the <a href="https://docs.mix-blockchain.org/en/latest/issuance.html" target="_blank">issuance model</a> on MIX.</div>
-            <div class="body-2 mb-4">Acuity has a permissionless treasury. Anyone can propose a motion for how treasury funds should be spent. Currently revenue from the four authority validators is automatically deposited into the treasury. Once permissionless validation is activated this will no longer be the case. Project revenue will be partially diverted into the treasury so the community can decide on how best to spend it.</div>
+            <div class="body-2 mb-4">Revenue for the project is provided by a 2000 day slow release of the ACU cryptocurrency ending on October 18th 2022. This is a continuation of the <a href="https://docs.mix-blockchain.org/en/latest/issuance.html" target="_blank">issuance model</a> on MIX.</div>
             <div class="body-2 mb-4">Content creators will also be able to be crowdfunded through the issuance of a brand token that can be conspicuously burned by fans - <a href="https://www.youtube.com/watch?v=wY8pAahyIw4" target="_blank">see video</a>.</div>
             <div class="body-2 mb-4"></div>
             <div class="text-h4 mb-1">Trading</div>
-            <div class="body-2 mb-4">Acuity has the currency code ACU and can be freely transferred and traded. Current market value can be found on <a href="https://www.coingecko.com/en/coins/acuity-token" target="_blank">CoinGecko</a>. There are currently two mains ways to trade ACU:
+            <div class="body-2 mb-4">Acuity has the currency code ACU and can be freely transferred and traded. There are currently two mains ways to trade ACU:
             <ul>
               <li>STEX have an <a href="https://app.stex.com/en/trade/pair/ETH/ACU" target="_blank">ACU/ETH</a> pair.</li>
-              <li>You can find someone to trade with in the OTC channel in the <a href="https://discordapp.com/invite/GxD7adN" target="_blank">Acuity Discord</a>.</li>
+              <li>You can find someone to trade with OTC in the <a href="https://matrix.to/#/!kfaMBmYfTFkOzPtvdH:matrix.org?via=matrix.org">Trading</a> room in the Acuity Matrix community.</li>
             </ul>
             </div>
             <div class="text-h6 mb-1">Atomic Swap</div>
-            <div class="body-2 mb-4">An important feature in the Acuity Roadmap is to have an atomic swap exchange. It will be possible trade ACU/ETH on this website without any trusted third party. This will involve the simultaneous use of both the Polkadot and Metamask browser plugins.</div>
+            <div class="body-2 mb-4">An important feature in the Acuity Roadmap is to have an <router-link to="/atomic-swap">atomic swap</router-link> exchange. It will be possible trade ACU/ETH on this website without any trusted third party. This will involve the simultaneous use of both the Polkadot and Metamask browser plugins.</div>
             <div class="text-h4 mb-1">Governance</div>
             <div class="body-2 mb-4">ACU is the governance token for Acuity. It uses standard <a href="https://wiki.polkadot.network/docs/en/learn-governance" target="_blank">Polkadot Governance</a>. This is a hierarchical system of checks and balances that enables the community to collaboratively decide how to make automated changes to the blockchain including replacing the runtime, retrieving lost funds and spending treasury funds.</div>
             <div class="text-h4 mb-1">Cash</div>

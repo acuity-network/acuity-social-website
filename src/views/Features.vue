@@ -51,7 +51,7 @@
         },
         {
           title: 'Comments',
-          text: '<p>Any content item can be a reply to another item and the comment hierarchy is maintained in contract state. Of course which comments a users can be entirely controlled by the filter bubble they choose to use. See Trust Accounts below.</p>',
+          text: '<p>Any content item can be a reply to another item and the comment hierarchy is maintained in contract state. Of course which comments a user can see can be entirely controlled by the filter bubble they choose to use. See Trust Accounts below.</p>',
           contract: 'https://github.com/acuity-social/acuity-contracts/blob/master/src/mix-item-dag/MixItemDagOneParent.sol',
           video: 'https://www.youtube.com/watch?v=WdkBjd2bPBY',
         },

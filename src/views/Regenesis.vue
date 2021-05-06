@@ -5,7 +5,7 @@
         <v-card>
           <v-card-text>
             <div class="text-h5 mb-1">Why did Acuity have a Regenesis?</div>
-            <div class="body-2 mb-4">Acuity is a fully decentralized social media platform that has been in development for five years, but it began as an independent Ethereum blockchain called MIX. The project has now migrated to a new <a target="_blank" href="https://polkadot.network/">Polkadot</a> blockchain with native cryptocurrency ACU. This has a number of advantages:
+            <div class="body-2 mb-4">Acuity is a fully decentralized social media platform that has been in development for six years, but it began as an independent Ethereum blockchain called MIX. The project has now migrated to a new <a target="_blank" href="https://polkadot.network/">Polkadot</a> blockchain with native cryptocurrency ACU. This has a number of advantages:
             </div>
             <div class="ml-4">
               <div class="text-h6 mb-1">Blockchain Interoperability</div>
