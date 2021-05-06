@@ -9,6 +9,39 @@
       <v-col cols="12" md="10">
         <v-card elevation="10" outlined>
           <v-card-text>
+            <div class="text-h5 mb-1">Project Update</div>
+            <div class="subtitle-2 mb-4">5th May 2021 by Jonathan Brown</div>
+            <div class="text-h6 mb-1">New Substrate implementation</div>
+            <div class="body-2 mb-4">
+              <p>In line with the previous blog post and <a href="https://www.youtube.com/watch?v=ipg6KQNcZ-k">video</a>, a new Acuity <a href="https://www.substrate.io/">Substrate</a> node implementation has been <a href="https://github.com/acuity-social/acuity-substrate/releases">released</a>.</p>
+              <p>The previous implementation was based on Kusama, which was causing a number of problems. The new implementation is based on <a href="https://github.com/substrate-developer-hub/substrate-node-template">substrate-node-template</a> and has the following advantages:</p>
+              <p><ul>
+                <li>It is now possible to become a validator on the Acuity network. This is an important step for Acuity to become fully decentralized. The process for setting up an Acuity validator node is very similar to <a href="https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-polkadot">Polkadot</a>.</li>
+                <li>The <a href="https://www.substrate.io/kb/smart-contracts/contracts-pallet">Contracts</a> pallet has been enabled. This is key to deploying the <a href="https://github.com/acuity-social/acuity-contracts">Acuity</a> and <a href="https://github.com/acuity-social/acuity-atomic-swap">Atomic Swap</a> smart contracts that have been developed since the project began six years ago. They should be able to be compiled from Solidity to Wasm using the <a href="https://github.com/hyperledger-labs/solang">Solang</a> compiler.</li>
+                <li>If there is a problem with using the Contracts pallet, the <a href="https://www.substrate.io/kb/smart-contracts/evm-pallet">EVM</a> pallet can be enabled and the contracts compiled with the standard Solidity to EVM compiler.</li>
+                <li>The codebase can be easily <a href="https://github.com/substrate-developer-hub/substrate-parachain-template">updated</a> for Acuity to be able to become a parachain on Polkadot or Kusama.</li>
+              </ul></p>
+              <p>Unfortunately, because it was not possible to upgrade the Acuity blockchain directly to the new runtime a <a target="_blank" href="https://wiki.polkadot.network/docs/ru/glossary#hard-spoon">hard spoon</a> had to be performed. This involved taking a snapshot of all the ACU balances and unclaimed MIX balances and creating a new genesis specification. This has the following disadvantages:</p>
+              <p><ul>
+                <li>2,000,000 blocks of history are no longer archived on the main chain.</li>
+                <li>Account identity information has been lost. Registrars will need to enabled and on-chain identities re-established.</li>
+                <li>The council has been reset and will need to be voted in again.</li>
+                <li>Nominators will need to rebond their stake and controller accounts.</li>
+              </ul></p>
+            </div>
+            <div class="text-h6 mb-1">Community discussions moving to Matrix</div>
+            <div class="body-2 mb-4">
+              <p>Previously community discussions had occured on group instance messaging platforms Discord and Telegram. Ultimately, the goal is for these discussions to move to Acuity itself. In the mean time the offical place to discuss Acuity will be on the <a href="https://matrix.org/">Matrix</a> platform.</p>
+              <p>Matrix has a lot in common with Acuity. It is open source, non-proprietary, and permissionlessly extensible. It is also quite different. It is more ephemeral and can be private, whereas Acuity is permanent and fully public. Acuity does not have the concept of a "home server", it is entirely serverless.</p>
+              <p>The Acuity community on Matrix has been created and the various channels on Discord and Telegram have been deprecated.</p>
+              <p>The new Matrix community will be strictly moderated. Only constructive messages will be permitted and there will be no price discussion.</p>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="10">
+        <v-card elevation="10" outlined>
+          <v-card-text>
             <div class="text-h5 mb-1">Acuity Parachain Strategy</div>
             <div class="subtitle-2 mb-4">19th March 2021 by Jonathan Brown</div>
             <div class="body-2 mb-4">
