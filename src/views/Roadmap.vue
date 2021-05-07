@@ -109,12 +109,6 @@
           completed: true,
         },
         {
-          when: '31st July 2020',
-          title: 'Acuity Ambassador Program Launched',
-          text: 'As we migrate Acuity to Polkadot we need to bootstrap the social media platform. The purpose of the <a href="/ambassador">Ambassador Program</a> is to foster growth in a diversity of communities.',
-          completed: true,
-        },
-        {
           when: '1st September 2020',
           title: 'Substrate Regenesis',
           text: 'A snapshot of all MIX accounts and balances was recorded at block 7,396,472.',

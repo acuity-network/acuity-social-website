@@ -136,11 +136,6 @@ export default Vue.extend({
         title: 'Support Acuity',
       },
 */
-      {
-        to: '/ambassador',
-        icon: 'mdi-account-heart',
-        title: 'Ambassador Program',
-      },
     ],
     socialLinks: [
       {

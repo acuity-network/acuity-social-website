@@ -23,7 +23,7 @@
             </div>
             <div class="text-h5 mb-1">How did the migration happen?</div>
             <div class="body-2 mb-4">On 1st September 2020 at 5am UTC a snapshot of all balances on MIX blockchain occurred. On 3rd September the new Acuity blockchain launched. All MIX holders have be allocated the same amount of ACU as they held in MIX at the time of the snapshot.</div>
-            <div class="body-2 mb-4">ACU can be claimed by signing a message from a MIX address using MyCrypto, MyEtherWallet, Metamask or Coinomi. Acuity ambassador Arun Goutham has published some excellent <a target="_blank" href="https://www.youtube.com/channel/UCbAIcinwIejHlpMAYHEA9dg">tutorials</a> on his YouTube channel.</div>
+            <div class="body-2 mb-4">ACU can be claimed by signing a message from a MIX address using MyCrypto, MyEtherWallet, Metamask or Coinomi. Arun Goutham has published some excellent <a target="_blank" href="https://www.youtube.com/channel/UCbAIcinwIejHlpMAYHEA9dg">tutorials</a> on his YouTube channel.</div>
             <div class="text-h5 mb-1">Was any extra ACU be created during Regenesis?</div>
             <div class="body-2 mb-4">No. Only ACU that can be claimed 1:1 from MIX balances will come into existence during Regenesis.</div>
           </v-card-text>
