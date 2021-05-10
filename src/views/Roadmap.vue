@@ -27,13 +27,13 @@
         {
           when: '26th November 2015',
           title: 'Work started on BlobStore',
-          text: 'The Ethereum mainnet had just been launched over the summer. This was the first technology that could be used to build a fully autonomous and permanent social media platform. The primary Acuity smart contract, ItemStore was originally called BlobStore and the first version was only <a href="https://github.com/acuity-social/mix-item-store/blob/6f0c4f3f87ba2571fd8f5e00c74f006194abe749/blobstore.sol">23 lines long</a>.',
+          text: 'The Ethereum mainnet had just been launched over the summer. This was the first technology that could be used to build a fully autonomous and permanent social media platform. The primary Acuity smart contract, ItemStore was originally called BlobStore and the first version was only <a target="_blank" href="https://github.com/acuity-social/mix-item-store/blob/6f0c4f3f87ba2571fd8f5e00c74f006194abe749/blobstore.sol">23 lines long</a>.',
           completed: true,
         },
         {
           when: '17th December 2016',
           title: 'LINK Blockchain announced',
-          text: 'MIX Blockchain (the precursor to the Acuity Blockchain) was orginally called <a href="https://medium.com/mix-blockchain/introducing-link-blockchain-b447576ff438">LINK</a>.',
+          text: 'MIX Blockchain (the precursor to the Acuity Blockchain) was orginally called <a target="_blank" href="https://medium.com/mix-blockchain/introducing-link-blockchain-b447576ff438">LINK</a>.',
           completed: true,
         },
         {
@@ -45,13 +45,13 @@
         {
           when: '3rd June 2017',
           title: 'Switch from log storage to IPFS',
-          text: 'In the original design, published content (excluding attachments) was to be stored in Ethereum log storage. It was determined that IPFS would be a much better technology to store all content, with the hash of each content revision being stored in contract state. Here is the <a href="https://github.com/acuity-social/mix-item-store/commit/cf818ec28a236e6f1966a22f0dcd45eef267f6f2">commit</a>.',
+          text: 'In the original design, published content (excluding attachments) was to be stored in Ethereum log storage. It was determined that IPFS would be a much better technology to store all content, with the hash of each content revision being stored in contract state. Here is the <a target="_blank" href="https://github.com/acuity-social/mix-item-store/commit/cf818ec28a236e6f1966a22f0dcd45eef267f6f2">commit</a>.',
           completed: true,
         },
         {
           when: 'July 2017',
           title: 'Kuala Lumpur LINK Presentation',
-          text: 'Founder Jonathan Brown and developer James Drummond travelled to Kuala Lumpur to deliver a presentation about LINK. Here\'s the <a href="https://www.youtube.com/watch?v=ih1eUUm5duM">video</a>.',
+          text: 'Founder Jonathan Brown and developer James Drummond travelled to Kuala Lumpur to deliver a presentation about LINK. Here\'s the <a target="_blank" href="https://www.youtube.com/watch?v=ih1eUUm5duM">video</a>.',
           completed: true,
         },
         {
@@ -69,7 +69,7 @@
         {
           when: '15th March 2018',
           title: 'MIX Party San Francisco',
-          text: 'MIX threw a party in The Mission, San Francisco with a <a href="https://www.youtube.com/watch?v=obO0axRvxLo">project update</a> by Founder Jonathan Brown and a live swing band.',
+          text: 'MIX threw a party in The Mission, San Francisco with a <a target="_blank" href="https://www.youtube.com/watch?v=obO0axRvxLo">project update</a> by Founder Jonathan Brown and a live swing band.',
           completed: true,
         },
         {
@@ -81,13 +81,13 @@
         {
           when: '4th February 2019',
           title: 'Chiang Mai Presentation',
-          text: 'Jonathan Brown gave a <a href="https://www.youtube.com/watch?v=lF5PZDWgmEs">project update</a> in Chiang Mai.',
+          text: 'Jonathan Brown gave a <a target="_blank" href="https://www.youtube.com/watch?v=lF5PZDWgmEs">project update</a> in Chiang Mai.',
           completed: true,
         },
         {
           when: '5th August 2019',
           title: 'MIX Acuity Browser released',
-          text: 'The MIX Acuity desktop browser for Windows, Mac and Linux was released. It is fully autonomous, doesn\'t connect to any servers and has rich functionaity such as profile creation, image publishing, feeds, topics and trust network - all implemented as <a href="https://docs.mix-blockchain.org/en/latest/smart_contracts.html">smart contracts</a>. It also has in-app mining.',
+          text: 'The MIX Acuity desktop browser for Windows, Mac and Linux was released. It is fully autonomous, doesn\'t connect to any servers and has rich functionaity such as profile creation, image publishing, feeds, topics and trust network - all implemented as <a target="_blank" href="https://docs.mix-blockchain.org/en/latest/smart_contracts.html">smart contracts</a>. It also has in-app mining.',
           completed: true,
         },
         {
@@ -99,13 +99,13 @@
         {
           when: '20th January 2020',
           title: 'Video publishing functionality',
-          text: 'The desktop app could transcoded the video to multiple resolutions and video could be streamed from IPFS in both the web app and the desktop app. Additionally a command line utility could synchronize video from YouTube to Acuity. Here\'s the <a href="https://www.youtube.com/watch?v=K_NSdHzQFdk">video</a>.',
+          text: 'The desktop app could transcoded the video to multiple resolutions and video could be streamed from IPFS in both the web app and the desktop app. Additionally a command line utility could synchronize video from YouTube to Acuity. Here\'s the <a target="_blank" href="https://www.youtube.com/watch?v=K_NSdHzQFdk">video</a>.',
           completed: true,
         },
         {
           when: '8th June 2020',
           title: 'Migration to Substrate / Polkadot announced',
-          text: 'An independent Ethereum PoW blockchain had been an excellent technology to develop the platform on. Now MIX is moving to the Polkadot eco-system as a Substrate PoS blockchain. This has many advantages: increased economic security, cheaper transactions, greater capacity, autonomous communication with other blockchains, standardized tooling, extensibile functionality, autonomous upgrades. Additionally the MIX name is being droped entirely in favour of ACUITY. Here\'s the <a href="https://www.youtube.com/watch?v=IQqgqCEQW9o">video announcement</a>.',
+          text: 'An independent Ethereum PoW blockchain had been an excellent technology to develop the platform on. Now MIX is moving to the Polkadot eco-system as a Substrate PoS blockchain. This has many advantages: increased economic security, cheaper transactions, greater capacity, autonomous communication with other blockchains, standardized tooling, extensibile functionality, autonomous upgrades. Additionally the MIX name is being droped entirely in favour of ACUITY. Here\'s the <a target="_blank" href="https://www.youtube.com/watch?v=IQqgqCEQW9o">video announcement</a>.',
           completed: true,
         },
         {
@@ -138,7 +138,7 @@
         {
           when: '',
           title: 'Connect to Kusama',
-          text: '<a href="https://kusama.network/">Kusama</a> is the experimental version of Polkadot. It will enable greater security, inter-blockchain communication and access to decentralized exchanges.',
+          text: '<a target="_blank" href="https://kusama.network/">Kusama</a> is the experimental version of Polkadot. It will enable greater security, inter-blockchain communication and access to decentralized exchanges.',
         },
         {
           when: '',
@@ -153,7 +153,7 @@
         {
           when: '',
           title: 'Connect to Polkadot',
-          text: '<a href="https://polkadot.network/">Polkadot</a> is Kusama for grownups. Connecting to Polkadot will seal the status of Acuity as one of the most prominent blockchains in existence.',
+          text: '<a target="_blank" href="https://polkadot.network/">Polkadot</a> is Kusama for grownups. Connecting to Polkadot will seal the status of Acuity as one of the most prominent blockchains in existence.',
         },
         {
           when: '18th October 2022',

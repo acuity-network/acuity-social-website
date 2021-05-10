@@ -33,17 +33,17 @@
       items: [
         {
           title: 'Design system',
-          text: 'Perform detailed research and analysis to determine how ACU can utilize <a href="https://en.bitcoin.it/wiki/Atomic_swap"atomic swaps</a> to trade with Ethereum blockchains.',
+          text: 'Perform detailed research and analysis to determine how ACU can utilize <a target="_blank" href="https://en.bitcoin.it/wiki/Atomic_swap"atomic swaps</a> to trade with Ethereum blockchains.',
           completed: true,
         },
         {
           title: 'Write smart contracts',
-          text: '<a href="https://github.com/acuity-social/acuity-atomic-swap">Two solidity smart contracts</a> have been written: one for selling and one for buying. Both contracts will be deployed on each participating blockchain.',
+          text: '<a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap">Two solidity smart contracts</a> have been written: one for selling and one for buying. Both contracts will be deployed on each participating blockchain.',
           completed: true,
         },
         {
           title: 'Unit tests',
-          text: 'Write unit tests for the smart contracts using the <a href="https://dapp.tools/dapp/">Dapp</a> framework.',
+          text: 'Write unit tests for the smart contracts using the <a target="_blank" href="https://dapp.tools/dapp/">Dapp</a> framework.',
           completed: true,
         },
         {
@@ -53,12 +53,12 @@
         },
         {
           title: 'Off-chain worker to index order book',
-          text: 'Only data required for consensus is stored in contract state. An <a href="https://substrate.dev/docs/en/knowledgebase/learn-substrate/off-chain-features#off-chain-workers">off-chain worker</a> needs to be written to index information such as the order book.',
+          text: 'Only data required for consensus is stored in contract state. An <a target="_blank" href="https://substrate.dev/docs/en/knowledgebase/learn-substrate/off-chain-features#off-chain-workers">off-chain worker</a> needs to be written to index information such as the order book.',
           completed: false,
         },
         {
           title: 'Create basic frontend',
-          text: 'A simple user interface will be created using <a href="https://vuetifyjs.com/">Vuetify</a>.',
+          text: 'A simple user interface will be created using <a target="_blank" href="https://vuetifyjs.com/">Vuetify</a>.',
           completed: false,
         },
         {
@@ -68,7 +68,7 @@
         },
         {
           title: 'Deploy contracts on Acuity',
-          text: 'On Acuity the smart contracts can either by compiled with <a href="https://solang.readthedocs.io/">Solang</a> and deployed on the <a href="https://substrate.dev/docs/en/knowledgebase/smart-contracts/contracts-pallet">Contracts</a> pallet, or compiled with <a href="https://soliditylang.org/">Solc</a> and deployed on the <a href="https://github.com/paritytech/frontier">EVM</a> pallet.',
+          text: 'On Acuity the smart contracts can either by compiled with <a target="_blank" href="https://solang.readthedocs.io/">Solang</a> and deployed on the <a target="_blank" href="https://substrate.dev/docs/en/knowledgebase/smart-contracts/contracts-pallet">Contracts</a> pallet, or compiled with <a target="_blank" href="https://soliditylang.org/">Solc</a> and deployed on the <a target="_blank" href="https://github.com/paritytech/frontier">EVM</a> pallet.',
           completed: false,
         },
         {

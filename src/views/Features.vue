@@ -35,7 +35,7 @@
       cards: [
         {
           title: 'Permanent',
-          text: '<p>Existing centralized social media platforms are highly unreliable as an historical record. Blockchain based social media platforms solve this problem. Everytime a content item is published or updated on Acuity it is timestamped and the IPFS hash is stored in contract state. This is an extremely powerful property of the system. In hundreds of years time people will be able to examine the blockchain and know who said what when and to whom.</p>',
+          text: '<p>Existing centralized social media platforms are highly unreliable as an historical record. Blockchain based social media platforms solve this problem. Everytime a content item is published or updated on Acuity it is timestamped and the <a target="_blank" href="https://ipfs.io/">IPFS</a> hash is stored in contract state. This is an extremely powerful property of the system. In hundreds of years time people will be able to examine the blockchain and know who said what when and to whom.</p>',
           contract: 'https://github.com/acuity-social/acuity-contracts/blob/master/src/mix-item-store/MixItemStoreIpfsSha256.sol',
         },
 /*        {
@@ -76,9 +76,9 @@
         },
         {
           title: 'Video',
-          text: '<p>Videos published on Acuity are transcoded from the source video into multiple resolutions of H.264 video. This codec is high quality, very fast to encode and highly compatible. Transcoding can occur locally on the device or on your server using <a href="https://www.ffmpeg.org/">FFmpeg</a>, or with a SaaS solution such as Encoding.com.</p>\
-          <p>Each encoding of the video, and optionally the source video, is then stored in IPFS. Subscribers to your content will then "pin" the files to pull them to their devices. Additionally <a href="https://filecoin.io/">Filecoin</a> can be used to pay to make sure your videos are available. Centralized services such as <a href="https://pinata.cloud/">Pinata</a> can also be used.</p>\
-          <p>Videos published on other services can be synchronized to Acuity using the extremely powerful <a href="http://ytdl-org.github.io/youtube-dl/about.html">youtube-dl</a>.</p>\
+          text: '<p>Videos published on Acuity are transcoded from the source video into multiple resolutions of H.264 video. This codec is high quality, very fast to encode and highly compatible. Transcoding can occur locally on the device or on your server using <a target="_blank" href="https://www.ffmpeg.org/">FFmpeg</a>, or with a SaaS solution such as Encoding.com.</p>\
+          <p>Each encoding of the video, and optionally the source video, is then stored in IPFS. Subscribers to your content will then "pin" the files to pull them to their devices. Additionally <a target="_blank" href="https://filecoin.io/">Filecoin</a> can be used to pay to make sure your videos are available. Centralized services such as <a target="_blank" href="https://pinata.cloud/">Pinata</a> can also be used.</p>\
+          <p>Videos published on other services can be synchronized to Acuity using the extremely powerful <a target="_blank" href="http://ytdl-org.github.io/youtube-dl/about.html">youtube-dl</a>.</p>\
           <p>Because a video is just another Acuity content item it supports revisioning. This means videos can be updated.</p>',
           video: 'https://www.youtube.com/watch?v=K_NSdHzQFdk',
         },

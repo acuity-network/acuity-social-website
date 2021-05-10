@@ -15,7 +15,7 @@
             <div class="body-2 mb-4">Acuity has the currency code ACU and can be freely transferred and traded. There are currently two mains ways to trade ACU:
             <ul>
               <li>STEX have an <a href="https://app.stex.com/en/trade/pair/ETH/ACU" target="_blank">ACU/ETH</a> pair.</li>
-              <li>You can find someone to trade with OTC in the <a href="https://matrix.to/#/!kfaMBmYfTFkOzPtvdH:matrix.org?via=matrix.org">Trading</a> room in the Acuity Matrix community.</li>
+              <li>You can find someone to trade with OTC in the <a target="_blank" href="https://matrix.to/#/!kfaMBmYfTFkOzPtvdH:matrix.org?via=matrix.org">Trading</a> room in the Acuity Matrix community or in the <a href="https://discordapp.com/invite/GxD7adN" target="_blank">Acuity Discord</a>.</li>
             </ul>
             </div>
             <div class="text-h6 mb-1">Atomic Swap</div>
@@ -44,8 +44,8 @@
                 <li><a href="https://www.youtube.com/watch?v=QqlUYCrhKWw" target="_blank">Staking on Polkadot UI, Everything you need to know!</a> (video)</li>
               </ul>
             </div>
-            <div class="body-2 mb-4">In order to run a validator you will need to build the Acuity binary from the <a href="https://github.com/acuity-social/acuity-substrate" target="_blank">acuity-substrate</a> repo.</div>
-            <div class="body-2 mb-4">Please join the Staking channel on <a href="https://discordapp.com/invite/GxD7adN" target="_blank">Acuity Discord</a> to discuss.</div>
+            <div class="body-2 mb-4">In order to run a validator you will need to download the Acuity binary from the <a href="https://github.com/acuity-social/acuity-substrate" target="_blank">acuity-substrate</a> repo.</div>
+            <div class="body-2 mb-4">Please join the <a target="_blank" href="https://matrix.to/#/!uvBQLOQZzBidUJYjWK:matrix.org?via=matrix.org">Staking</a> room on Acuity Matrix</a> to discuss.</div>
             <div class="text-h4 mb-1">Anything else...</div>
           </v-card-text>
         </v-card>

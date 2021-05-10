@@ -9,7 +9,7 @@
 
               <p>Videos of the Acuity Browser can be seen on the <a target="_blank" href="https://www.youtube.com/channel/UCkvRVEWnTPWWYJQqPbYwyiw">Acuity</a> YouTube channel.</p>
 
-              <p>On June 8th of this year it was <a target="_blank" href="https://www.youtube.com/watch?v=IQqgqCEQW9o">announced</a> that Acuity would be migrating from MIX to a <a target="_blank" href="https://www.substrate.io/">Substrate</a>-based blockchain in the Polkadot ecosystem.</p>
+              <p>On June 8th 2020 it was <a target="_blank" href="https://www.youtube.com/watch?v=IQqgqCEQW9o">announced</a> that Acuity would be migrating from MIX to a <a target="_blank" href="https://www.substrate.io/">Substrate</a>-based blockchain in the Polkadot ecosystem.</p>
 
               <p>On 1st September the Acuity <router-link to="/regenesis">Regenesis</router-link> occurred and a snapshot of all MIX balances was recorded. A few days later the new blockchain was launched. The MIX cryptocurrency no longer exists.</p>
 
