@@ -6,6 +6,8 @@
           :headers="headers"
           :items="items"
         ></v-data-table>
+        <v-text-field v-model="address" label="Address"></v-text-field>
+        <v-btn>Goto</v-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -31,6 +33,7 @@
           { text: 'Address', value: 'address' },
         ],
         items: [],
+        address: '',
       }
     },
 
