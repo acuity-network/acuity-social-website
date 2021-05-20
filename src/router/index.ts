@@ -12,6 +12,7 @@ import Regenesis from '../views/Regenesis.vue'
 import ACU from '../views/ACU.vue'
 import AtomicSwap from '../views/AtomicSwap.vue'
 import Blog from '../views/Blog.vue'
+import Accounts from '../views/Accounts.vue'
 
 Vue.use(VueRouter)
 
@@ -83,6 +84,12 @@ const routes: Array<RouteConfig> = [
     name: 'blog',
     component: Blog,
     meta: { title: 'Blog' },
+  },
+  {
+    path: '/accounts',
+    name: 'accounts',
+    component: Accounts,
+    meta: { title: 'Accounts' },
   },
 ]
 

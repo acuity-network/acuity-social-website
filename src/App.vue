@@ -124,6 +124,11 @@ export default Vue.extend({
         icon: 'mdi-format-quote-open',
         title: 'Blog',
       },
+      {
+        to: '/accounts',
+        icon: 'mdi-account',
+        title: 'Accounts',
+      },
 /*
       {
         to: '/comparison',
