@@ -10,5 +10,16 @@ module.exports = {
       localeDir: 'locales',
       enableInSFC: true
     }
+  },
+  configureWebpack: {
+    module: {
+      rules: [
+        {
+          type: 'javascript/auto',
+          test: /\.mjs$/,
+          use: [],
+        },
+      ]
+    }
   }
 }
