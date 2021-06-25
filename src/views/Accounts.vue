@@ -2,9 +2,13 @@
   <v-container>
     <v-row>
       <v-col cols="12" md="10">
-        <v-data-table
-          :headers="headers"
-          :items="items"
+        <v-data-table :headers="headers" :items="items" @click:row="click"
+
+        item-key="address"
+        v-model="selected"
+        show-select
+        :single-select="true"
+
         ></v-data-table>
         <v-text-field v-model="address" label="Address"></v-text-field>
         <v-btn>Goto</v-btn>
@@ -34,6 +38,7 @@
         ],
         items: [],
         address: '',
+        selected: []
       }
     },
 
@@ -46,7 +51,15 @@
           name: account.meta.name,
         });
       }
+      this.selected = [{address: this.$activeAccount.address}];
     },
 
+    // define methods under the `methods` object
+    methods: {
+      click: function (event, row) {
+        this.$activeAccount.address = event.address;
+        row.select(true);
+      }
+    }
   })
 </script>
