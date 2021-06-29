@@ -178,7 +178,8 @@ export default Vue.extend({
   async created() {
     this.darkMode = this.$vuetify.theme.dark = true
 
-    let wsProvider = new WsProvider('wss://acuity.social:9961')
+    let acuityEndpoint = (process.env.NODE_ENV == 'development') ? 'ws://127.0.0.1:9946' : 'wss://acuity.social:9961';
+    let wsProvider = new WsProvider(acuityEndpoint);
     ApiPromise.create({ provider: wsProvider }).then(async api => {
       this.$api = api
       await this.$api.isReady
