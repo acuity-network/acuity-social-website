@@ -193,9 +193,10 @@ export default Vue.extend({
       return this.$route.name != 'support'
     },
     breadcrumbs() {
+      let vue: any = this;
       return [
         {
-          text: this.$route.meta.title,
+          text: vue.$route.meta.title,
           disabled: true,
         },
       ]

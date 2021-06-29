@@ -56,7 +56,7 @@
 
     // define methods under the `methods` object
     methods: {
-      click: function (event, row) {
+      click(event: any, row: any) {
         this.$activeAccount.address = event.address;
         row.select(true);
       }
