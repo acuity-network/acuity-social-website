@@ -36,9 +36,9 @@
           { text: 'Name', value: 'name' },
           { text: 'Address', value: 'address' },
         ],
-        items: [],
+        items: [] as {}[],
         address: '',
-        selected: []
+        selected: [] as {}[],
       }
     },
 
