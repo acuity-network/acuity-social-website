@@ -7,7 +7,11 @@ import i18n from './i18n'
 
 Vue.config.productionTip = false
 
-Vue.prototype.$activeAccount = {};
+import activeAccount from './lib/activeAccount'
+Vue.prototype.$activeAccount = activeAccount
+
+import AcuityClient from './lib/AcuityClient'
+Vue.prototype.$acuityClient = new AcuityClient()
 
 new Vue({
   router,

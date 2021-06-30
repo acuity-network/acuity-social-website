@@ -105,7 +105,7 @@ export default Vue.extend({
         title: 'ACU',
       },
       {
-        to: '/atomic-swap',
+        to: '/atomic-swap/test',
         icon: 'mdi-atom-variant',
         title: 'Atomic Swap',
       },
@@ -176,17 +176,12 @@ export default Vue.extend({
   }),
 
   async created() {
-    this.darkMode = this.$vuetify.theme.dark = true
+    this.darkMode = this.$vuetify.theme.dark = true;
 
-    let acuityEndpoint = (process.env.NODE_ENV == 'development') ? 'ws://127.0.0.1:9946' : 'wss://acuity.social:9961';
-    let wsProvider = new WsProvider(acuityEndpoint);
-    ApiPromise.create({ provider: wsProvider }).then(async api => {
-      this.$api = api
-      await this.$api.isReady
-      this.$api.rpc.chain.subscribeNewHeads((lastHeader: any) => {
-        this.blockNumber = lastHeader.number.toString()
-      })
-    })
+    await this.$acuityClient.init(this.$root);
+    this.$acuityClient.api.rpc.chain.subscribeNewHeads((lastHeader: any) => {
+      this.blockNumber = lastHeader.number.toString();
+    });
   },
 
   computed: {

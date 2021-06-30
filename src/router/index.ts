@@ -11,6 +11,7 @@ import Support from '../views/Support.vue'
 import Regenesis from '../views/Regenesis.vue'
 import ACU from '../views/ACU.vue'
 import AtomicSwap from '../views/AtomicSwap.vue'
+import AtomicSwapTest from '../views/AtomicSwapTest.vue'
 import Blog from '../views/Blog.vue'
 import Accounts from '../views/Accounts.vue'
 
@@ -78,6 +79,12 @@ const routes: Array<RouteConfig> = [
     name: 'atomic-swap',
     component: AtomicSwap,
     meta: { title: 'Atomic Swap' },
+  },
+  {
+    path: '/atomic-swap/test',
+    name: 'atomic-swap-test',
+    component: AtomicSwapTest,
+    meta: { title: 'Atomic Swap Test' },
   },
   {
     path: '/blog',

@@ -51,13 +51,15 @@
           name: account.meta.name,
         });
       }
-      this.selected = [{address: this.$activeAccount.address}];
+      console.log(this.$activeAccount.get())
+      this.selected = [{address: this.$activeAccount.get()}];
     },
 
     // define methods under the `methods` object
     methods: {
       click(event: any, row: any) {
-        this.$activeAccount.address = event.address;
+        this.$activeAccount.set(event.address);
+        console.log(this.$activeAccount.get())
         row.select(true);
       }
     }
