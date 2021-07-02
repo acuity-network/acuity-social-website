@@ -13,6 +13,7 @@
   },
   "main": "background.js",
   "dependencies": {
+    "@metamask/detect-provider": "^1.2.0",
     "@polkadot/api": "^4.15.1",
     "@polkadot/extension-dapp": "^0.38.6",
     "@polkadot/util": "^6.9.1",
