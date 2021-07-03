@@ -5,7 +5,18 @@
         <v-alert type="info">The Acuity DEX is currently under development. It will enable ACU to be traded with ETH and ETC peer-to-peer.</v-alert>
       </v-col>
     </v-row>
+
     <v-row>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title><router-link to="/atomic-swap/polkadot">Create Polkadot Sell Order</router-link></v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title><router-link to="/atomic-swap/ethereum">Create Ethereum Sell Order</router-link></v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
       <v-col cols="12" md="10">
         <v-timeline dense="true" style="margin: 0 20px;">
           <v-timeline-item v-for="(item, i) in items" :key="i"
