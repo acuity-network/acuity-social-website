@@ -3,11 +3,13 @@
     <v-row>
       <v-col cols="12" md="10">
         <div class="text-h5 mb-1">Create Ethereum sell order</div>
-        <v-select v-model="asset" :items="assets" label="Asset"></v-select>
-        <v-select v-model="address" :items="addresses" label="Account"></v-select>
+        <v-select v-model="sell_asset" :items="sell_assets" label="Sell Asset"></v-select>
+        <v-select v-model="sell_address" :items="sell_addresses" label="Sell Account"></v-select>
+        <v-text-field v-model="sell_value" label="Sell Value"></v-text-field>
+        <v-select v-model="buy_blockchain" :items="buy_blockchains" label="Buy Blockchain"></v-select>
+        <v-select v-model="buy_asset" :items="buy_assets" label="Buy Asset"></v-select>
+        <v-select v-model="buy_address" :items="buy_addresses" label="Buy Account"></v-select>
         <v-text-field v-model="price" label="Price"></v-text-field>
-        <v-text-field v-model="value" label="Value"></v-text-field>
-        <v-text-field v-model="foreign_address" label="Foreign address"></v-text-field>
         <v-btn @click="addSellOrder">Create Sell Order</v-btn>
       </v-col>
     </v-row>
@@ -29,13 +31,18 @@
 
     data () {
       return {
-        assets: ['ETH'],
-        asset: 'ETH',
-        addresses: [] as {}[],
-        address: '',
+        sell_assets: ['ETH'],
+        sell_asset: 'ETH',
+        sell_addresses: [] as {}[],
+        sell_address: '',
+        sell_value: '',
+        buy_blockchains: ['Acuity'],
+        buy_blockchain: 'Acuity',
+        buy_assets: ['ACU'],
+        buy_asset: 'ACU',
+        buy_addresses: [] as {}[],
+        buy_address: '',
         price: '',
-        value: '',
-        foreign_address: '',
       }
     },
 
@@ -43,7 +50,12 @@
       await this.$ethClient.web3.eth.requestAccounts()
       const allAccounts = await this.$ethClient.web3.eth.getAccounts()
       for (let account of allAccounts) {
-          this.addresses.push({text: account, value: account});
+          this.sell_addresses.push({text: account, value: account});
+      }
+      const allInjected = await web3Enable('Acuity Browser');
+      const buyAccounts = await web3Accounts();
+      for (let account of buyAccounts) {
+          this.buy_addresses.push({text: account.meta.name, value: account.address});
       }
     },
 

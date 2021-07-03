@@ -3,12 +3,14 @@
     <v-row>
       <v-col cols="12" md="10">
         <div class="text-h5 mb-1">Create Polkadot sell order</div>
-        <v-select v-model="blockchain" :items="blockchains" label="Blockchain"></v-select>
-        <v-select v-model="asset" :items="assets" label="Asset"></v-select>
-        <v-select v-model="address" :items="addresses" label="Account"></v-select>
+        <v-select v-model="sell_blockchain" :items="sell_blockchains" label="Sell Blockchain"></v-select>
+        <v-select v-model="sell_asset" :items="sell_assets" label="Sell Asset"></v-select>
+        <v-select v-model="sell_address" :items="sell_addresses" label="Sell Account"></v-select>
+        <v-text-field v-model="sell_value" label="Sell Value"></v-text-field>
+        <v-select v-model="buy_blockchain" :items="buy_blockchains" label="Buy Blockchain"></v-select>
+        <v-select v-model="buy_asset" :items="buy_assets" label="Buy Asset"></v-select>
+        <v-select v-model="buy_address" :items="buy_addresses" label="Buy Account"></v-select>
         <v-text-field v-model="price" label="Price"></v-text-field>
-        <v-text-field v-model="value" label="Value"></v-text-field>
-        <v-text-field v-model="foreign_address" label="Foreign address"></v-text-field>
         <v-btn @click="addSellOrder">Create Sell Order</v-btn>
       </v-col>
     </v-row>
@@ -30,29 +32,35 @@
 
     data () {
       return {
-        blockchains: ['Acuity'],
-        blockchain: 'Acuity',
-        assets: ['ACU'],
-        asset: 'ACU',
-        addresses: [] as {}[],
-        address: '',
+        sell_blockchains: ['Acuity'],
+        sell_blockchain: 'Acuity',
+        sell_assets: ['ACU'],
+        sell_asset: 'ACU',
+        sell_addresses: [] as {}[],
+        sell_address: '',
+        sell_value: '',
+        buy_blockchains: ['Ethereum'],
+        buy_blockchain: 'Ethereum',
+        buy_assets: ['ETH'],
+        buy_asset: 'ETH',
+        buy_addresses: [] as {}[],
+        buy_address: '',
         price: '',
-        value: '',
-        foreign_address: '',
       }
     },
 
     async created() {
       const allInjected = await web3Enable('Acuity Browser');
       const allAccounts = await web3Accounts();
-
-      console.log(allAccounts);
-
       for (let account of allAccounts) {
-          this.addresses.push({text: account.meta.name, value: account.address});
+          this.sell_addresses.push({text: account.meta.name, value: account.address});
+      }
+      await this.$ethClient.web3.eth.requestAccounts()
+      const ethAccounts = await this.$ethClient.web3.eth.getAccounts()
+      for (let account of ethAccounts) {
+          this.buy_addresses.push({text: account, value: account});
       }
 
-      console.log(this.addresses)
     },
 
     methods: {
