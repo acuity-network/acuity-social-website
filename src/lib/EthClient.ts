@@ -6,8 +6,9 @@ export default class MixClient {
   formatWei: any
 
 	async init(vue: any) {
+/*
     // This function detects most providers injected at window.ethereum
-    const provider = await detectEthereumProvider();
+    const provider: AbstractProvider = await detectEthereumProvider();
 
     if (provider) {
       this.web3 = new Web3(provider);
@@ -18,5 +19,6 @@ export default class MixClient {
     } else {
       console.log('Please install MetaMask!');
     }
+    */
   }
 }

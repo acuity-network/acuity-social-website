@@ -18,7 +18,7 @@
         </v-list-item-content>
       </v-list-item>
       <v-col cols="12" md="10">
-        <v-timeline dense="true" style="margin: 0 20px;">
+        <v-timeline :dense="true" style="margin: 0 20px;">
           <v-timeline-item v-for="(item, i) in items" :key="i"
             :color="item.completed ? '#E6007A' : primary"
             :icon="item.completed ? 'mdi-check' : ''"

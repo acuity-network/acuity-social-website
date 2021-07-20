@@ -65,13 +65,14 @@
 
     methods: {
       async addSellOrder(event: any) {
-        const SENDER = this.$activeAccount.get();
+/*        const SENDER = this.$activeAccount.get();
         const injector = await web3FromAddress(SENDER);
         this.$acuityClient.api.tx.atomicSwap
           .addToOrder('0x', this.price, this.foreign_address, this.value)
           .signAndSend(SENDER, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });
+*/
       }
     }
   })
