@@ -57,9 +57,9 @@
           text: 'The Acuity Browser is a desktop app, a web app, and an Android app. All built from the same <a target="_blank" href="https://vuejs.org/">Vue.js</a> codebase. Vue is an incredibly powerful platform that enables complex applications to be built with ease. Because it is based in JavaScript it has access to a massive community of open source components, including <a target="_blank" href="https://polkadot.js.org/">Polkadot.js</a> and the Polkadot browser plugins.',
         },
         {
-          image: '/kusama.png',
-          title: 'Kusama',
-          text: 'Substrate-based blockchains will be able to connect together with Polkadot, but this is not ready yet. In the mean time an experimental version of Polkadot called <a target="_blank" href="https://kusama.network/">Kusama</a> has gone live. Connecting Acuity to Kusama will be an incredible way for Acuity to interact with other chains, including decentralized token exchange and publishing from other blockchains.',
+          image: '/rust.jpeg',
+          title: 'Rust',
+          text: '',
         },
       ],
     }),

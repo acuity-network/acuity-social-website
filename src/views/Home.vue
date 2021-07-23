@@ -8,7 +8,9 @@
     <v-row style="margin: 40px 0;">
       <v-col>
         <div style="color: #3cc3db; font-family: Raleway; text-align: center; font-size: 24px;">
-          {{ message }}<span class="blink-me">|</span>
+          {{ message }}<span class="blink-me">|</span><br /><br />
+          <router-link to="/parachains">Parachains Airdrop</router-link> in {{ days }} {{ $tc('days', days) }}, {{ hours }} {{ $tc('hours', hours) }}, {{ minutes }} {{ $tc('minutes', minutes) }}, {{ seconds }} {{ $tc('seconds', seconds) }}<br /><br />
+          ACU => ACR, ACU, ACF, ACT
         </div>
       </v-col>
     </v-row>
@@ -124,6 +126,7 @@
         'Wag the dog. ',
         'What you see is all there is. ',
         'Rings within rings. ',
+        'Go where you are treated best. ',
       ],
       row: 0,
       column: 0,
@@ -169,7 +172,7 @@
         }
       },
       updateTimeLeft() {
-        let msLeft = Math.max(1602896346000 - Date.now(), 0)
+        let msLeft = Math.max(1633280400000 - Date.now(), 0)
         this.days = Math.floor(msLeft / 86400000)
         msLeft %= 86400000
         this.hours = Math.floor(msLeft / 3600000)

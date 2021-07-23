@@ -9,6 +9,29 @@
       <v-col cols="12" md="10">
         <v-card elevation="10" outlined>
           <v-card-text>
+            <div class="text-h5 mb-1">Acuity DEX Alpha Testing and Parachain Airdrop</div>
+            <div class="subtitle-2 mb-4">23rd July 2021 by Jonathan Brown</div>
+            <div class="text-h6 mb-1">Acuity atomic swap decentralized exchange gears up for alpha testing</div>
+            <div class="body-2 mb-4">
+              <p>The <router-link to="/atomic-swap">Acuity DEX</router-link> is approaching minimum viable product. To begin with it will have a simple pair ACU / ETH. It will be possible to trade ETH stored in <a target="_blank" href="https://metamask.io/">Metamask</a> for ACU stored in the <a target="_blank" href="https://polkadot.js.org/extension/">Polkadot browser extension</a>. The <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-solidity">Solidity smart contracts</a> and the <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-pallet">Substrate pallet</a> are both mature. Development of a Rust-based <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-offchain">off-chain worker</a> to index the order book continues. Basic UI is coming together.</p>
+              <p>We will be adding many more pairs in future, including all ERC20 tokens, Avalanche, and Substrate chains that have enabled a supported pallet (Acuity, Contracts, or EVM).</p>
+              <p>Support for trading with Ethereum via new layer 2 technologies like <a target="_blank" href="https://optimism.io/">Optimism</a> and <a target="_blank" href="https://arbitrum.io/">Abritrum</a> is a major priority to reduce transaction fees.</p>
+            </div>
+            <div class="text-h6 mb-1">Acuity parachains airdrop October 4th</div>
+            <div class="body-2 mb-4">
+              <p>In order to fully take advantage of the Substrate parachain system, the Acuity blockchain will be <router-link to="/parachains">federating</router-link> into 3 parachains and a relay chain. This will increase the scalability, security and flexibility of the whole system. The current ACU blockchain will become the Acuity DeFi parachain. The two new parachains will be:</p>
+              <p><ul>
+                <li>Acuity Feeds (ACF) - for feed based social content like Twitter and YouTube.</li>
+                <li>Acuity Topics (ACT) - for topic based content like Reddit.</li>
+              </ul></p>
+              <p>A snapshot of all ACU balances will be taken on October 4th and the new blockchains will be started. Each ACU holder will receive a balance of ACR, ACF and ACT equal to their balance of ACU.</p>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="10">
+        <v-card elevation="10" outlined>
+          <v-card-text>
             <div class="text-h5 mb-1">Project Update</div>
             <div class="subtitle-2 mb-4">5th May 2021 by Jonathan Brown</div>
             <div class="text-h6 mb-1">New Substrate implementation</div>

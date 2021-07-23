@@ -95,6 +95,11 @@ export default Vue.extend({
         title: 'Features',
       },
       {
+        to: '/parachains',
+        icon: 'mdi-expansion-card-variant',
+        title: 'Parachains',
+      },
+      {
         to: '/regenesis',
         icon: 'mdi-rocket-launch',
         title: 'Regenesis',
@@ -124,12 +129,12 @@ export default Vue.extend({
         icon: 'mdi-format-quote-open',
         title: 'Blog',
       },
+/*
       {
         to: '/accounts',
         icon: 'mdi-account',
         title: 'Accounts',
       },
-/*
       {
         to: '/comparison',
         icon: 'mdi-compare',

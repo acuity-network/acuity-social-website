@@ -8,6 +8,7 @@ import TechStack from '../views/TechStack.vue'
 //import Comparison from '../views/Comparison.vue'
 import Roadmap from '../views/Roadmap.vue'
 import Support from '../views/Support.vue'
+import Parachains from '../views/Parachains.vue'
 import Regenesis from '../views/Regenesis.vue'
 import ACU from '../views/ACU.vue'
 import AtomicSwap from '../views/AtomicSwap.vue'
@@ -63,6 +64,12 @@ const routes: Array<RouteConfig> = [
     meta: { title: 'Support' },
   },
 */
+  {
+    path: '/parachains',
+    name: 'parachains',
+    component: Parachains,
+    meta: { title: 'Parachains' },
+  },
   {
     path: '/regenesis',
     name: 'regenesis',

@@ -123,7 +123,12 @@
         {
           when: '',
           title: 'Acuity DEX',
-          text: 'Acuity will have its very own decentralized <a href="/atomic-swap">atomic swap exchange</a>. Using the Polkadot and Metamask browser plugins it will be possible to trade permissionlessly between ACU and ETH / ETC.',
+          text: 'Acuity will have its very own decentralized <a href="/atomic-swap">atomic swap exchange</a>. Using the Polkadot and Metamask browser plugins it will be possible to trade permissionlessly between many different cryptocurrencies.',
+        },
+        {
+          when: '4th October 2021',
+          title: 'Parachain Airdrop',
+          text: 'Holders of ACU will be <a href="/parachains">airdropped</a> ACR, ACF and ACT.',
         },
         {
           when: '',
@@ -137,11 +142,6 @@
         },
         {
           when: '',
-          title: 'Connect to Kusama',
-          text: '<a target="_blank" href="https://kusama.network/">Kusama</a> is the experimental version of Polkadot. It will enable greater security, inter-blockchain communication and access to decentralized exchanges.',
-        },
-        {
-          when: '',
           title: 'Creator Tokens Relaunch',
           text: 'Creator Tokens are a means for content creators to get paid without paywalls or advertising. Fans can conspicuously burn tokens issued by creators to prove they are real supporters. The Acuity project will also have a creator token, ACUITYFUND.',
         },
@@ -151,14 +151,9 @@
           text: 'Each device will index the content that it sees. When searching, the user\'s Trust Network will be queried recursively so search cannot be censored.',
         },
         {
-          when: '',
-          title: 'Connect to Polkadot',
-          text: '<a target="_blank" href="https://polkadot.network/">Polkadot</a> is Kusama for grownups. Connecting to Polkadot will seal the status of Acuity as one of the most prominent blockchains in existence.',
-        },
-        {
           when: '18th October 2022',
           title: 'Revenue contract ends',
-          text: 'The revenue smart contract will stop releasing ACUITY. Funding of the project will continue by the selling of the ACUITYFUND creator token for conspicuous burning.',
+          text: 'The revenue smart contract will stop releasing ACUITY.',
         },
       ],
     }),
