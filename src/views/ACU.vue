@@ -15,11 +15,11 @@
             <div class="body-2 mb-4">Acuity has the currency code ACU and can be freely transferred and traded. There are currently two mains ways to trade ACU:
             <ul>
               <li>STEX have an <a href="https://app.stex.com/en/trade/pair/ETH/ACU" target="_blank">ACU/ETH</a> pair.</li>
-              <li>You can find someone to trade with OTC in the <a target="_blank" href="https://matrix.to/#/!kfaMBmYfTFkOzPtvdH:matrix.org?via=matrix.org">Trading</a> room in the Acuity Matrix community or in the <a href="https://discordapp.com/invite/GxD7adN" target="_blank">Acuity Discord</a>.</li>
+              <li>You can find someone to trade with OTC on <a target="_blank" href="https://matrix.to/#/!kfaMBmYfTFkOzPtvdH:matrix.org?via=matrix.org">Element</a>, <a href="https://discord.gg/ekuJCWQeGz" target="_blank">Discord</a>, or <a target="_blank" href="https://t.me/Acuity_Trading">Telegram</a>.</li>
             </ul>
             </div>
             <div class="text-h6 mb-1">Atomic Swap</div>
-            <div class="body-2 mb-4">An important feature in the Acuity Roadmap is to have an <router-link to="/atomic-swap">atomic swap</router-link> exchange. It will be possible trade ACU/ETH on this website without any trusted third party. This will involve the simultaneous use of both the Polkadot and Metamask browser plugins.</div>
+            <div class="body-2 mb-4">An important feature in the Acuity Roadmap is to have an <router-link to="/atomic-swap">atomic swap</router-link> exchange. It will be possible trade ACU against many other assets without a third party. This will involve the simultaneous use of both the Polkadot and Metamask browser plugins.</div>
             <div class="text-h4 mb-1">Governance</div>
             <div class="body-2 mb-4">ACU is the governance token for Acuity. It uses standard <a href="https://wiki.polkadot.network/docs/en/learn-governance" target="_blank">Polkadot Governance</a>. This is a hierarchical system of checks and balances that enables the community to collaboratively decide how to make automated changes to the blockchain including replacing the runtime, retrieving lost funds and spending treasury funds.</div>
             <div class="text-h4 mb-1">Cash</div>
