@@ -14,7 +14,7 @@
             <div class="text-h4 mb-1">Trading</div>
             <div class="body-2 mb-4">Acuity has the currency code ACU and can be freely transferred and traded. There are currently two mains ways to trade ACU:
             <ul>
-              <li>STEX have an <a href="https://app.stex.com/en/trade/pair/ETH/ACU" target="_blank">ACU/ETH</a> pair.</li>
+              <li>STEX have an <a href="https://app.stex.com/en/trading/pair/ETH/ACU/1D" target="_blank">ACU/ETH</a> pair.</li>
               <li>You can find someone to trade with OTC on <a target="_blank" href="https://matrix.to/#/!kfaMBmYfTFkOzPtvdH:matrix.org?via=matrix.org">Element</a>, <a href="https://discord.gg/ekuJCWQeGz" target="_blank">Discord</a>, or <a target="_blank" href="https://t.me/Acuity_Trading">Telegram</a>.</li>
             </ul>
             </div>

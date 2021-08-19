@@ -181,7 +181,7 @@
 
             <div class="text-h6 mb-1">STEX</div>
             <div class="body-2 mb-4">
-              <p>It is now possible to trade ACU against ETH on <a target="_blank" href="https://app.stex.com/en/trade/pair/ETH/ACU">STEX</a>.</p>
+              <p>It is now possible to trade ACU against ETH on <a target="_blank" href="https://app.stex.com/en/trading/pair/ETH/ACU/1D">STEX</a>.</p>
             </div>
 
             <div class="text-h6 mb-1">ACU / ETH Atomic Swap Exchange</div>
