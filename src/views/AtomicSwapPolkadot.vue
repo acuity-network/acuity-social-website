@@ -60,20 +60,20 @@
       for (let account of ethAccounts) {
           this.buy_addresses.push({text: account, value: account});
       }
-
     },
 
     methods: {
       async addSellOrder(event: any) {
-/*        const SENDER = this.$activeAccount.get();
-        const injector = await web3FromAddress(SENDER);
+
+        console.log();
+        const injector = await web3FromAddress(this.sell_address);
         this.$acuityClient.api.tx.atomicSwap
-          .addToOrder('0x', this.price, this.foreign_address, this.value)
-          .signAndSend(SENDER, { signer: injector.signer }, (status: any) => {
+          .addToOrder('0x88888888888888888888888888888888', 1234, '0x8888888888888888888888888888888888888888888888888888888888888888', 1000)
+          .signAndSend(this.sell_address, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });
-*/
       }
     }
   })
+
 </script>
