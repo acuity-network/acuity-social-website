@@ -53,7 +53,11 @@
     </v-row>
 
     <v-row>
-      <!--
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title><router-link to="/atomic-swap/orderbook">Order Book</router-link></v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title><router-link to="/atomic-swap/polkadot">Create Polkadot Sell Order</router-link></v-list-item-title>
@@ -64,11 +68,10 @@
           <v-list-item-title><router-link to="/atomic-swap/ethereum">Create Ethereum Sell Order</router-link></v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-    -->
       <v-col cols="12" md="10" class="pt-0">
         <v-timeline :dense="true" style="margin: 0 20px;">
           <v-timeline-item v-for="(item, i) in items" :key="i"
-            :color="item.completed ? '#E6007A' : primary"
+            :color="item.completed ? '#E6007A' : 'primary'"
             :icon="item.completed ? 'mdi-check' : ''"
             >
             <v-card class="elevation-2">
