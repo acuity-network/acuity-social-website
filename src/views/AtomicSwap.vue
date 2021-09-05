@@ -55,17 +55,12 @@
     <v-row>
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title><router-link to="/atomic-swap/orderbook">Order Book</router-link></v-list-item-title>
+          <v-list-item-title><router-link to="/atomic-swap/polkadot">Acuity Sell Orders</router-link></v-list-item-title>
         </v-list-item-content>
       </v-list-item>
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title><router-link to="/atomic-swap/polkadot">Create Polkadot Sell Order</router-link></v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title><router-link to="/atomic-swap/ethereum">Create Ethereum Sell Order</router-link></v-list-item-title>
+          <v-list-item-title><router-link to="/atomic-swap/ethereum">Ethereum Sell Orders</router-link></v-list-item-title>
         </v-list-item-content>
       </v-list-item>
       <v-col cols="12" md="10" class="pt-0">
