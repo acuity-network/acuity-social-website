@@ -26,11 +26,14 @@
             <td>{{ order.price }}</td>
             <td>{{ order.value }}</td>
             <td>{{ order.seller }}</td>
-            <td v-if="order.owned">
-              <v-btn icon @click="add(order)"><v-icon small>mdi-plus</v-icon></v-btn>
-              <v-btn icon @click="remove(order)"><v-icon small>mdi-minus</v-icon></v-btn>
-              <v-btn icon @click="removeAll(order)"><v-icon small>mdi-delete</v-icon></v-btn>
-              <v-btn icon @click="change(order)"><v-icon small>mdi-pencil</v-icon></v-btn>
+            <td>
+              <v-btn icon @click="$router.push({ name: 'atomic-swap-polkadot-buy', params: { orderId: order.orderId } })"><v-icon small>mdi-atom-variant</v-icon></v-btn>
+              <span v-if="order.owned">
+                <v-btn icon @click="add(order)"><v-icon small>mdi-plus</v-icon></v-btn>
+                <v-btn icon @click="remove(order)"><v-icon small>mdi-minus</v-icon></v-btn>
+                <v-btn icon @click="removeAll(order)"><v-icon small>mdi-delete</v-icon></v-btn>
+                <v-btn icon @click="change(order)"><v-icon small>mdi-pencil</v-icon></v-btn>
+              </span>
             </td>
           </tr>
         </tbody>
@@ -135,6 +138,8 @@
     },
 
     methods: {
+      async swap(order: any) {
+      },
       async add(order: any) {
       },
       async remove(order: any) {

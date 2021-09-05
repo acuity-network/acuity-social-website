@@ -13,6 +13,7 @@ import Regenesis from '../views/Regenesis.vue'
 import ACU from '../views/ACU.vue'
 import AtomicSwap from '../views/AtomicSwap.vue'
 import AtomicSwapPolkadot from '../views/AtomicSwapPolkadot.vue'
+import AtomicSwapPolkadotBuy from '../views/AtomicSwapPolkadotBuy.vue'
 import AtomicSwapEthereum from '../views/AtomicSwapEthereum.vue'
 import Blog from '../views/Blog.vue'
 import Accounts from '../views/Accounts.vue'
@@ -93,6 +94,13 @@ const routes: Array<RouteConfig> = [
     name: 'atomic-swap-polkadot',
     component: AtomicSwapPolkadot,
     meta: { title: 'Atomic Swap' },
+  },
+  {
+    path: '/atomic-swap/polkadot/buy/:orderId',
+    name: 'atomic-swap-polkadot-buy',
+    component: AtomicSwapPolkadotBuy,
+    meta: { title: 'Atomic Swap' },
+    props: true,
   },
   {
     path: '/atomic-swap/ethereum',
