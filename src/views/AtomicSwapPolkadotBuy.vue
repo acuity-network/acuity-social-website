@@ -81,9 +81,9 @@
 
     methods: {
       async buy() {
-        let value = this.$ethClient.web3.utils.fromWei((BigInt(this.$ethClient.web3.utils.toWei(this.value)) * this.priceWei).toString());
+        let value = this.$ethClient.web3.utils.fromWei((BigInt(this.$ethClient.web3.utils.toWei(this.value)) * BigInt(this.priceWei)).toString());
         let hashedSecret = this.$ethClient.web3.utils.randomHex(32);
-        let assetIdOrderId = "0x8888888888888888888888888888888888888888888888888888888888888888";
+        let assetIdOrderId = "0x88888888888888888888888888888888" + this.orderId;
         let timeout = Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 3;
 
         this.$ethClient.atomicSwapBuy.methods.lockBuy(
