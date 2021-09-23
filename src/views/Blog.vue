@@ -9,6 +9,20 @@
       <v-col cols="12" md="10">
         <v-card elevation="10" outlined>
           <v-card-text>
+            <div class="text-h5 mb-1">Acuity DEX Progress Report, Parachain Airdrop Reschedule</div>
+            <div class="subtitle-2 mb-4">21st September 2021 by Jonathan Brown</div>
+            <div class="body-2 mb-4">
+              Progress on the Acuity Atomic Swap DEX has been good, but not fast enough. I'm postponing the parachain airdrop from 4th October to 1st November.
+            </div>
+            <div class="body-2 mb-4">
+              I'm also going to start doing regular development videos showing how the DEX is progressing. This will help build momentum in the run up to the airdrop. The first development update video is <a target="_blank" href="https://www.youtube.com/watch?v=vQmiCia6TZE">here</a>.
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="10">
+        <v-card elevation="10" outlined>
+          <v-card-text>
             <div class="text-h5 mb-1">Acuity DEX Alpha Testing and Parachain Airdrop</div>
             <div class="subtitle-2 mb-4">23rd July 2021 by Jonathan Brown</div>
             <div class="text-h6 mb-1">Acuity atomic swap decentralized exchange gears up for alpha testing</div>

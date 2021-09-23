@@ -1,7 +1,7 @@
 <template>
   <v-timeline :dense="dense" style="margin: 0 20px;">
     <v-timeline-item v-for="(item, i) in items" :key="i"
-      :color="item.completed ? '#E6007A' : primary"
+      :color="item.completed ? '#E6007A' : 'primary'"
       :icon="item.completed ? 'mdi-check' : ''"
       >
       <template v-slot:opposite>
@@ -126,7 +126,7 @@
           text: 'Acuity will have its very own decentralized <a href="/atomic-swap">atomic swap exchange</a>. Using the Polkadot and Metamask browser plugins it will be possible to trade permissionlessly between many different cryptocurrencies.',
         },
         {
-          when: '4th October 2021',
+          when: '1st November 2021',
           title: 'Parachain Airdrop',
           text: 'Holders of ACU will be <a href="/parachains">airdropped</a> ACR, ACF and ACT.',
         },
