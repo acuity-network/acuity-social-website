@@ -1,20 +1,23 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
 import vuetify from './plugins/vuetify';
-import i18n from './i18n'
+import i18n from './i18n';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
-import activeAccount from './lib/activeAccount'
-Vue.prototype.$activeAccount = activeAccount
+import activeAccount from './lib/activeAccount';
+Vue.prototype.$activeAccount = activeAccount;
 
-import AcuityClient from './lib/AcuityClient'
-Vue.prototype.$acuityClient = new AcuityClient()
+import AcuityClient from './lib/AcuityClient';
+Vue.prototype.$acuityClient = new AcuityClient();
 
-import EthClient from './lib/EthClient'
-Vue.prototype.$ethClient = new EthClient()
+import EthClient from './lib/EthClient';
+Vue.prototype.$ethClient = new EthClient();
+
+import OffChainClient from './lib/OffChainClient';
+Vue.prototype.$offChainClient = new OffChainClient();
 
 new Vue({
   router,
@@ -22,4 +25,4 @@ new Vue({
   vuetify,
   i18n,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');
