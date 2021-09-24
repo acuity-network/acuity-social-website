@@ -81,7 +81,6 @@
     data () {
       return {
         acu_addresses: [] as String[],
-        orders: [] as {}[],
         sell_blockchains: ['Acuity'],
         sell_blockchain: 'Acuity',
         sell_assets: ['ACU'],
@@ -96,6 +95,12 @@
         buy_addresses: [] as {}[],
         buy_address: '',
         price: '',
+      }
+    },
+
+    computed: {
+      orders() {
+        return this.$store.state.sellOrdersAcu;
       }
     },
 
@@ -115,8 +120,10 @@
 
       let ws = new WebSocket("ws://127.0.0.1:8080");
       ws.onmessage = (event) => {
+        let orders = [];
+
         for (let order of JSONbig.parse(event.data)) {
-          this.orders.push({
+          orders.push({
             orderId: order.order_id,
             price: this.$ethClient.web3.utils.fromWei(order.order_static.price.toString()),
             value: this.$ethClient.web3.utils.fromWei(order.value.toString()),
@@ -125,6 +132,8 @@
             raw: order,
           })
         }
+
+        this.$store.commit('sellOrdersAcuSet', orders);
       }
       ws.onopen = function(event) {
 
