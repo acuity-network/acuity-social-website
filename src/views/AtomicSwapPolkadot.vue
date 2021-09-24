@@ -112,38 +112,13 @@
           this.acu_addresses.push(account.address);
       }
 
-      await this.$ethClient.web3.eth.requestAccounts()
-      const ethAccounts = await this.$ethClient.web3.eth.getAccounts()
+      await this.$ethClient.web3.eth.requestAccounts();
+      const ethAccounts = await this.$ethClient.web3.eth.getAccounts();
       for (let account of ethAccounts) {
           this.buy_addresses.push({text: account, value: account});
       }
 
-      let ws = new WebSocket("ws://127.0.0.1:8080");
-      ws.onmessage = (event) => {
-        let orders = [];
-
-        for (let order of JSONbig.parse(event.data)) {
-          orders.push({
-            orderId: order.order_id,
-            price: this.$ethClient.web3.utils.fromWei(order.order_static.price.toString()),
-            value: this.$ethClient.web3.utils.fromWei(order.value.toString()),
-            seller: order.order_static.seller,
-            owned: this.acu_addresses.includes(order.order_static.seller) ? true : false,
-            raw: order,
-          })
-        }
-
-        this.$store.commit('sellOrdersAcuSet', orders);
-      }
-      ws.onopen = function(event) {
-
-        var msg = {
-          op: "getOrderBook",
-        };
-
-        ws.send(JSON.stringify(msg));
-      };
-
+      this.$offChainClient.getOrderBook();
     },
 
     methods: {
