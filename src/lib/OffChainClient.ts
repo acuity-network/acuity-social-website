@@ -37,7 +37,7 @@ export default class OffChainClient {
 
   getOrderBook() {
     var msg = {
-      op: "getOrderBook",
+      type: "GetOrderBook",
     };
 
     this.ws.send(JSON.stringify(msg));
