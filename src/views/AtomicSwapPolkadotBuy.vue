@@ -35,13 +35,51 @@
         valid: true,
         buy_addresses: [] as {}[],
         buy_address: '',
-        priceWei: BigInt(0),
-        price: '',
-        maxValue: '',
-        seller: '',
         value: '',
-        foreignAddress: '',
       }
+    },
+
+    computed: {
+      priceWei(): string {
+        if (this.orderId in this.$store.state.ordersAcu) {
+          return this.$store.state.ordersAcu[this.orderId].order_static.price;
+        }
+        else {
+          return '';
+        }
+      },
+      price(): string {
+        if (this.orderId in this.$store.state.ordersAcu) {
+          return this.$ethClient.web3.utils.fromWei(this.$store.state.ordersAcu[this.orderId].order_static.price.toString());
+        }
+        else {
+          return '';
+        }
+      },
+      maxValue(): string {
+        if (this.orderId in this.$store.state.ordersAcu) {
+          return this.$ethClient.web3.utils.fromWei(this.$store.state.ordersAcu[this.orderId].value.toString());
+        }
+        else {
+          return '';
+        }
+      },
+      seller(): string {
+        if (this.orderId in this.$store.state.ordersAcu) {
+          return this.$store.state.ordersAcu[this.orderId].order_static.seller.toString();
+        }
+        else {
+          return '';
+        }
+      },
+      foreignAddress(): string {
+        if (this.orderId in this.$store.state.ordersAcu) {
+          return this.$ethClient.web3.utils.bytesToHex(this.$store.state.ordersAcu[this.orderId].order_static.foreign_address.slice(12,32));
+        }
+        else {
+          return '';
+        }
+      },
     },
 
     async created() {
@@ -51,25 +89,7 @@
           this.buy_addresses.push({text: account, value: account});
       }
 
-      let ws = new WebSocket("ws://127.0.0.1:8080");
-      ws.onmessage = (event) => {
-        let order = JSONbig.parse(event.data);
-        console.log(order);
-        this.priceWei = order.order_static.price;
-        this.price = this.$ethClient.web3.utils.fromWei(order.order_static.price.toString());
-        this.maxValue = this.$ethClient.web3.utils.fromWei(order.value.toString());
-        this.seller = order.order_static.seller.toString();
-        this.foreignAddress = this.$ethClient.web3.utils.bytesToHex(order.order_static.foreign_address.slice(12,32));
-      }
-      ws.onopen = event => {
-
-        var msg = {
-          op: "getOrder",
-          order_id: this.orderId,
-        };
-
-        ws.send(JSON.stringify(msg));
-      };
+      this.$offChainClient.getOrder(this.orderId);
     },
 
     methods: {
@@ -82,7 +102,6 @@
         this.$ethClient.atomicSwapBuy.methods.lockBuy(
           hashedSecret, assetIdOrderId, this.foreignAddress, timeout
         ).send({from: this.buy_address, value: value});
-
       },
     }
   })

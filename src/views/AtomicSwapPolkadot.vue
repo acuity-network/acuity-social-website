@@ -94,7 +94,7 @@
 
     computed: {
       orders() {
-        return this.$store.state.sellOrdersAcu;
+        return this.$store.state.orderBookAcu;
       }
     },
 

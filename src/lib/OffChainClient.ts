@@ -16,7 +16,7 @@ export default class OffChainClient {
       console.log(message);
 
       switch (message.type) {
-        case 'OrderBook': {
+        case 'OrderBook':
           let orders = [];
 
           for (let order of message.order_book) {
@@ -29,8 +29,12 @@ export default class OffChainClient {
             })
           }
 
-          this.vue.$store.commit('sellOrdersAcuSet', orders);
-        }
+          this.vue.$store.commit('orderBookAcuSet', orders);
+          break;
+
+        case 'Order':
+          this.vue.$store.commit('orderAcuSet', message.order);
+          break;
       }
     }
   }
@@ -38,6 +42,15 @@ export default class OffChainClient {
   getOrderBook() {
     var msg = {
       type: "GetOrderBook",
+    };
+
+    this.ws.send(JSON.stringify(msg));
+  }
+
+  getOrder(order_id: String) {
+    var msg = {
+      type: "GetOrder",
+      order_id: order_id,
     };
 
     this.ws.send(JSON.stringify(msg));
