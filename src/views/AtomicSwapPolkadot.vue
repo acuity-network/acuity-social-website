@@ -67,13 +67,7 @@
 <script lang="ts">
   import Vue from 'vue'
   let JSONbig = require('json-bigint')({ useNativeBigInt: true })
-  import {
-    web3Accounts,
-    web3Enable,
-    web3FromAddress,
-    web3ListRpcProviders,
-    web3UseRpcProvider
-  } from '@polkadot/extension-dapp';
+  import { web3FromAddress } from '@polkadot/extension-dapp';
 
   export default Vue.extend({
     name: 'AtomicSwapPolkadot',
@@ -105,9 +99,7 @@
     },
 
     async created() {
-      const allInjected = await web3Enable('Acuity Browser');
-      const allAccounts = await web3Accounts();
-      for (let account of allAccounts) {
+      for (let account of this.$acuityClient.accounts) {
           this.sell_addresses.push({text: account.meta.name, value: account.address});
           this.acu_addresses.push(account.address);
       }

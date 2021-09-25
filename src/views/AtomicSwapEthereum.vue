@@ -60,9 +60,7 @@
       for (let account of allAccounts) {
           this.sell_addresses.push({text: account, value: account});
       }
-      const allInjected = await web3Enable('Acuity Browser');
-      const buyAccounts = await web3Accounts();
-      for (let account of buyAccounts) {
+      for (let account of this.$acuityClient.accounts) {
           this.buy_addresses.push({text: account.meta.name, value: account.address});
       }
     },

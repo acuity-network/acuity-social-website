@@ -19,13 +19,6 @@
 <script lang="ts">
   import Vue from 'vue'
   let JSONbig = require('json-bigint')({ useNativeBigInt: true })
-  import {
-    web3Accounts,
-    web3Enable,
-    web3FromAddress,
-    web3ListRpcProviders,
-    web3UseRpcProvider
-  } from '@polkadot/extension-dapp';
 
   export default Vue.extend({
     name: 'AtomicSwapPolkadotBuy',
