@@ -33,7 +33,7 @@ export default class OffChainClient {
           break;
 
         case 'Order':
-          this.vue.$store.commit('orderAcuSet', message.order);
+          this.vue.$store.commit('orderAcuSet', message);
           break;
       }
     }

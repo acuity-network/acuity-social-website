@@ -1,5 +1,33 @@
 <template>
   <v-container>
+    <v-simple-table>
+      <template v-slot:default>
+        <thead>
+          <tr>
+            <th class="text-left">
+              Buyer
+            </th>
+            <th class="text-left">
+              Value (ETH)
+            </th>
+            <th class="text-left">
+              Timeout
+            </th>
+            <th class="text-left">
+              Operations
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="buyLock in buyLocks" :key="buyLock.hashed_secret">
+            <td>{{ buyLock.buyer }}</td>
+            <td>{{ buyLock.value }}</td>
+            <td>{{ buyLock.timeout }}</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </template>
+    </v-simple-table>
     <v-row>
       <v-col cols="12" md="10">
         <div class="text-h5 mb-1">Buy ACU</div>
@@ -40,9 +68,17 @@
     },
 
     computed: {
+      buyLocks(): {}[] {
+        if (this.orderId in this.$store.state.ordersAcu) {
+          return this.$store.state.ordersAcu[this.orderId].buy_locks;
+        }
+        else {
+          return [];
+        }
+      },
       priceWei(): string {
         if (this.orderId in this.$store.state.ordersAcu) {
-          return this.$store.state.ordersAcu[this.orderId].order_static.price;
+          return this.$store.state.ordersAcu[this.orderId].order.order_static.price;
         }
         else {
           return '';
@@ -50,7 +86,7 @@
       },
       price(): string {
         if (this.orderId in this.$store.state.ordersAcu) {
-          return this.$ethClient.web3.utils.fromWei(this.$store.state.ordersAcu[this.orderId].order_static.price.toString());
+          return this.$ethClient.web3.utils.fromWei(this.$store.state.ordersAcu[this.orderId].order.order_static.price.toString());
         }
         else {
           return '';
@@ -58,7 +94,7 @@
       },
       maxValue(): string {
         if (this.orderId in this.$store.state.ordersAcu) {
-          return this.$ethClient.web3.utils.fromWei(this.$store.state.ordersAcu[this.orderId].value.toString());
+          return this.$ethClient.web3.utils.fromWei(this.$store.state.ordersAcu[this.orderId].order.value.toString());
         }
         else {
           return '';
@@ -66,7 +102,7 @@
       },
       seller(): string {
         if (this.orderId in this.$store.state.ordersAcu) {
-          return this.$store.state.ordersAcu[this.orderId].order_static.seller.toString();
+          return this.$store.state.ordersAcu[this.orderId].order.order_static.seller.toString();
         }
         else {
           return '';
@@ -74,7 +110,7 @@
       },
       foreignAddress(): string {
         if (this.orderId in this.$store.state.ordersAcu) {
-          return this.$ethClient.web3.utils.bytesToHex(this.$store.state.ordersAcu[this.orderId].order_static.foreign_address.slice(12,32));
+          return this.$ethClient.web3.utils.bytesToHex(this.$store.state.ordersAcu[this.orderId].order.order_static.foreign_address.slice(12,32));
         }
         else {
           return '';
