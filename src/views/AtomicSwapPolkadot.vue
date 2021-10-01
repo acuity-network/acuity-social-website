@@ -1,44 +1,48 @@
 <template>
   <v-container>
-    <v-simple-table>
-      <template v-slot:default>
-        <thead>
-          <tr>
-            <th class="text-left">
-              Price (ETH)
-            </th>
-            <th class="text-left">
-              Value (ACU)
-            </th>
-            <th class="text-left">
-              Seller
-            </th>
-            <th class="text-left">
-              Operations
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr
-            v-for="order in orders"
-            :key="order.orderId"
-          >
-            <td>{{ order.price }}</td>
-            <td>{{ order.value }}</td>
-            <td>{{ order.seller }}</td>
-            <td>
-              <v-btn icon @click="$router.push({ name: 'atomic-swap-polkadot-buy', params: { orderId: order.orderId } })"><v-icon small>mdi-atom-variant</v-icon></v-btn>
-              <span v-if="order.owned">
-                <v-btn icon @click="add(order)"><v-icon small>mdi-plus</v-icon></v-btn>
-                <v-btn icon @click="remove(order)"><v-icon small>mdi-minus</v-icon></v-btn>
-                <v-btn icon @click="removeAll(order)"><v-icon small>mdi-delete</v-icon></v-btn>
-                <v-btn icon @click="change(order)"><v-icon small>mdi-pencil</v-icon></v-btn>
-              </span>
-            </td>
-          </tr>
-        </tbody>
-      </template>
-    </v-simple-table>
+    <v-row>
+      <v-col cols="12" md="10">
+        <v-simple-table>
+          <template v-slot:default>
+            <thead>
+              <tr>
+                <th class="text-left">
+                  Price (ETH)
+                </th>
+                <th class="text-left">
+                  Value (ACU)
+                </th>
+                <th class="text-left">
+                  Seller
+                </th>
+                <th class="text-left">
+                  Operations
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="order in orders"
+                :key="order.orderId"
+              >
+                <td>{{ order.price }}</td>
+                <td>{{ order.value }}</td>
+                <td>{{ order.seller }}</td>
+                <td>
+                  <v-btn icon @click="$router.push({ name: 'atomic-swap-polkadot-buy', params: { orderId: order.orderId } })"><v-icon small>mdi-atom-variant</v-icon></v-btn>
+                  <span v-if="order.owned">
+                    <v-btn icon @click="add(order)"><v-icon small>mdi-plus</v-icon></v-btn>
+                    <v-btn icon @click="remove(order)"><v-icon small>mdi-minus</v-icon></v-btn>
+                    <v-btn icon @click="removeAll(order)"><v-icon small>mdi-delete</v-icon></v-btn>
+                    <v-btn icon @click="change(order)"><v-icon small>mdi-pencil</v-icon></v-btn>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </template>
+        </v-simple-table>
+      </v-col>
+    </v-row>
     <v-row>
       <v-col cols="12" md="10">
         <div class="text-h5 mb-1">Sell ACU for ETH</div>
