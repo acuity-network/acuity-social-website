@@ -22,15 +22,21 @@
       },
       {
         "indexed": false,
-        "internalType": "uint256",
+        "internalType": "uint64",
         "name": "value",
-        "type": "uint256"
+        "type": "uint64"
       },
       {
         "indexed": false,
-        "internalType": "uint256",
+        "internalType": "uint32",
         "name": "timeout",
-        "type": "uint256"
+        "type": "uint32"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
       }
     ],
     "name": "LockBuy",
@@ -79,19 +85,62 @@
     "name": "getBuyLock",
     "outputs": [
       {
-        "internalType": "address",
-        "name": "seller",
-        "type": "address"
-      },
+        "components": [
+          {
+            "internalType": "address",
+            "name": "seller",
+            "type": "address"
+          },
+          {
+            "internalType": "uint64",
+            "name": "value",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint32",
+            "name": "timeout",
+            "type": "uint32"
+          }
+        ],
+        "internalType": "struct AcuityAtomicSwapBuy.BuyLock",
+        "name": "buyLock",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
       {
-        "internalType": "uint256",
-        "name": "value",
-        "type": "uint256"
-      },
+        "internalType": "bytes32[]",
+        "name": "hashedSecrets",
+        "type": "bytes32[]"
+      }
+    ],
+    "name": "getBuyLocks",
+    "outputs": [
       {
-        "internalType": "uint256",
-        "name": "timeout",
-        "type": "uint256"
+        "components": [
+          {
+            "internalType": "address",
+            "name": "seller",
+            "type": "address"
+          },
+          {
+            "internalType": "uint64",
+            "name": "value",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint32",
+            "name": "timeout",
+            "type": "uint32"
+          }
+        ],
+        "internalType": "struct AcuityAtomicSwapBuy.BuyLock[]",
+        "name": "buyLocks",
+        "type": "tuple[]"
       }
     ],
     "stateMutability": "view",
@@ -115,9 +164,9 @@
         "type": "address"
       },
       {
-        "internalType": "uint256",
+        "internalType": "uint32",
         "name": "timeout",
-        "type": "uint256"
+        "type": "uint32"
       }
     ],
     "name": "lockBuy",

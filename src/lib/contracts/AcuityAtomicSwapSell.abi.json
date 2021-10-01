@@ -47,15 +47,15 @@
       },
       {
         "indexed": false,
-        "internalType": "uint256",
+        "internalType": "uint64",
         "name": "value",
-        "type": "uint256"
+        "type": "uint64"
       },
       {
         "indexed": false,
-        "internalType": "uint256",
+        "internalType": "uint32",
         "name": "timeout",
-        "type": "uint256"
+        "type": "uint32"
       }
     ],
     "name": "LockSell",
@@ -262,19 +262,62 @@
     "name": "getSellLock",
     "outputs": [
       {
-        "internalType": "bytes32",
-        "name": "orderId",
-        "type": "bytes32"
-      },
+        "components": [
+          {
+            "internalType": "bytes16",
+            "name": "orderId",
+            "type": "bytes16"
+          },
+          {
+            "internalType": "uint64",
+            "name": "value",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint32",
+            "name": "timeout",
+            "type": "uint32"
+          }
+        ],
+        "internalType": "struct AcuityAtomicSwapSell.SellLock",
+        "name": "sellLock",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
       {
-        "internalType": "uint256",
-        "name": "value",
-        "type": "uint256"
-      },
+        "internalType": "bytes32[]",
+        "name": "hashedSecrets",
+        "type": "bytes32[]"
+      }
+    ],
+    "name": "getSellLocks",
+    "outputs": [
       {
-        "internalType": "uint256",
-        "name": "timeout",
-        "type": "uint256"
+        "components": [
+          {
+            "internalType": "bytes16",
+            "name": "orderId",
+            "type": "bytes16"
+          },
+          {
+            "internalType": "uint64",
+            "name": "value",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint32",
+            "name": "timeout",
+            "type": "uint32"
+          }
+        ],
+        "internalType": "struct AcuityAtomicSwapSell.SellLock[]",
+        "name": "sellLocks",
+        "type": "tuple[]"
       }
     ],
     "stateMutability": "view",
@@ -298,14 +341,14 @@
         "type": "bytes32"
       },
       {
-        "internalType": "uint256",
+        "internalType": "uint64",
         "name": "value",
-        "type": "uint256"
+        "type": "uint64"
       },
       {
-        "internalType": "uint256",
+        "internalType": "uint32",
         "name": "timeout",
-        "type": "uint256"
+        "type": "uint32"
       }
     ],
     "name": "lockSell",
