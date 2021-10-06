@@ -1,7 +1,5 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col cols="12" md="10">
         <v-simple-table>
           <template v-slot:default>
             <thead>
@@ -33,13 +31,11 @@
                 <td>{{ buyLock.value }}</td>
                 <td></td>
                 <td>{{ buyLock.valueAcu }}</td>
-                <td><v-btn icon @click=""><v-icon small>mdi-atom-variant</v-icon></v-btn></td>
+                <td><v-btn icon @click="createSellLock(buyLock)"><v-icon small>mdi-atom-variant</v-icon></v-btn></td>
               </tr>
             </tbody>
           </template>
         </v-simple-table>
-      </v-col>
-    </v-row>
     <v-row>
       <v-col cols="12" md="10">
         <div class="text-h5 mb-1">Buy ACU</div>
@@ -59,6 +55,7 @@
 <script lang="ts">
   import Vue from 'vue'
   let JSONbig = require('json-bigint')({ useNativeBigInt: true })
+  import { web3FromAddress } from '@polkadot/extension-dapp';
 
   export default Vue.extend({
     name: 'AtomicSwapPolkadotBuy',
@@ -87,6 +84,7 @@
 
           for (let buy_lock of this.$store.state.ordersAcu[this.orderId].buy_locks) {
             buy_locks.push({
+              hashedSecret: buy_lock.hashed_secret,
               buyer: buy_lock.buyer,
               timeout: new Date(buy_lock.timeout * 1000).toLocaleString(),
               value: this.$ethClient.web3.utils.fromWei(buy_lock.value.toString()),
@@ -163,6 +161,16 @@
         this.$ethClient.atomicSwapBuy.methods.lockBuy(
           hashedSecret, assetIdOrderId, this.foreignAddress, timeout
         ).send({from: this.buy_address, value: value});
+      },
+      async createSellLock(buyLock: any) {
+        let foreignAddress = '0x' + this.$ethClient.web3.utils.padLeft(buyLock.buyer, 64);
+        let timeout = Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 2;
+        const injector = await web3FromAddress(this.seller);
+        this.$acuityClient.api.tx.atomicSwap
+          .lockSell(buyLock.hashedSecret, "0x88888888888888888888888888888888", this.priceWei, foreignAddress, buyLock.valueAcu, timeout)
+          .signAndSend(this.seller, { signer: injector.signer }, (status: any) => {
+            console.log(status)
+          });
       },
     }
   })
