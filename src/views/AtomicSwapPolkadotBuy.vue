@@ -159,7 +159,7 @@
         let timeout = Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 3;
 
         this.$ethClient.atomicSwapBuy.methods.lockBuy(
-          hashedSecret, assetIdOrderId, this.foreignAddress, timeout
+          this.foreignAddress, hashedSecret, timeout, assetIdOrderId
         ).send({from: this.buy_address, value: value});
       },
       async createSellLock(buyLock: any) {

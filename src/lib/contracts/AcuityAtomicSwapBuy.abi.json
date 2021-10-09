@@ -4,15 +4,9 @@
     "inputs": [
       {
         "indexed": false,
-        "internalType": "bytes32",
-        "name": "hashedSecret",
-        "type": "bytes32"
-      },
-      {
-        "indexed": false,
-        "internalType": "bytes32",
-        "name": "assetIdOrderId",
-        "type": "bytes32"
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
       },
       {
         "indexed": false,
@@ -22,21 +16,27 @@
       },
       {
         "indexed": false,
-        "internalType": "uint64",
-        "name": "value",
-        "type": "uint64"
+        "internalType": "bytes32",
+        "name": "hashedSecret",
+        "type": "bytes32"
       },
       {
         "indexed": false,
-        "internalType": "uint32",
+        "internalType": "uint256",
         "name": "timeout",
-        "type": "uint32"
+        "type": "uint256"
       },
       {
         "indexed": false,
-        "internalType": "address",
-        "name": "buyer",
-        "type": "address"
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "assetIdOrderId",
+        "type": "bytes32"
       }
     ],
     "name": "LockBuy",
@@ -47,15 +47,15 @@
     "inputs": [
       {
         "indexed": false,
-        "internalType": "bytes32",
-        "name": "hashedSecret",
-        "type": "bytes32"
-      },
-      {
-        "indexed": false,
         "internalType": "address",
         "name": "buyer",
         "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "secret",
+        "type": "bytes32"
       }
     ],
     "name": "TimeoutBuy",
@@ -66,9 +66,21 @@
     "inputs": [
       {
         "indexed": false,
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
+      },
+      {
+        "indexed": false,
         "internalType": "bytes32",
-        "name": "hashedSecret",
+        "name": "secret",
         "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "seller",
+        "type": "address"
       }
     ],
     "name": "UnlockBuy",
@@ -77,86 +89,9 @@
   {
     "inputs": [
       {
-        "internalType": "bytes32",
-        "name": "hashedSecret",
-        "type": "bytes32"
-      }
-    ],
-    "name": "getBuyLock",
-    "outputs": [
-      {
-        "components": [
-          {
-            "internalType": "address",
-            "name": "seller",
-            "type": "address"
-          },
-          {
-            "internalType": "uint64",
-            "name": "value",
-            "type": "uint64"
-          },
-          {
-            "internalType": "uint32",
-            "name": "timeout",
-            "type": "uint32"
-          }
-        ],
-        "internalType": "struct AcuityAtomicSwapBuy.BuyLock",
-        "name": "buyLock",
-        "type": "tuple"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "bytes32[]",
-        "name": "hashedSecrets",
-        "type": "bytes32[]"
-      }
-    ],
-    "name": "getBuyLocks",
-    "outputs": [
-      {
-        "components": [
-          {
-            "internalType": "address",
-            "name": "seller",
-            "type": "address"
-          },
-          {
-            "internalType": "uint64",
-            "name": "value",
-            "type": "uint64"
-          },
-          {
-            "internalType": "uint32",
-            "name": "timeout",
-            "type": "uint32"
-          }
-        ],
-        "internalType": "struct AcuityAtomicSwapBuy.BuyLock[]",
-        "name": "buyLocks",
-        "type": "tuple[]"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "hashedSecret",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "assetIdOrderId",
-        "type": "bytes32"
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
       },
       {
         "internalType": "address",
@@ -164,9 +99,67 @@
         "type": "address"
       },
       {
-        "internalType": "uint32",
+        "internalType": "bytes32",
+        "name": "hashedSecret",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
         "name": "timeout",
-        "type": "uint32"
+        "type": "uint256"
+      }
+    ],
+    "name": "getBuyLock",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "buyLockId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getBuyLock",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "seller",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "hashedSecret",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timeout",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "assetIdOrderId",
+        "type": "bytes32"
       }
     ],
     "name": "lockBuy",
@@ -177,9 +170,19 @@
   {
     "inputs": [
       {
+        "internalType": "address",
+        "name": "seller",
+        "type": "address"
+      },
+      {
         "internalType": "bytes32",
         "name": "secret",
         "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timeout",
+        "type": "uint256"
       }
     ],
     "name": "timeoutBuy",
@@ -190,9 +193,19 @@
   {
     "inputs": [
       {
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
+      },
+      {
         "internalType": "bytes32",
         "name": "secret",
         "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timeout",
+        "type": "uint256"
       }
     ],
     "name": "unlockBuy",
