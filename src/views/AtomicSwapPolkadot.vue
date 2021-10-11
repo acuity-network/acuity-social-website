@@ -29,7 +29,7 @@
                 <td>{{ order.value }}</td>
                 <td>{{ order.seller }}</td>
                 <td>
-                  <v-btn icon @click="$router.push({ name: 'atomic-swap-polkadot-buy', params: { orderId: order.orderId } })"><v-icon small>mdi-atom-variant</v-icon></v-btn>
+                  <v-btn icon @click="$router.push({ name: 'atomic-swap-polkadot-buy', params: { orderId: order.orderId } })"><v-icon small>mdi-download-lock</v-icon></v-btn>
                   <span v-if="order.owned">
                     <v-btn icon @click="add(order)"><v-icon small>mdi-plus</v-icon></v-btn>
                     <v-btn icon @click="remove(order)"><v-icon small>mdi-minus</v-icon></v-btn>

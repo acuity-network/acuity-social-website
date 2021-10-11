@@ -31,7 +31,7 @@
                 <td>{{ buyLock.value }}</td>
                 <td></td>
                 <td>{{ buyLock.valueAcu }}</td>
-                <td><v-btn icon @click="createSellLock(buyLock)"><v-icon small>mdi-atom-variant</v-icon></v-btn></td>
+                <td><v-btn icon @click="createSellLock(buyLock)"><v-icon small>mdi-upload-lock</v-icon></v-btn></td>
               </tr>
             </tbody>
           </template>
