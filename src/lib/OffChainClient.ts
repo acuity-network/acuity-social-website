@@ -16,15 +16,15 @@ export default class OffChainClient {
       console.log(message);
 
       switch (message.type) {
-        case 'OrderBook':
+        case 'orderBook':
           let orders = [];
 
           for (let order of message.order_book) {
             orders.push({
-              orderId: order.order_id,
-              price: this.vue.$ethClient.web3.utils.fromWei(order.order_static.price.toString()),
+              orderId: order.orderId,
+              price: this.vue.$ethClient.web3.utils.fromWei(order.orderStatic.price.toString()),
               value: this.vue.$ethClient.web3.utils.fromWei(order.value.toString()),
-              seller: order.order_static.seller,
+              seller: order.orderStatic.seller,
               raw: order,
             })
           }
@@ -32,7 +32,7 @@ export default class OffChainClient {
           this.vue.$store.commit('orderBookAcuSet', orders);
           break;
 
-        case 'Order':
+        case 'order':
           this.vue.$store.commit('orderAcuSet', message);
           break;
       }

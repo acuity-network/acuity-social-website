@@ -13,7 +13,7 @@ export default new Vuex.Store({
       state.orderBookAcu = orders;
     },
     orderAcuSet(state: any, order: any) {
-      Vue.set(state.ordersAcu, order.order.order_id, order);
+      Vue.set(state.ordersAcu, order.order.orderId, order);
     },
   },
   actions: {

@@ -25,13 +25,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="buyLock in buyLocks" :key="buyLock.hashed_secret">
-                <td>{{ buyLock.buyer }}</td>
-                <td>{{ buyLock.timeout }}</td>
-                <td>{{ buyLock.value }}</td>
-                <td></td>
-                <td>{{ buyLock.valueAcu }}</td>
-                <td><v-btn icon @click="createSellLock(buyLock)"><v-icon small>mdi-upload-lock</v-icon></v-btn></td>
+              <tr v-for="lock in locks" :key="lock.hashed_secret">
+                <td>{{ lock.buyer }}</td>
+                <td>{{ lock.timeout }}</td>
+                <td>{{ lock.value }}</td>
+                <td>{{ lock.sellerTimeout }}</td>
+                <td>{{ lock.valueAcu }}</td>
+                <td><v-btn icon @click="createSellLock(lock)"><v-icon small>mdi-upload-lock</v-icon></v-btn></td>
               </tr>
             </tbody>
           </template>
@@ -77,23 +77,24 @@
     },
 
     computed: {
-      buyLocks(): {}[] {
+      locks(): {}[] {
         if (this.orderId in this.$store.state.ordersAcu) {
 
-          let buy_locks = [];
+          let locks = [];
 
-          for (let buy_lock of this.$store.state.ordersAcu[this.orderId].buy_locks) {
-            buy_locks.push({
-              hashedSecret: buy_lock.hashed_secret,
-              buyer: buy_lock.buyer,
-              timeout: new Date(buy_lock.timeout * 1000).toLocaleString(),
-              value: this.$ethClient.web3.utils.fromWei(buy_lock.value.toString()),
-              valueAcu: this.$ethClient.web3.utils.fromWei((BigInt(this.$ethClient.web3.utils.toWei(buy_lock.value.toString())) / BigInt(this.priceWei)).toString()),
-//              valueAcu: parseFloat(buy_lock.value.toString()) / parseFloat(this.priceWei),
+          for (let lock of this.$store.state.ordersAcu[this.orderId].locks) {
+            locks.push({
+              hashedSecret: lock.hashedSecret,
+              buyer: lock.buyer,
+              timeout: new Date(lock.buyLockTimeout * 1000).toLocaleString(),
+              value: this.$ethClient.web3.utils.fromWei(lock.buyLockValue.toString()),
+              valueAcu: this.$ethClient.web3.utils.fromWei((BigInt(this.$ethClient.web3.utils.toWei(lock.buyLockValue.toString())) / BigInt(this.priceWei)).toString()),
+//              valueAcu: parseFloat(lock.buyLockValue.toString()) / parseFloat(this.priceWei),
+              sellerTimeout: (lock.sellLockTimeout == 0) ? "" : new Date(lock.sellLockTimeout * 1000).toLocaleString(),
             })
           }
 
-          return buy_locks;
+          return locks;
         }
         else {
           return [];
@@ -101,7 +102,7 @@
       },
       priceWei(): string {
         if (this.orderId in this.$store.state.ordersAcu) {
-          return this.$store.state.ordersAcu[this.orderId].order.order_static.price;
+          return this.$store.state.ordersAcu[this.orderId].order.orderStatic.price;
         }
         else {
           return '';
@@ -109,7 +110,7 @@
       },
       price(): string {
         if (this.orderId in this.$store.state.ordersAcu) {
-          return this.$ethClient.web3.utils.fromWei(this.$store.state.ordersAcu[this.orderId].order.order_static.price.toString());
+          return this.$ethClient.web3.utils.fromWei(this.$store.state.ordersAcu[this.orderId].order.orderStatic.price.toString());
         }
         else {
           return '';
@@ -125,7 +126,7 @@
       },
       seller(): string {
         if (this.orderId in this.$store.state.ordersAcu) {
-          return this.$store.state.ordersAcu[this.orderId].order.order_static.seller.toString();
+          return this.$store.state.ordersAcu[this.orderId].order.orderStatic.seller.toString();
         }
         else {
           return '';
@@ -133,7 +134,7 @@
       },
       foreignAddress(): string {
         if (this.orderId in this.$store.state.ordersAcu) {
-          return this.$ethClient.web3.utils.bytesToHex(this.$store.state.ordersAcu[this.orderId].order.order_static.foreign_address.slice(12,32));
+          return this.$ethClient.web3.utils.bytesToHex(this.$store.state.ordersAcu[this.orderId].order.orderStatic.foreign_address.slice(12,32));
         }
         else {
           return '';
@@ -162,12 +163,12 @@
           this.foreignAddress, hashedSecret, timeout, assetIdOrderId
         ).send({from: this.buy_address, value: value});
       },
-      async createSellLock(buyLock: any) {
-        let foreignAddress = '0x' + this.$ethClient.web3.utils.padLeft(buyLock.buyer, 64);
+      async createSellLock(lock: any) {
+        let foreignAddress = '0x' + this.$ethClient.web3.utils.padLeft(lock.buyer, 64);
         let timeout = Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 2;
         const injector = await web3FromAddress(this.seller);
         this.$acuityClient.api.tx.atomicSwap
-          .lockSell(buyLock.hashedSecret, "0x88888888888888888888888888888888", this.priceWei, foreignAddress, buyLock.valueAcu, timeout)
+          .lockSell('0x' + lock.hashedSecret, "0x88888888888888888888888888888888", this.priceWei, foreignAddress, lock.valueAcu, timeout)
           .signAndSend(this.seller, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });
