@@ -88,6 +88,7 @@
               buyer: lock.buyer,
               timeout: new Date(lock.buyLockTimeout * 1000).toLocaleString(),
               value: this.$ethClient.web3.utils.fromWei(lock.buyLockValue.toString()),
+              valueWei: lock.buyLockValue,
               valueAcu: this.$ethClient.web3.utils.fromWei((BigInt(this.$ethClient.web3.utils.toWei(lock.buyLockValue.toString())) / BigInt(this.priceWei)).toString()),
 //              valueAcu: parseFloat(lock.buyLockValue.toString()) / parseFloat(this.priceWei),
               sellerTimeout: (lock.sellLockTimeout == 0) ? "" : new Date(lock.sellLockTimeout * 1000).toLocaleString(),
@@ -165,10 +166,11 @@
       },
       async createSellLock(lock: any) {
         let foreignAddress = '0x' + this.$ethClient.web3.utils.padLeft(lock.buyer, 64);
+        let valueAcu = (BigInt(this.$ethClient.web3.utils.toWei(lock.valueWei.toString())) / BigInt(this.priceWei)).toString();
         let timeout = Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 2;
         const injector = await web3FromAddress(this.seller);
         this.$acuityClient.api.tx.atomicSwap
-          .lockSell('0x' + lock.hashedSecret, "0x88888888888888888888888888888888", this.priceWei, foreignAddress, lock.valueAcu, timeout)
+          .lockSell('0x' + lock.hashedSecret, "0x88888888888888888888888888888888", this.priceWei, foreignAddress, valueAcu, timeout)
           .signAndSend(this.seller, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });
