@@ -156,7 +156,9 @@
     methods: {
       async buy() {
         let value = this.$ethClient.web3.utils.fromWei((BigInt(this.$ethClient.web3.utils.toWei(this.value)) * BigInt(this.priceWei)).toString()).split('.')[0];
-        let hashedSecret = this.$ethClient.web3.utils.randomHex(32);
+        let secret = this.$ethClient.web3.utils.randomHex(32);
+        let hashedSecret = this.$ethClient.web3.utils.keccak256(secret);
+        localStorage.setItem(hashedSecret, secret);
         let assetIdOrderId = "0x88888888888888888888888888888888" + this.orderId;
         let timeout = Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 3;
 
