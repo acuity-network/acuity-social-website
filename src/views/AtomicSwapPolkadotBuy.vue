@@ -8,30 +8,33 @@
                   Buyer
                 </th>
                 <th class="text-left">
-                  Buy Lock
+                  Buy Lock (ETH)
                 </th>
                 <th class="text-left">
-                  Value (ETH)
+                  Timeout
+                </th>
+                <th style="background-color: rgb(14, 15, 15);"></ht>
+                <th class="text-left">
+                  Sell Lock (ACU)
                 </th>
                 <th class="text-left">
-                  Sell Lock
+                  Timeout
                 </th>
-                <th class="text-left">
-                  Value (ACU)
-                </th>
-                <th class="text-left">
-                  Operations
-                </th>
+                <th class="text-left"></th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="lock in locks" :key="lock.hashed_secret">
                 <td>{{ lock.buyer }}</td>
-                <td>{{ lock.timeout }}</td>
                 <td>{{ lock.value }}</td>
-                <td>{{ lock.sellerTimeout }}</td>
+                <td>{{ lock.timeout }}</td>
+                <td style="background-color: rgb(14, 15, 15);"></td>
                 <td>{{ lock.valueAcu }}</td>
-                <td><v-btn icon @click="createSellLock(lock)"><v-icon small>mdi-upload-lock</v-icon></v-btn></td>
+                <td>{{ lock.sellerTimeout }}</td>
+                <td>
+                  <v-btn v-if="!lock.sellerLocked" small @click="createSellLock(lock)"><v-icon small>mdi-lock</v-icon></v-btn>
+                  <v-btn v-else small @click="createSellLock(lock)"><v-icon small>mdi-lock-open-variant</v-icon></v-btn>
+                </td>
               </tr>
             </tbody>
           </template>
@@ -92,6 +95,7 @@
               valueAcu: this.$ethClient.web3.utils.fromWei((BigInt(this.$ethClient.web3.utils.toWei(lock.buyLockValue.toString())) / BigInt(this.priceWei)).toString()),
 //              valueAcu: parseFloat(lock.buyLockValue.toString()) / parseFloat(this.priceWei),
               sellerTimeout: (lock.sellLockTimeout == 0) ? "" : new Date(lock.sellLockTimeout * 1000).toLocaleString(),
+              sellerLocked: lock.sellLockState == "Locked",
             })
           }
 
