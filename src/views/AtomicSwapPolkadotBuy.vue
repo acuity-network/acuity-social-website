@@ -19,6 +19,9 @@
                   Sell Lock (ACU)
                 </th>
                 <th class="text-left">
+                  State
+                </th>
+                <th class="text-left">
                   Timeout
                 </th>
                 <th class="text-left"></th>
@@ -33,6 +36,7 @@
                 </td>
                 <td style="background-color: rgb(14, 15, 15);"></td>
                 <td>{{ lock.valueAcu }}</td>
+                <td>{{ lock.sellLockState }}</td>
                 <td>{{ lock.sellerTimeout }}</td>
                 <td>
                   <v-btn v-if="!lock.sellerLocked" small @click="createSellLock(lock)"><v-icon small>mdi-lock</v-icon></v-btn>
@@ -97,6 +101,7 @@
               valueWei: lock.buyLockValue,
               valueAcu: this.$ethClient.web3.utils.fromWei((BigInt(this.$ethClient.web3.utils.toWei(lock.buyLockValue.toString())) / BigInt(this.priceWei)).toString()),
 //              valueAcu: parseFloat(lock.buyLockValue.toString()) / parseFloat(this.priceWei),
+              sellLockState: lock.sellLockState, 
               sellerTimeout: (lock.sellLockTimeout == 0) ? "" : new Date(lock.sellLockTimeout).toLocaleString(),
               sellerLocked: lock.sellLockState == "Locked",
             })
@@ -188,7 +193,7 @@
         let secret = localStorage.getItem('0x' + lock.hashedSecret);
         const injector = await web3FromAddress(this.seller);
         this.$acuityClient.api.tx.atomicSwap
-          .unlockSell(secret)
+          .unlockSell('0x' + this.orderId, secret)
           .signAndSend(this.seller, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });
