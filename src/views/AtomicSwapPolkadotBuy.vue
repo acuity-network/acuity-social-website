@@ -11,6 +11,9 @@
                   Buy Lock (ETH)
                 </th>
                 <th class="text-left">
+                  State
+                </th>
+                <th class="text-left">
                   Timeout
                 </th>
                 <th class="text-left"></th>
@@ -30,17 +33,19 @@
             <tbody>
               <tr v-for="lock in locks" :key="lock.hashed_secret">
                 <td>{{ lock.buyer }}</td>
-                <td>{{ lock.value }}</td>
-                <td>{{ lock.timeout }}</td>
+                <td>{{ lock.buyLockValue }}</td>
+                <td>{{ lock.buyLockState }}</td>
+                <td>{{ lock.buyLockTimeout }}</td>
                 <td>
+                  <v-btn v-if="lock.buyLockState == 'Locked'" small @click="unlockBuyLock(lock)"><v-icon small>mdi-lock-open-variant</v-icon></v-btn>
                 </td>
                 <td style="background-color: rgb(14, 15, 15);"></td>
                 <td>{{ lock.valueAcu }}</td>
                 <td>{{ lock.sellLockState }}</td>
-                <td>{{ lock.sellerTimeout }}</td>
+                <td>{{ lock.sellLockTimeout }}</td>
                 <td>
-                  <v-btn v-if="!lock.sellerLocked" small @click="createSellLock(lock)"><v-icon small>mdi-lock</v-icon></v-btn>
-                  <v-btn v-else small @click="unlockSellLock(lock)"><v-icon small>mdi-lock-open-variant</v-icon></v-btn>
+                  <v-btn v-if="lock.sellLockState == 'NotLocked'" small @click="createSellLock(lock)"><v-icon small>mdi-lock</v-icon></v-btn>
+                  <v-btn v-if="lock.sellLockState == 'Locked'" small @click="unlockSellLock(lock)"><v-icon small>mdi-lock-open-variant</v-icon></v-btn>
                 </td>
               </tr>
             </tbody>
@@ -95,15 +100,16 @@
           for (let lock of this.$store.state.ordersAcu[this.orderId].locks) {
             locks.push({
               hashedSecret: lock.hashedSecret,
-              buyer: lock.buyer,
-              timeout: new Date(lock.buyLockTimeout * 1000).toLocaleString(),
-              value: this.$ethClient.web3.utils.fromWei(lock.buyLockValue.toString()),
+              buyer: lock.buyer.substr(0, 8),
+              buyLockValue: this.$ethClient.web3.utils.fromWei(lock.buyLockValue.toString()),
               valueWei: lock.buyLockValue,
+              buyLockState: lock.buyLockState,
+              buyLockTimeout: new Date(lock.buyLockTimeout * 1000).toLocaleString(),
               valueAcu: this.$ethClient.web3.utils.fromWei((BigInt(this.$ethClient.web3.utils.toWei(lock.buyLockValue.toString())) / BigInt(this.priceWei)).toString()),
 //              valueAcu: parseFloat(lock.buyLockValue.toString()) / parseFloat(this.priceWei),
-              sellLockState: lock.sellLockState, 
-              sellerTimeout: (lock.sellLockTimeout == 0) ? "" : new Date(lock.sellLockTimeout).toLocaleString(),
-              sellerLocked: lock.sellLockState == "Locked",
+              sellLockState: lock.sellLockState,
+              sellLockTimeout: (lock.sellLockTimeout == 0) ? "" : new Date(lock.sellLockTimeout).toLocaleString(),
+              raw: lock,
             })
           }
 
@@ -179,12 +185,12 @@
         ).send({from: this.buy_address, value: value});
       },
       async createSellLock(lock: any) {
-        let foreignAddress = '0x' + this.$ethClient.web3.utils.padLeft(lock.buyer, 64);
-        let valueAcu = (BigInt(this.$ethClient.web3.utils.toWei(lock.valueWei.toString())) / BigInt(this.priceWei)).toString();
+        let foreignAddress = '0x' + this.$ethClient.web3.utils.padLeft(lock.raw.buyer, 64);
+        let valueAcu = (BigInt(this.$ethClient.web3.utils.toWei(lock.raw.buyLockValue.toString())) / BigInt(this.priceWei)).toString();
         let timeout = Date.now() + 60 * 60 * 24 * 2 * 1000;
         const injector = await web3FromAddress(this.seller);
         this.$acuityClient.api.tx.atomicSwap
-          .lockSell('0x' + lock.hashedSecret, "0x88888888888888888888888888888888", this.priceWei, foreignAddress, valueAcu, timeout)
+          .lockSell('0x' + lock.raw.hashedSecret, "0x88888888888888888888888888888888", this.priceWei, foreignAddress, valueAcu, timeout)
           .signAndSend(this.seller, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });
@@ -197,6 +203,13 @@
           .signAndSend(this.seller, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });
+      },
+      async unlockBuyLock(lock: any) {
+        let secret = localStorage.getItem('0x' + lock.hashedSecret);
+        console.log('0x' + lock.raw.buyer, secret, lock.raw.buyLockTimeout);
+        this.$ethClient.atomicSwapBuy.methods.unlockBuy(
+          '0x' + lock.raw.buyer, secret, lock.raw.buyLockTimeout
+        ).send({from: this.buy_address});
       },
     }
   })
