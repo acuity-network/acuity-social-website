@@ -59,7 +59,7 @@
           <v-select v-model="buy_blockchain" :items="buy_blockchains" label="Buy Blockchain"></v-select>
           <v-select v-model="buy_asset" :items="buy_assets" label="Buy Asset"></v-select>
           -->
-          <v-select v-model="buy_address" :items="buy_addresses" label="Buy Account" hint='The ETH account to receive payment.' persistent-hint class="mb-4"></v-select>
+          <v-text-field v-model="buy_address" label="Buy Account" hint='The ETH account to receive payment.' persistent-hint class="mb-4"></v-text-field>
           <v-text-field v-model="price" label="Price" suffix="ETH" hint='Amount of ETH to receive per 1 ACU.' persistent-hint class="mb-4"></v-text-field>
           <v-btn @click="addSellOrder" class="mt-4">Create Sell Order</v-btn>
         </v-form>
@@ -108,11 +108,10 @@
           this.acu_addresses.push(account.address);
       }
 
-      await this.$ethClient.web3.eth.requestAccounts();
-      const ethAccounts = await this.$ethClient.web3.eth.getAccounts();
-      for (let account of ethAccounts) {
-          this.buy_addresses.push({text: account, value: account});
-      }
+      window.ethereum.on('accountsChanged', accounts => {
+        this.buy_address = accounts[0];
+      });
+      this.buy_address = await this.$ethClient.getAddress();
 
       this.$offChainClient.getOrderBook();
     },
