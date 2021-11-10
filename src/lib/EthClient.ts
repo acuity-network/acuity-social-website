@@ -1,9 +1,9 @@
 import detectEthereumProvider from '@metamask/detect-provider';
 import Web3 from 'web3'
 
-export default class MixClient {
-	web3: any
-  formatWei: any
+export default class EthClient {
+	web3: any;
+  formatWei: any;
   atomicSwapSell: any;
   atomicSwapBuy: any;
 
@@ -21,5 +21,10 @@ export default class MixClient {
     } else {
       console.log('Please install MetaMask!');
     }
+  }
+
+  async getAddress() {
+    let accounts = await this.web3.eth.requestAccounts();
+    return accounts[0];
   }
 }

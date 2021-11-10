@@ -58,9 +58,8 @@
           <v-text-field v-model="price" label="Price" suffix="ETH" hint='Amount of ETH to pay per 1 ACU.' persistent-hint class="mb-4" disabled></v-text-field>
           <v-text-field v-model="maxValue" label="Maximum Value" suffix="ACU" hint='How much ACU is for sale in this order.' persistent-hint class="mb-4" disabled></v-text-field>
           <v-text-field v-model="seller" label="Seller" hint='Who is selling the ACU.' persistent-hint class="mb-4" disabled></v-text-field>
-          <v-select v-model="buy_address" :items="buy_addresses" label="Buy Account"></v-select>
           <v-text-field v-model="value" label="Buy Value" suffix="ACU" hint='How much ACU you wish to buy.' persistent-hint class="mb-4"></v-text-field>
-          <v-btn @click="buy" class="mt-4">Buy</v-btn>
+          <v-btn @click="createBuyLock" class="mt-4">Buy</v-btn>
         </v-form>
       </v-col>
     </v-row>
@@ -85,8 +84,6 @@
     data () {
       return {
         valid: true,
-        buy_addresses: [] as {}[],
-        buy_address: '',
         value: '',
       }
     },
@@ -162,17 +159,11 @@
     },
 
     async created() {
-      await this.$ethClient.web3.eth.requestAccounts()
-      const ethAccounts = await this.$ethClient.web3.eth.getAccounts()
-      for (let account of ethAccounts) {
-          this.buy_addresses.push({text: account, value: account});
-      }
-
       this.$offChainClient.getOrder(this.orderId);
     },
 
     methods: {
-      async buy() {
+      async createBuyLock() {
         let value = this.$ethClient.web3.utils.fromWei((BigInt(this.$ethClient.web3.utils.toWei(this.value)) * BigInt(this.priceWei)).toString()).split('.')[0];
         let secret = this.$ethClient.web3.utils.randomHex(32);
         let hashedSecret = this.$ethClient.web3.utils.keccak256(secret);
@@ -182,7 +173,7 @@
 
         this.$ethClient.atomicSwapBuy.methods.lockBuy(
           this.foreignAddress, hashedSecret, timeout, assetIdOrderId
-        ).send({from: this.buy_address, value: value});
+        ).send({from: await this.$ethClient.getAddress(), value: value});
       },
       async createSellLock(lock: any) {
         let foreignAddress = '0x' + this.$ethClient.web3.utils.padLeft(lock.raw.buyer, 64);
@@ -207,7 +198,7 @@
       async unlockBuyLock(lock: any) {
         this.$ethClient.atomicSwapBuy.methods.unlockBuy(
           '0x' + lock.raw.buyer, '0x' + lock.raw.secret, lock.raw.buyLockTimeout
-        ).send({from: this.buy_address});
+        ).send({from: await this.$ethClient.getAddress()});
       },
     }
   })
