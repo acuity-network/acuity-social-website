@@ -205,10 +205,8 @@
           });
       },
       async unlockBuyLock(lock: any) {
-        let secret = localStorage.getItem('0x' + lock.hashedSecret);
-        console.log('0x' + lock.raw.buyer, secret, lock.raw.buyLockTimeout);
         this.$ethClient.atomicSwapBuy.methods.unlockBuy(
-          '0x' + lock.raw.buyer, secret, lock.raw.buyLockTimeout
+          '0x' + lock.raw.buyer, '0x' + lock.raw.secret, lock.raw.buyLockTimeout
         ).send({from: this.buy_address});
       },
     }
