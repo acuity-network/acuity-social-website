@@ -176,7 +176,7 @@
         ).send({from: await this.$ethClient.getAddress(), value: value});
       },
       async createSellLock(lock: any) {
-        let foreignAddress = '0x' + this.$ethClient.web3.utils.padLeft(lock.raw.buyer, 64);
+        let foreignAddress = this.$ethClient.web3.utils.bytesToHex(this.$store.state.ordersAcu[this.orderId].order.orderStatic.foreign_address);
         let valueAcu = (BigInt(this.$ethClient.web3.utils.toWei(lock.raw.buyLockValue.toString())) / BigInt(this.priceWei)).toString();
         let timeout = Date.now() + 60 * 60 * 24 * 2 * 1000;
         const injector = await web3FromAddress(this.seller);
