@@ -9,8 +9,7 @@ export default new Vuex.Store({
     ordersAcu: {},
     accountsAcu: [],
     addressesAcu: [],
-    accountsEth: [],
-    addressesEth: [],
+    addressEth: "",
   },
   mutations: {
     orderBookAcuSet(state: any, orders: []) {
@@ -27,7 +26,10 @@ export default new Vuex.Store({
           state.accountsAcu.push({text: account.meta.name, value: account.address});
           state.addressesAcu.push(account.address);
       }
-    }
+    },
+    addressEthSet(state: any, address: string) {
+      state.addressEth = address;
+    },
   },
   actions: {
   },

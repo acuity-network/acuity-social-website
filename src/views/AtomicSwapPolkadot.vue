@@ -59,7 +59,7 @@
           <v-select v-model="buy_blockchain" :items="buy_blockchains" label="Buy Blockchain"></v-select>
           <v-select v-model="buy_asset" :items="buy_assets" label="Buy Asset"></v-select>
           -->
-          <v-text-field v-model="buy_address" label="Buy Account" hint='The ETH account to receive payment.' persistent-hint class="mb-4" disabled></v-text-field>
+          <v-text-field v-model="addressEth" label="Buy Account" hint='The ETH account to receive payment.' persistent-hint class="mb-4" disabled></v-text-field>
           <v-text-field v-model="price" label="Price" suffix="ETH" hint='Amount of ETH to receive per 1 ACU.' persistent-hint class="mb-4"></v-text-field>
           <v-btn @click="addSellOrder" class="mt-4">Create Sell Order</v-btn>
         </v-form>
@@ -72,7 +72,6 @@
   import Vue from 'vue'
   let JSONbig = require('json-bigint')({ useNativeBigInt: true })
   import { web3FromAddress } from '@polkadot/extension-dapp';
-  declare let window: any;
 
   export default Vue.extend({
     name: 'AtomicSwapPolkadot',
@@ -83,15 +82,12 @@
         sell_blockchain: 'Acuity',
         sell_assets: ['ACU'],
         sell_asset: 'ACU',
-        sell_addresses: [] as {}[],
         sell_address: '',
         sell_value: '',
         buy_blockchains: ['Ethereum'],
         buy_blockchain: 'Ethereum',
         buy_assets: ['ETH'],
         buy_asset: 'ETH',
-        buy_addresses: [] as {}[],
-        buy_address: '',
         price: '',
       }
     },
@@ -103,14 +99,12 @@
       accountsAcu() {
         return this.$store.state.accountsAcu;
       },
+      addressEth() {
+        return this.$store.state.addressEth;
+      }
     },
 
     async created() {
-      window.ethereum.on('accountsChanged', (accounts: any) => {
-        this.buy_address = accounts[0];
-      });
-      this.buy_address = await this.$ethClient.getAddress();
-
       this.$offChainClient.getOrderBook();
     },
 
@@ -132,7 +126,7 @@
       async change(orderId: String) {
       },
       async addSellOrder(event: any) {
-        let buy_address = this.$ethClient.web3.utils.padLeft(this.buy_address, 64);
+        let buy_address = this.$ethClient.web3.utils.padLeft(this.addressEth, 64);
         let value = this.$ethClient.web3.utils.toWei(this.sell_value);
         let price = this.$ethClient.web3.utils.toWei(this.price);
         const injector = await web3FromAddress(this.sell_address);

@@ -176,7 +176,7 @@
 
         this.$ethClient.atomicSwapBuy.methods.lockBuy(
           this.foreignAddress, hashedSecret, timeout, assetIdOrderId
-        ).send({from: await this.$ethClient.getAddress(), value: value});
+        ).send({from: this.$store.state.addressEth, value: value});
       },
       async createSellLock(lock: any) {
         let foreignAddress = this.$ethClient.web3.utils.bytesToHex(this.$store.state.ordersAcu[this.orderId].order.orderStatic.foreign_address);
@@ -201,7 +201,7 @@
       async unlockBuyLock(lock: any) {
         this.$ethClient.atomicSwapBuy.methods.unlockBuy(
           '0x' + lock.raw.buyer, '0x' + lock.raw.secret, lock.raw.buyLockTimeout
-        ).send({from: await this.$ethClient.getAddress()});
+        ).send({from: this.$store.state.addressEth});
       },
     }
   })
