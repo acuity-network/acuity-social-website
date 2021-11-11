@@ -72,6 +72,7 @@
   import Vue from 'vue'
   let JSONbig = require('json-bigint')({ useNativeBigInt: true })
   import { web3FromAddress } from '@polkadot/extension-dapp';
+  declare let window: any;
 
   export default Vue.extend({
     name: 'AtomicSwapPolkadot',
@@ -108,7 +109,7 @@
           this.acu_addresses.push(account.address);
       }
 
-      window.ethereum.on('accountsChanged', accounts => {
+      window.ethereum.on('accountsChanged', (accounts: any) => {
         this.buy_address = accounts[0];
       });
       this.buy_address = await this.$ethClient.getAddress();
