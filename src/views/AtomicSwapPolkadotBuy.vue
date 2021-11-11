@@ -37,7 +37,7 @@
                 <td>{{ lock.buyLockState }}</td>
                 <td>{{ lock.buyLockTimeout }}</td>
                 <td>
-                  <v-btn v-if="lock.sellLockState == 'Unlocked' && lock.buyLockState == 'Locked'" small @click="unlockBuyLock(lock)"><v-icon small>mdi-lock-open-variant</v-icon></v-btn>
+                  <v-btn v-if="(addressEth == foreignAddress) && (lock.sellLockState == 'Unlocked') && (lock.buyLockState == 'Locked')" small @click="unlockBuyLock(lock)"><v-icon small>mdi-lock-open-variant</v-icon></v-btn>
                 </td>
                 <td style="background-color: rgb(14, 15, 15);"></td>
                 <td>{{ lock.valueAcu }}</td>
@@ -159,6 +159,9 @@
       sellerAvailable(): boolean {
         return this.$store.state.addressesAcu.includes(this.seller);
       },
+      addressEth(): string {
+        return this.$store.state.addressEth;
+      }
     },
 
     async created() {
