@@ -44,7 +44,7 @@
                 <td>{{ lock.sellLockState }}</td>
                 <td>{{ lock.sellLockTimeout }}</td>
                 <td>
-                  <v-btn v-if="lock.sellLockState == 'NotLocked'" small @click="createSellLock(lock)"><v-icon small>mdi-lock</v-icon></v-btn>
+                  <v-btn v-if="sellerAvailable && lock.sellLockState == 'NotLocked'" small @click="createSellLock(lock)"><v-icon small>mdi-lock</v-icon></v-btn>
                   <v-btn v-if="lock.sellLockState == 'Locked'" small @click="unlockSellLock(lock)"><v-icon small>mdi-lock-open-variant</v-icon></v-btn>
                 </td>
               </tr>
@@ -155,6 +155,9 @@
         else {
           return '';
         }
+      },
+      sellerAvailable(): boolean {
+        return this.$store.state.addressesAcu.includes(this.seller);
       },
     },
 
