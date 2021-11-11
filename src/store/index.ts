@@ -7,6 +7,10 @@ export default new Vuex.Store({
   state: {
     orderBookAcu: [],
     ordersAcu: {},
+    accountsAcu: [],
+    addressesAcu: [],
+    accountsEth: [],
+    addressesEth: [],
   },
   mutations: {
     orderBookAcuSet(state: any, orders: []) {
@@ -15,6 +19,15 @@ export default new Vuex.Store({
     orderAcuSet(state: any, order: any) {
       Vue.set(state.ordersAcu, order.order.orderId, order);
     },
+    accountsAcuSet(state: any, accounts: any[]) {
+      state.accountsAcu = [];
+      state.addressesAcu = [];
+
+      for (let account of accounts) {
+          state.accountsAcu.push({text: account.meta.name, value: account.address});
+          state.addressesAcu.push(account.address);
+      }
+    }
   },
   actions: {
   },

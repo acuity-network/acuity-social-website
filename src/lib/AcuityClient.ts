@@ -1,14 +1,18 @@
 import { ApiPromise, WsProvider } from '@polkadot/api'
-import { web3Enable, web3Accounts } from '@polkadot/extension-dapp';
+import { web3Enable, web3Accounts, web3AccountsSubscribe } from '@polkadot/extension-dapp';
 
 export default class MixClient {
 	api: any;
-  accounts: {}[] = [];
 
 	async init(vue: any) {
 
     const allInjected = await web3Enable('Acuity Atomic Swap Exchange');
-    this.accounts = await web3Accounts();
+
+    web3AccountsSubscribe(injectedAccounts => {
+      vue.$store.commit('accountsAcuSet', injectedAccounts);
+    });
+
+    vue.$store.commit('accountsAcuSet', await web3Accounts());
 
     let acuityEndpoint = (process.env.NODE_ENV == 'development') ? 'ws://127.0.0.1:9946' : 'wss://acuity.social:9961';
     let wsProvider = new WsProvider(acuityEndpoint);

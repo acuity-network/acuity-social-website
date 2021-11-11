@@ -53,7 +53,7 @@
           <v-select v-model="sell_blockchain" :items="sell_blockchains" label="Sell Blockchain"></v-select>
           <v-select v-model="sell_asset" :items="sell_assets" label="Sell Asset"></v-select>
           -->
-          <v-select v-model="sell_address" :items="sell_addresses" label="Sell Account" hint='The ACU account you wish to sell from.' persistent-hint class="mb-4"></v-select>
+          <v-select v-model="sell_address" :items="accountsAcu" label="Sell Account" hint='The ACU account you wish to sell from.' persistent-hint class="mb-4"></v-select>
           <v-text-field v-model="sell_value" label="Sell Value" suffix="ACU" hint='How much ACU you wish to sell at this price.' persistent-hint class="mb-4"></v-text-field>
           <!--
           <v-select v-model="buy_blockchain" :items="buy_blockchains" label="Buy Blockchain"></v-select>
@@ -79,7 +79,6 @@
 
     data () {
       return {
-        acu_addresses: [] as String[],
         sell_blockchains: ['Acuity'],
         sell_blockchain: 'Acuity',
         sell_assets: ['ACU'],
@@ -100,15 +99,13 @@
     computed: {
       orders() {
         return this.$store.state.orderBookAcu;
-      }
+      },
+      accountsAcu() {
+        return this.$store.state.accountsAcu;
+      },
     },
 
     async created() {
-      for (let account of this.$acuityClient.accounts) {
-          this.sell_addresses.push({text: account.meta.name, value: account.address});
-          this.acu_addresses.push(account.address);
-      }
-
       window.ethereum.on('accountsChanged', (accounts: any) => {
         this.buy_address = accounts[0];
       });
