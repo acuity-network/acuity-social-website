@@ -59,7 +59,7 @@
           <v-select v-model="buy_blockchain" :items="buy_blockchains" label="Buy Blockchain"></v-select>
           <v-select v-model="buy_asset" :items="buy_assets" label="Buy Asset"></v-select>
           -->
-          <v-text-field v-model="buy_address" label="Buy Account" hint='The ETH account to receive payment.' persistent-hint class="mb-4"></v-text-field>
+          <v-text-field v-model="buy_address" label="Buy Account" hint='The ETH account to receive payment.' persistent-hint class="mb-4" disabled></v-text-field>
           <v-text-field v-model="price" label="Price" suffix="ETH" hint='Amount of ETH to receive per 1 ACU.' persistent-hint class="mb-4"></v-text-field>
           <v-btn @click="addSellOrder" class="mt-4">Create Sell Order</v-btn>
         </v-form>
