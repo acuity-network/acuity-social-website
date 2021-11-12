@@ -266,19 +266,9 @@
   {
     "inputs": [
       {
-        "internalType": "bytes16",
-        "name": "orderId",
-        "type": "bytes16"
-      },
-      {
         "internalType": "bytes32",
-        "name": "hashedSecret",
+        "name": "sellLockId",
         "type": "bytes32"
-      },
-      {
-        "internalType": "uint256",
-        "name": "timeout",
-        "type": "uint256"
       }
     ],
     "name": "getSellLock",
@@ -295,9 +285,24 @@
   {
     "inputs": [
       {
+        "internalType": "bytes16",
+        "name": "orderId",
+        "type": "bytes16"
+      },
+      {
         "internalType": "bytes32",
-        "name": "sellLockId",
+        "name": "hashedSecret",
         "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timeout",
+        "type": "uint256"
       }
     ],
     "name": "getSellLock",
@@ -327,6 +332,11 @@
         "internalType": "bytes32",
         "name": "hashedSecret",
         "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
       },
       {
         "internalType": "uint256",
@@ -398,6 +408,11 @@
         "type": "bytes32"
       },
       {
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
+      },
+      {
         "internalType": "uint256",
         "name": "timeout",
         "type": "uint256"
@@ -419,6 +434,11 @@
         "internalType": "bytes32",
         "name": "secret",
         "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
       },
       {
         "internalType": "uint256",
