@@ -58,6 +58,8 @@
           <v-text-field v-model="price" label="Price" suffix="ETH" hint='Amount of ETH to pay per 1 ACU.' persistent-hint class="mb-4" disabled></v-text-field>
           <v-text-field v-model="maxValue" label="Maximum Value" suffix="ACU" hint='How much ACU is for sale in this order.' persistent-hint class="mb-4" disabled></v-text-field>
           <v-text-field v-model="seller" label="Seller" hint='Who is selling the ACU.' persistent-hint class="mb-4" disabled></v-text-field>
+          <v-text-field v-model="addressEth" label="ETH Buy Account" hint='The ETH account to pay from.' persistent-hint class="mb-4" disabled></v-text-field>
+          <v-select v-model="acu_buy_address" :items="accountsAcu" label="ACU Buy Account" hint='The account to receive the ACU.' persistent-hint class="mb-4"></v-select>
           <v-text-field v-model="value" label="Buy Value" suffix="ACU" hint='How much ACU you wish to buy.' persistent-hint class="mb-4"></v-text-field>
           <v-btn @click="createBuyLock" class="mt-4">Buy</v-btn>
         </v-form>
@@ -70,6 +72,7 @@
   import Vue from 'vue'
   let JSONbig = require('json-bigint')({ useNativeBigInt: true })
   import { web3FromAddress } from '@polkadot/extension-dapp';
+  import { decodeAddress, encodeAddress } from '@polkadot/keyring';
 
   export default Vue.extend({
     name: 'AtomicSwapPolkadotBuy',
@@ -84,6 +87,7 @@
     data () {
       return {
         valid: true,
+        acu_buy_address: '',
         value: '',
       }
     },
@@ -161,7 +165,10 @@
       },
       addressEth(): string {
         return this.$store.state.addressEth;
-      }
+      },
+      accountsAcu(): [] {
+        return this.$store.state.accountsAcu;
+      },
     },
 
     async created() {
@@ -176,35 +183,38 @@
         localStorage.setItem(hashedSecret, secret);
         let assetIdOrderId = "0x88888888888888888888888888888888" + this.orderId;
         let timeout = Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 3;
+        let foreign_address = this.$ethClient.web3.utils.bytesToHex(decodeAddress(this.acu_buy_address));
 
         this.$ethClient.atomicSwapBuy.methods.lockBuy(
-          this.foreignAddress, hashedSecret, timeout, assetIdOrderId
-        ).send({from: this.$store.state.addressEth, value: value});
+          this.foreignAddress, hashedSecret, timeout, assetIdOrderId, foreign_address
+        ).send({from: this.addressEth, value: value});
       },
       async createSellLock(lock: any) {
         let foreignAddress = this.$ethClient.web3.utils.bytesToHex(this.$store.state.ordersAcu[this.orderId].order.orderStatic.foreign_address);
+        let buyer = encodeAddress("0x" + lock.raw.buyLockForeignAddress);
         let valueAcu = (BigInt(this.$ethClient.web3.utils.toWei(lock.raw.buyLockValue.toString())) / BigInt(this.priceWei)).toString();
         let timeout = Date.now() + 60 * 60 * 24 * 2 * 1000;
         const injector = await web3FromAddress(this.seller);
         this.$acuityClient.api.tx.atomicSwap
-          .lockSell('0x' + lock.raw.hashedSecret, "0x88888888888888888888888888888888", this.priceWei, foreignAddress, valueAcu, timeout)
+          .lockSell('0x' + lock.raw.hashedSecret, "0x88888888888888888888888888888888", this.priceWei, foreignAddress, buyer, valueAcu, timeout)
           .signAndSend(this.seller, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });
       },
       async unlockSellLock(lock: any) {
         let secret = localStorage.getItem('0x' + lock.hashedSecret);
+        let buyer = encodeAddress("0x" + lock.raw.buyLockForeignAddress);
         const injector = await web3FromAddress(this.seller);
         this.$acuityClient.api.tx.atomicSwap
           .unlockSell('0x' + this.orderId, secret)
-          .signAndSend(this.seller, { signer: injector.signer }, (status: any) => {
+          .signAndSend(buyer, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });
       },
       async unlockBuyLock(lock: any) {
         this.$ethClient.atomicSwapBuy.methods.unlockBuy(
           '0x' + lock.raw.buyer, '0x' + lock.raw.secret, lock.raw.buyLockTimeout
-        ).send({from: this.$store.state.addressEth});
+        ).send({from: this.addressEth});
       },
     }
   })
