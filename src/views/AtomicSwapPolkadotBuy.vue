@@ -44,8 +44,8 @@
                 <td>{{ lock.sellLockState }}</td>
                 <td>{{ lock.sellLockTimeout }}</td>
                 <td>
-                  <v-btn v-if="sellerAvailable && lock.sellLockState == 'NotLocked'" small @click="createSellLock(lock)"><v-icon small>mdi-lock</v-icon></v-btn>
-                  <v-btn v-if="lock.sellLockState == 'Locked'" small @click="unlockSellLock(lock)"><v-icon small>mdi-lock-open-variant</v-icon></v-btn>
+                  <v-btn v-if="sellerAvailable && (lock.sellLockState == 'NotLocked')" small @click="createSellLock(lock)"><v-icon small>mdi-lock</v-icon></v-btn>
+                  <v-btn v-if="addressesAcu.includes(lock.buyerAddress) && (lock.sellLockState == 'Locked')" small @click="unlockSellLock(lock)"><v-icon small>mdi-lock-open-variant</v-icon></v-btn>
                 </td>
               </tr>
             </tbody>
@@ -110,6 +110,7 @@
 //              valueAcu: parseFloat(lock.buyLockValue.toString()) / parseFloat(this.priceWei),
               sellLockState: lock.sellLockState,
               sellLockTimeout: (lock.sellLockTimeout == 0) ? "" : new Date(lock.sellLockTimeout).toLocaleString(),
+              buyerAddress: encodeAddress('0x' + lock.buyLockForeignAddress),
               raw: lock,
             })
           }
@@ -169,6 +170,9 @@
       accountsAcu(): [] {
         return this.$store.state.accountsAcu;
       },
+      addressesAcu(): [] {
+        return this.$store.state.addressesAcu;
+      },
     },
 
     async created() {
@@ -191,23 +195,21 @@
       },
       async createSellLock(lock: any) {
         let foreignAddress = this.$ethClient.web3.utils.bytesToHex(this.$store.state.ordersAcu[this.orderId].order.orderStatic.foreign_address);
-        let buyer = encodeAddress("0x" + lock.raw.buyLockForeignAddress);
         let valueAcu = (BigInt(this.$ethClient.web3.utils.toWei(lock.raw.buyLockValue.toString())) / BigInt(this.priceWei)).toString();
         let timeout = Date.now() + 60 * 60 * 24 * 2 * 1000;
         const injector = await web3FromAddress(this.seller);
         this.$acuityClient.api.tx.atomicSwap
-          .lockSell('0x' + lock.raw.hashedSecret, "0x88888888888888888888888888888888", this.priceWei, foreignAddress, buyer, valueAcu, timeout)
+          .lockSell('0x' + lock.raw.hashedSecret, "0x88888888888888888888888888888888", this.priceWei, foreignAddress, lock.buyerAddress, valueAcu, timeout)
           .signAndSend(this.seller, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });
       },
       async unlockSellLock(lock: any) {
         let secret = localStorage.getItem('0x' + lock.hashedSecret);
-        let buyer = encodeAddress("0x" + lock.raw.buyLockForeignAddress);
         const injector = await web3FromAddress(this.seller);
         this.$acuityClient.api.tx.atomicSwap
           .unlockSell('0x' + this.orderId, secret)
-          .signAndSend(buyer, { signer: injector.signer }, (status: any) => {
+          .signAndSend(lock.buyerAddress, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });
       },
