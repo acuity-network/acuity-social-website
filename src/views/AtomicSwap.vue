@@ -153,6 +153,13 @@
           coins: 'AVAX and tokens',
           connector: 'Smart contracts (Solidity) => EVM',
         },
+        {
+          logo: 'coin_logos/solana.svg',
+          name: 'Solana',
+          link: 'https://solana.com/',
+          coins: 'SOL and tokens',
+          connector: 'Rust on-chain program',
+        },
       ],
       items: [
         {
