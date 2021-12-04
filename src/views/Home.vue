@@ -8,9 +8,9 @@
     <v-row style="margin: 40px 0;">
       <v-col>
         <div style="color: #3cc3db; font-family: Raleway; text-align: center; font-size: 24px;">
-          {{ message }}<span class="blink-me">|</span><br /><br />
+          {{ message }}<span class="blink-me">|</span><!-- <br /><br />
           <router-link to="/parachains">Parachains Airdrop</router-link> in {{ days }} {{ $tc('days', days) }}, {{ hours }} {{ $tc('hours', hours) }}, {{ minutes }} {{ $tc('minutes', minutes) }}, {{ seconds }} {{ $tc('seconds', seconds) }}<br /><br />
-          ACU => ACR, ACU, ACF, ACT
+          ACU => ACR, ACU, ACF, ACT -->
         </div>
       </v-col>
     </v-row>

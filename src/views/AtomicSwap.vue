@@ -185,12 +185,12 @@
         {
           title: 'Off-chain worker to index order book',
           text: 'Only data required for consensus is stored in contract state. An <a target="_blank" href="https://substrate.dev/docs/en/knowledgebase/learn-substrate/off-chain-features#off-chain-workers">off-chain worker</a> needs to be written to index information such as the order book.',
-          completed: false,
+          completed: true,
         },
         {
           title: 'Create basic frontend',
           text: 'A simple user interface will be created using <a target="_blank" href="https://vuetifyjs.com/">Vuetify</a>.',
-          completed: false,
+          completed: true,
         },
         {
           title: 'Upgrade the Acuity runtime with the atomic swap pallet.',

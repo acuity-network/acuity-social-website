@@ -9,11 +9,73 @@
       <v-col cols="12" md="10">
         <v-card elevation="10" outlined>
           <v-card-text>
-            <div class="text-h5 mb-1">Parachain Airdrop Reschedule</div>
-            <div class="subtitle-2 mb-4">30th October by Jonathan Brown</div>
+            <div class="text-h5 mb-1">Acuity Atomic Swap DEX - the future of interchain trading</div>
+            <div class="subtitle-2 mb-4">4th December 2021 by Jonathan Brown</div>
             <div class="body-2 mb-4">
-              <p>After consulting with the Acuity community, we have decided to postpone the <router-link to="/parachains">parachain airdrop</router-link> by another month to 1st December 2021. As can be seen from the latest progress update <a target="_blank" href="https://www.youtube.com/channel/UCkvRVEWnTPWWYJQqPbYwyiw/videos">videos</a>, the Acuity Atomic Swap <router-link to="/atomic-swap">DEX</router-link> is really coming along.</p>
-              <p>It's important that we have a period of trading on the DEX with the first pair (ETH/ACU) before the airdrop, with many other pairs coming later.</p>
+              <p>First a little back-story on the history of Acuity...</p>
+              <p>Acuity (previously known as MIX) was started in 2015 with the goal of creating on-chain social communities. These have many useful properties that are not available on centralized platforms including:</p>
+              <p>
+                <ul>
+                  <li>permissionless innovation: everyone is at liberty to improve the platform</li>
+                  <li>separation of data and functionality: you can create an entirely new social platform and bring in all the existing users</li>
+                  <li>censorship resistance: you can always publish - of course whether any one is listening is another matter</li>
+                  <li><a target="_blank" href="https://en.wikipedia.org/wiki/Link_rot">link rot</a> prevention: each piece of content has a permanent id and anyone can ensure that the content remains hosted</li>
+                </ul>
+              </p>
+              <p>MIX was built on a clone of Ethereum and achieved a minimum viable product as can be seen on the <a target="_blank" href="https://www.youtube.com/channel/UCkvRVEWnTPWWYJQqPbYwyiw/videos">Acuity YouTube channel</a>.</p>
+              <p>At that time DeFi and scalable programmable blockchains were still only an idea. While we knew centralized exchanges were bad and DeFi was the way forward, it was decided to concentrate on the primary goal of the project (on-chain social communities). This meant that the coin for the project (MIX) was traded on centralized exchanges with the intention of migrating trading to DeFi once the technology was available.</p>
+              <p>On the 3rd September 2020 MIX migrated from a clone of Ethereum to the Polkadot ecosystem. The new blockchain is known as Acuity. All MIX balances could and still can be converted to ACU.</p>
+              <p>Polkadot is a much more suitable technology for on-chain social communities. It has a scalability model where there are many different high performance parachains with their own governance that can connect together via a "relay chain" for shared security and communication.</p>
+              <p>When designing on-chain social communities there is unlimited potential for innovation. This is why the goal with Acuity on Polkadot is that each on-chain social community will have its own parachain. Each community can operate in its own way while still being able to communicate via the Acuity relay chain with other parachain communities.</p>
+            </div>
+            <div class="text-h6 mb-1">The problem...</div>
+            <div class="body-2 mb-4">
+              <p>However it became apparent that centralized exchanges are an obstacle for Acuity and the broader blockchain movement.</p>
+              <p>The issue is that when a centralized exchange lists a coin, they are actually creating a totally new coin that is simply stored in a database that they control. The exchange operator uses public relations to ensure that in the mind of coin holders a real coin (the owner is in possession of the private key) is equivalent to a coin held on the exchange.</p>
+              <p>However this couldn't be further from the truth. Cryptocurrencies are generally said to have certain important properties, such as having deterministic inflation rate and the fact that they are "sound money" that can't be counterfeited. While this may be true on the blockchain, this is most certainly not true on centralized exchanges.</p>
+              <p>Because operators of CEXs are in control of the database of their cryptocurrency, they have the technical ability to create arbitrary amounts of it as they see fit and use this fake cryptocurrency to benefit themselves.</p>
+              <p>For example, they can create arbitrary quantities of coin A and sell it for coin B on their own exchange, thereby lowering the value of coin A and raising the value of coin B. This means they know the future. There are many ways this can be used to generate large profits. For example, they can:</p>
+              <p>
+                <ul>
+                  <li>obtain large quantities of coin B before raising its value, then sell it OTC</li>
+                  <li>start positive feedback buying loop of coin B where many unsuspecting traders also participate, before selling at the top</li>
+                  <li>short coin A against another coin</li>
+                  <li>conspire with other CEXs to work in lockstep, thereby increasing profits</li>
+                  <li>sell information about the future, e.g. paywalled mailing lists</li>
+                  <li>do all of this over and over again</li>
+                </ul>
+              </p>
+              <p>So CEXs have the potential to be parasites, sucking value out of crypto projects.</p>
+              <p>CEXs can operate like banks, only keeping a fractional reserve of deposits. This is totally invisible unless they become completely insolvent, at which point the exchange will shut down.</p>
+              <p>CEX operators may start out with the intention of being corrupt or they may become corrupt over time, either because the temptation is too great or because they make a technical error and loose funds that need to be recovered. Either way we are trusting CEXs to not be corrupt. This goes against the fundamental purpose of blockchain - having rules without having to trust anyone.</p>
+              <p>Exchange rates on major centralized exchanges are generally quite similar to those on DeFi, showing that the community really believes that coins on a CEX are equivalent to those on a DEX. Price aggregation websites combine the exchange rates of centralized exchanges with those from DeFi, further propagating the myth.</p>
+              <p>Of course the other issue with centralized exchanges is that you have no guarantee that you can convert your CEX coins into real coins. Many people have lost crypto over the years because they have been unable to withdraw it.</p>
+              <p>ACU is currently trading on <a target="_blank" href="https://www.stex.com/">STEX</a>. They have treated us very well and they do not appear to be corrupt.</p>
+            </div>
+            <div class="text-h6 mb-1">The solution...</div>
+            <div class="body-2 mb-4">
+              <p>DeFi solves this problem. Trading on DeFi does not involve depositing crypto into a centralized system that credits you with tokens in a controlled database. Trading occurs via smart contracts that operate in a fully deterministic manner. There is no need to trust a third party.</p>
+              <p>DeFi on a single blockchain, for example Uniswap, has been very successful. But what we really need to replace centralized exchanges is cross-chain DeFi.</p>
+              <p>There are various ways this can be done, for example with <a target="_blank" href="https://wiki.polkadot.network/docs/learn-bridges">Polkadot Bridges</a>. This enables tokens to be "teleported" from one chain to another where they can be traded using regular on-chain DeFi.</p>
+              <p>Another way that has been discussed since the early days of Bitcoin, but not fully realized, is <a target="_blank" href="https://www.youtube.com/watch?v=-9NDKbJo_A4">Atomic Swap</a>. This enables direct trading from wallet to wallet across blockchains. With atomic swap either both the buy and sell transfers occur or neither of them do.</p>
+              <p>It was announced on 3rd December 2020 that development had started on the <router-link to="/atomic-swap">Acuity DEX</router-link>.</p>
+              <p>Development of the DEX is now very mature. On testnets it is possible to create ACU sell orders and match them with ETH. <a target="_blank" href="https://www.youtube.com/watch?v=9-DvgMzOtis">Here's the video</a>.</p>
+              <p>The next step is to implement the UI for sales in the other direction (creating ETH sell orders and matching them with ACU). We will then have the minimal viable product. After that we will be adding support for many more programmable blockchains (Optimism, Arbitrum, Polkadot chains, Avalanche, Solana, etc) and also all tokens within those blockchains.</p>
+              <p>The UI will need to be improved a lot. This is an ongoing process.</p>
+              <p>Atomic Swaps operate with a system of timeouts. If either party doesn't do what is required of them the other party simply has to wait for the timeout to expire. The timeout duration can be negotiated by both parties before the trade starts. For fast blockchains and bot or bot-assisted trading these timeouts can be just a few seconds long, resulting in high frequency trading.</p>
+              <p>An important aspect of Atomic Swap trading is that you need to be able to view the reputation of potential trading partners. The Acuity DEX will have an on-chain review / rating system, storing IPFS hashes of comments. Essentially the first parachain social community on Acuity. In order to publish reviews of your trading partners it will be necessary to spend a small amount of ACU to pay for the transaction.</p>
+              <p>For example a trade could happen between Avalanche and Solana, and the traders would pay a small amount of ACU to review it.</p>
+            </div>
+            <div class="text-h6 mb-1">Hard spoon</div>
+            <div class="body-2 mb-4">
+              <p>Before we can launch the exchange we need to perform a <a target="_blank" href="https://wiki.polkadot.network/docs/glossary#hard-spoon">hard spoon</a> to upgrade the blockchain. This will be the third (and hopefully final) hard spoon that we have performed on the Acuity blockchain. This will occur over the next few days. A snapshot of all ACU balances will be taken and a new genesis block will be created. You do not need to take any action before the hard spoon.</p>
+              <p>Any ACU you have locked or staked will be credited to your account. Nominators and validators can be setup again after the hard spoon.</p>
+            </div>
+            <div class="text-h6 mb-1">Parachains</div>
+            <div class="body-2 mb-4">
+              <p>As described above, Acuity will be a federated system with each <router-link to="/parachains">parachain</router-link> being its own on-chain community that has unique functionality (its own runtime). There will be an airdrop where holders of ACU will receive ACR, ACF and ACT. </p>
+              <p>The airdrop had been previously scheduled for 1st December, but this could not occur before the atomic swap exchange is operational because the new assets will need to be tradable. It will not be appropriate to perform the airdrop until the exchange is running effectively and on blockchains that do not have high fees.</p>
+              <p>Once it becomes possible and the community deems it the right time, the airdrop will occur.</p>
             </div>
           </v-card-text>
         </v-card>
@@ -56,7 +118,7 @@
                 <li>If there is a problem with using the Contracts pallet, the <a target="_blank" href="https://www.substrate.io/kb/smart-contracts/evm-pallet">EVM</a> pallet can be enabled and the contracts compiled with the standard Solidity to EVM compiler.</li>
                 <li>The codebase can be easily <a target="_blank" href="https://github.com/substrate-developer-hub/substrate-parachain-template">updated</a> for Acuity to be able to become a parachain on Polkadot or Kusama.</li>
               </ul></p>
-              <p>Unfortunately, because it was not possible to upgrade the Acuity blockchain directly to the new runtime a <a target="_blank" href="https://wiki.polkadot.network/docs/ru/glossary#hard-spoon">hard spoon</a> had to be performed. This involved taking a snapshot of all the ACU balances and unclaimed MIX balances and creating a new genesis specification. This has the following disadvantages:</p>
+              <p>Unfortunately, because it was not possible to upgrade the Acuity blockchain directly to the new runtime a <a target="_blank" href="https://wiki.polkadot.network/docs/glossary#hard-spoon">hard spoon</a> had to be performed. This involved taking a snapshot of all the ACU balances and unclaimed MIX balances and creating a new genesis specification. This has the following disadvantages:</p>
               <p><ul>
                 <li>2,000,000 blocks of history are no longer archived on the main chain.</li>
                 <li>Account identity information has been lost. Registrars will need to enabled and on-chain identities re-established.</li>
@@ -91,7 +153,7 @@
                 <p>The way forward is clear, Acuity needs to be able to become a parachain / parathread on Kusama / Polkadot at the earliest opportunity to be able to participate in the early network effects that MIX missed out on on Ethereum (being an independent Ethereum blockchain at the time).</p>
                 <p>The first Acuity community will be based on the original Solidity smart contracts <a target="_blank" href="https://github.com/acuity-social/acuity-contracts">developed</a> when Acuity was called MIX. The <a target="_blank" href="https://github.com/hyperledger-labs/solang">Solang</a> compiler is now mature enough to compile these to <a target="_blank" href="https://en.wikipedia.org/wiki/WebAssembly">Wasm</a> and can therefore be deployed on the <a target="_blank" href="https://www.substrate.io/kb/smart-contracts/contracts-pallet">Contracts</a> pallet on the Acuity blockchain.</p>
                 <p>Eventually, once Acuity can have its own parachains, social communities will be developed as native <a target="_blank" href="https://www.substrate.io/">Substrate</a> pallets on their own blockchains. Developers wishing to extend the on-chain functionality of such a community without going through the governance mechanism will be able to do so with smart contracts.</p>
-                <p>Currently the Acuity node software is based on Kusama. This does not provide what we need. In order for Acuity to be able to be a parachain, the node software needs to be rebuilt based on <a target="_blank" href="https://github.com/substrate-developer-hub/substrate-node-template">substrate-node-template</a>. This is not especially difficult and hopefully can be achieved without performing another <a target="_blank" href="https://wiki.polkadot.network/docs/ru/glossary#hard-spoon">hard-spoon</a>.</p>
+                <p>Currently the Acuity node software is based on Kusama. This does not provide what we need. In order for Acuity to be able to be a parachain, the node software needs to be rebuilt based on <a target="_blank" href="https://github.com/substrate-developer-hub/substrate-node-template">substrate-node-template</a>. This is not especially difficult and hopefully can be achieved without performing another <a target="_blank" href="https://wiki.polkadot.network/docs/glossary#hard-spoon">hard-spoon</a>.</p>
             </div>
           </v-card-text>
         </v-card>
@@ -106,7 +168,6 @@
               <p>Those wishing to sell ACU will lock it up in the smart contract along with the ETH price they want to sell it for and a <a target="_blank" href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">hash</a> of a random number. A buyer can deposit the ETH required into the smart contract on the Ethereum chain (along with the same hashed random number). At this point the seller can retrieve the ETH, but in doing so they reveal the random number. The buyer can then use this number to receive the ACU.</p>
               <p>The offers will be stored on-chain in a linked list, ordered by the quantity that is for sale. Various timeouts exist so that if either party does not fulfil their side of the arrangement the other party can retrieve their funds. The process can happen very quickly if both parties are online, or over space space of several hours. The procedure can also operative in reverse where someone can lock up their ETH to sell it for a specific ACU price.</p>
               <p>The frontend will be implemented directly in the Acuity web app you are using right now. It will require the simultaneous use of both the <a target="_blank" href="https://polkadot.js.org/extension/">Polkadot</a> and <a target="_blank" href="https://metamask.io/">Metamask</a> browser plugins.</p>
-              <p>I think this can come together very quickly and be online within a couple of weeks.</p>
             </div>
           </v-card-text>
         </v-card>
@@ -117,7 +178,7 @@
             <div class="text-h5 mb-1">Acuity hard spooned!</div>
             <div class="subtitle-2 mb-4">26th November 2020 by Jonathan Brown</div>
             <div class="body-2 mb-4">
-              <p>Due to the cessation of block production of the proof-of-authority nodes (see previous blog post), it was necessary for Acuity to <a target="_blank" href="https://wiki.polkadot.network/docs/ru/glossary#hard-spoon">hard spoon</a>. A snapshot of blockchain state was taken at block 1049095 (the last finalized block) and a new genesis block was created.</p>
+              <p>Due to the cessation of block production of the proof-of-authority nodes (see previous blog post), it was necessary for Acuity to <a target="_blank" href="https://wiki.polkadot.network/docs/glossary#hard-spoon">hard spoon</a>. A snapshot of blockchain state was taken at block 1049095 (the last finalized block) and a new genesis block was created.</p>
               <p>Two modifications to the state were made:
                 <ul>
                   <li>runtime upgrade - Built with the latest version of <a target="_blank" href="https://github.com/acuity-social/acuity-substrate">acuity-substrate</a>, this may fix the problem of new validators being unable to join the network  (and prevent cessation of block production from re-occuring).</li>
