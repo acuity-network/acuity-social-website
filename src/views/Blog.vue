@@ -45,7 +45,8 @@
                   <li>do all of this over and over again</li>
                 </ul>
               </p>
-              <p>So CEXs have the potential to be parasites, sucking value out of crypto projects.</p>
+              <p>So CEXs have the potential to be parasites, sucking value out of crypto projects. They have the power to decide the winners and losers.</p>
+              <p>On proof-of-stake blockchains and those that use stake for governance (like Polkadot) the situation is even worse. CEXs can use their power to accumulate vast real quantities of a specific cryptocurrency and then use it to interfere with the governance of the chain.</p>
               <p>CEXs can operate like banks, only keeping a fractional reserve of deposits. This is totally invisible unless they become completely insolvent, at which point the exchange will shut down.</p>
               <p>CEX operators may start out with the intention of being corrupt or they may become corrupt over time, either because the temptation is too great or because they make a technical error and loose funds that need to be recovered. Either way we are trusting CEXs to not be corrupt. This goes against the fundamental purpose of blockchain - having rules without having to trust anyone.</p>
               <p>Exchange rates on major centralized exchanges are generally quite similar to those on DeFi, showing that the community really believes that coins on a CEX are equivalent to those on a DEX. Price aggregation websites combine the exchange rates of centralized exchanges with those from DeFi, further propagating the myth.</p>
