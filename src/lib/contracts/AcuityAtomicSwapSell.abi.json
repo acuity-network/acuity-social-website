@@ -11,7 +11,7 @@
       {
         "indexed": false,
         "internalType": "bytes32",
-        "name": "assetIdPrice",
+        "name": "chainIdAdapterIdAssetIdPrice",
         "type": "bytes32"
       },
       {
@@ -73,7 +73,7 @@
       {
         "indexed": false,
         "internalType": "bytes32",
-        "name": "assetIdPrice",
+        "name": "chainIdAdapterIdAssetIdPrice",
         "type": "bytes32"
       },
       {
@@ -140,7 +140,7 @@
     "inputs": [
       {
         "internalType": "bytes32",
-        "name": "assetIdPrice",
+        "name": "chainIdAdapterIdAssetIdPrice",
         "type": "bytes32"
       },
       {
@@ -158,7 +158,7 @@
     "inputs": [
       {
         "internalType": "bytes32",
-        "name": "oldAssetIdPrice",
+        "name": "oldChainIdAdapterIdAssetIdPrice",
         "type": "bytes32"
       },
       {
@@ -168,7 +168,7 @@
       },
       {
         "internalType": "bytes32",
-        "name": "newAssetIdPrice",
+        "name": "newChainIdAdapterIdAssetIdPrice",
         "type": "bytes32"
       },
       {
@@ -191,7 +191,7 @@
     "inputs": [
       {
         "internalType": "bytes32",
-        "name": "oldAssetIdPrice",
+        "name": "oldChainIdAdapterIdAssetIdPrice",
         "type": "bytes32"
       },
       {
@@ -201,7 +201,7 @@
       },
       {
         "internalType": "bytes32",
-        "name": "newAssetIdPrice",
+        "name": "newChainIdAdapterIdAssetIdPrice",
         "type": "bytes32"
       },
       {
@@ -224,7 +224,7 @@
       },
       {
         "internalType": "bytes32",
-        "name": "assetIdPrice",
+        "name": "chainIdAdapterIdAssetIdPrice",
         "type": "bytes32"
       },
       {
@@ -320,7 +320,7 @@
     "inputs": [
       {
         "internalType": "bytes32",
-        "name": "assetIdPrice",
+        "name": "chainIdAdapterIdAssetIdPrice",
         "type": "bytes32"
       },
       {
@@ -358,7 +358,7 @@
     "inputs": [
       {
         "internalType": "bytes32",
-        "name": "assetIdPrice",
+        "name": "chainIdAdapterIdAssetIdPrice",
         "type": "bytes32"
       },
       {
@@ -376,7 +376,7 @@
     "inputs": [
       {
         "internalType": "bytes32",
-        "name": "assetIdPrice",
+        "name": "chainIdAdapterIdAssetIdPrice",
         "type": "bytes32"
       },
       {
