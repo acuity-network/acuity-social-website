@@ -199,7 +199,7 @@
         let timeout = Date.now() + 60 * 60 * 24 * 2 * 1000;
         const injector = await web3FromAddress(this.seller);
         this.$acuityClient.api.tx.atomicSwap
-          .lockSell('0x' + lock.raw.hashedSecret, "0x88888888888888888888888888888888", this.priceWei, foreignAddress, lock.buyerAddress, valueAcu, timeout)
+          .lockSell('0x' + lock.raw.hashedSecret, '0x11111111', '0x22222222', '0x3333333333333333', this.priceWei, foreignAddress, lock.buyerAddress, valueAcu, timeout)
           .signAndSend(this.seller, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });
