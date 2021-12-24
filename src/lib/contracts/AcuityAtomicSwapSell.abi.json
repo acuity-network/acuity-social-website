@@ -4,6 +4,12 @@
     "inputs": [
       {
         "indexed": false,
+        "internalType": "bytes16",
+        "name": "orderId",
+        "type": "bytes16"
+      },
+      {
+        "indexed": false,
         "internalType": "address",
         "name": "seller",
         "type": "address"
@@ -66,21 +72,9 @@
     "inputs": [
       {
         "indexed": false,
-        "internalType": "address",
-        "name": "seller",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "bytes32",
-        "name": "chainIdAdapterIdAssetIdPrice",
-        "type": "bytes32"
-      },
-      {
-        "indexed": false,
-        "internalType": "bytes32",
-        "name": "foreignAddress",
-        "type": "bytes32"
+        "internalType": "bytes16",
+        "name": "orderId",
+        "type": "bytes16"
       },
       {
         "indexed": false,
