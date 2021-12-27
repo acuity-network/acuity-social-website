@@ -215,7 +215,7 @@
       },
       async unlockBuyLock(lock: any) {
         this.$ethClient.atomicSwapBuy.methods.unlockBuy(
-          '0x' + lock.raw.buyer, '0x' + lock.raw.secret, lock.raw.buyLockTimeout
+          '0x' + lock.raw.buyer.slice(24), '0x' + lock.raw.secret, lock.raw.buyLockTimeout
         ).send({from: this.addressEth});
       },
     }
