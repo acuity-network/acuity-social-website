@@ -131,7 +131,7 @@
         let price = this.$ethClient.web3.utils.toWei(this.price);
         const injector = await web3FromAddress(this.sell_address);
         this.$acuityClient.api.tx.atomicSwap
-          .addToOrder('0x11111111', '0x22222222', '0x3333333333333333', price, buy_address, value)
+          .addToOrder(76, 0, '0x0000000000000000', price, buy_address, value)
           .signAndSend(this.sell_address, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });

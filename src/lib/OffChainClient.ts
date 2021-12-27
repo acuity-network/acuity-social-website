@@ -42,6 +42,10 @@ export default class OffChainClient {
   getOrderBook() {
     var msg = {
       type: "GetOrderBook",
+      sell_chain_id: 76,
+      sell_asset_id: "0000000000000000",
+      buy_chain_id: 60,
+      buy_asset_id: "0000000000000000",
     };
 
     this.ws.send(JSON.stringify(msg));
@@ -50,6 +54,8 @@ export default class OffChainClient {
   getOrder(order_id: String) {
     var msg = {
       type: "GetOrder",
+      sell_chain_id: 76,
+      sell_adapter_id: 0,
       order_id: order_id,
     };
 
