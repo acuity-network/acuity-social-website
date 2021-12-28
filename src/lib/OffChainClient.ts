@@ -1,4 +1,5 @@
 let JSONbig = require('json-bigint')({ useNativeBigInt: true })
+import { encodeAddress } from '@polkadot/keyring';
 
 export default class OffChainClient {
   vue: any;
@@ -19,17 +20,36 @@ export default class OffChainClient {
         case 'orderBook':
           let orders = [];
 
-          for (let order of message.order_book) {
-            orders.push({
-              orderId: order.orderId,
-              price: this.vue.$ethClient.web3.utils.fromWei(order.price.toString()),
-              value: this.vue.$ethClient.web3.utils.fromWei(order.value.toString()),
-              seller: order.seller,
-              raw: order,
-            })
+          switch(message.sellChainId) {
+            case 76:
+              for (let order of message.orderBook) {
+                orders.push({
+                  orderId: order.orderId,
+                  price: this.vue.$ethClient.web3.utils.fromWei(order.price.toString()),
+                  value: this.vue.$ethClient.web3.utils.fromWei(order.value.toString()),
+                  seller: encodeAddress('0x' + order.seller),
+                  raw: order,
+                })
+              }
+
+              this.vue.$store.commit('orderBookAcuSet', orders);
+              break;
+
+            case 60:
+              for (let order of message.orderBook) {
+                orders.push({
+                  orderId: order.orderId,
+                  price: this.vue.$ethClient.web3.utils.fromWei(order.price.toString()),
+                  value: this.vue.$ethClient.web3.utils.fromWei(order.value.toString()),
+                  seller: '0x' + order.seller.slice(24),
+                  raw: order,
+                })
+              }
+
+              this.vue.$store.commit('orderBookEthSet', orders);
+              break;
           }
 
-          this.vue.$store.commit('orderBookAcuSet', orders);
           break;
 
         case 'order':
@@ -42,9 +62,9 @@ export default class OffChainClient {
   getOrderBook(sell_chain_id: number, sell_asset_id: string, buy_chain_id: number, buy_asset_id: string) {
     var msg = {
       type: "GetOrderBook",
-      sell_chain_id: 76,
+      sell_chain_id: sell_chain_id,
       sell_asset_id: "0000000000000000",
-      buy_chain_id: 60,
+      buy_chain_id: buy_chain_id,
       buy_asset_id: "0000000000000000",
     };
 

@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { encodeAddress } from '@polkadot/keyring';
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
     orderBookAcu: [],
+    orderBookEth: [],
     ordersAcu: {},
     accountsAcu: [],
     addressesAcu: [],
@@ -14,10 +14,10 @@ export default new Vuex.Store({
   },
   mutations: {
     orderBookAcuSet(state: any, orders: []) {
-      for (let order in orders) {
-        orders[order].seller = encodeAddress('0x' + orders[order].seller);
-      }
       state.orderBookAcu = orders;
+    },
+    orderBookEthSet(state: any, orders: []) {
+      state.orderBookEth = orders;
     },
     orderAcuSet(state: any, order: any) {
       order.order.seller = encodeAddress('0x' + order.order.seller);
