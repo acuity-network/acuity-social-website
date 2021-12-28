@@ -105,7 +105,7 @@
     },
 
     async created() {
-      this.$offChainClient.getOrderBook();
+      this.$offChainClient.getOrderBook(76, "0000000000000000", 60, "0000000000000000");
     },
 
     methods: {
@@ -116,9 +116,9 @@
       async remove(order: any) {
       },
       async removeAll(order: any) {
-        const injector = await web3FromAddress(order.raw.order_static.seller);
+        const injector = await web3FromAddress(this.sell_address);
         this.$acuityClient.api.tx.atomicSwap
-          .removeFromOrderAll('0x88888888888888888888888888888888', order.raw.order_static.price, order.raw.order_static.foreign_address)
+          .removeFromOrderAll('0x88888888888888888888888888888888', order.raw.order_static.price, order.raw.order_static.foreignAddress)
           .signAndSend(order.raw.order_static.seller, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });

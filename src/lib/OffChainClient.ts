@@ -22,9 +22,9 @@ export default class OffChainClient {
           for (let order of message.order_book) {
             orders.push({
               orderId: order.orderId,
-              price: this.vue.$ethClient.web3.utils.fromWei(order.orderStatic.price.toString()),
+              price: this.vue.$ethClient.web3.utils.fromWei(order.price.toString()),
               value: this.vue.$ethClient.web3.utils.fromWei(order.value.toString()),
-              seller: order.orderStatic.seller,
+              seller: order.seller,
               raw: order,
             })
           }
@@ -39,7 +39,7 @@ export default class OffChainClient {
     }
   }
 
-  getOrderBook() {
+  getOrderBook(sell_chain_id: number, sell_asset_id: string, buy_chain_id: number, buy_asset_id: string) {
     var msg = {
       type: "GetOrderBook",
       sell_chain_id: 76,
@@ -51,11 +51,11 @@ export default class OffChainClient {
     this.ws.send(JSON.stringify(msg));
   }
 
-  getOrder(order_id: String) {
+  getOrder(sell_chain_id: number, sell_adapter_id: number, order_id: string) {
     var msg = {
       type: "GetOrder",
-      sell_chain_id: 76,
-      sell_adapter_id: 0,
+      sell_chain_id: sell_chain_id,
+      sell_adapter_id: sell_adapter_id,
       order_id: order_id,
     };
 

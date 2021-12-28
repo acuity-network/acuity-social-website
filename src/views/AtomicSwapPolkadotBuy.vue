@@ -123,7 +123,7 @@
       },
       priceWei(): string {
         if (this.orderId in this.$store.state.ordersAcu) {
-          return this.$store.state.ordersAcu[this.orderId].order.orderStatic.price;
+          return this.$store.state.ordersAcu[this.orderId].order.price;
         }
         else {
           return '';
@@ -131,7 +131,7 @@
       },
       price(): string {
         if (this.orderId in this.$store.state.ordersAcu) {
-          return this.$ethClient.web3.utils.fromWei(this.$store.state.ordersAcu[this.orderId].order.orderStatic.price.toString());
+          return this.$ethClient.web3.utils.fromWei(this.$store.state.ordersAcu[this.orderId].order.price.toString());
         }
         else {
           return '';
@@ -147,7 +147,7 @@
       },
       seller(): string {
         if (this.orderId in this.$store.state.ordersAcu) {
-          return this.$store.state.ordersAcu[this.orderId].order.orderStatic.seller.toString();
+          return this.$store.state.ordersAcu[this.orderId].order.seller.toString();
         }
         else {
           return '';
@@ -155,7 +155,7 @@
       },
       foreignAddress(): string {
         if (this.orderId in this.$store.state.ordersAcu) {
-          return this.$ethClient.web3.utils.bytesToHex(this.$store.state.ordersAcu[this.orderId].order.orderStatic.foreign_address.slice(12,32));
+          return '0x' + this.$store.state.ordersAcu[this.orderId].order.foreignAddress.slice(24);
         }
         else {
           return '';
@@ -165,7 +165,7 @@
         return this.$store.state.addressesAcu.includes(this.seller);
       },
       addressEth(): string {
-        return this.$store.state.addressEth;
+        return this.$store.state.addressEth.toLowerCase();
       },
       accountsAcu(): [] {
         return this.$store.state.accountsAcu;
@@ -176,7 +176,7 @@
     },
 
     async created() {
-      this.$offChainClient.getOrder(this.orderId);
+      this.$offChainClient.getOrder(76, 0, this.orderId);
     },
 
     methods: {
@@ -187,14 +187,14 @@
         localStorage.setItem(hashedSecret, secret);
         let assetIdOrderId = "0x88888888888888888888888888888888" + this.orderId;
         let timeout = Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 3;
-        let foreign_address = this.$ethClient.web3.utils.bytesToHex(decodeAddress(this.acu_buy_address));
+        let foreignAddress = this.$ethClient.web3.utils.bytesToHex(decodeAddress(this.acu_buy_address));
 
         this.$ethClient.atomicSwapBuy.methods.lockBuy(
-          this.foreignAddress, hashedSecret, timeout, assetIdOrderId, foreign_address
+          this.foreignAddress, hashedSecret, timeout, assetIdOrderId, foreignAddress
         ).send({from: this.addressEth, value: value});
       },
       async createSellLock(lock: any) {
-        let foreignAddress = this.$ethClient.web3.utils.bytesToHex(this.$store.state.ordersAcu[this.orderId].order.orderStatic.foreign_address);
+        let foreignAddress = '0x' + this.$store.state.ordersAcu[this.orderId].order.foreignAddress;
         let valueAcu = (BigInt(this.$ethClient.web3.utils.toWei(lock.raw.buyLockValue.toString())) / BigInt(this.priceWei)).toString();
         let timeout = Date.now() + 60 * 60 * 24 * 2 * 1000;
         const injector = await web3FromAddress(this.seller);
