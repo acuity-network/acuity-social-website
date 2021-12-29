@@ -45,7 +45,7 @@
         <v-form>
           <v-select v-model="sellAddressAcu" :items="accountsAcu" label="Sell Account" hint='The ACU account you wish to sell from.' persistent-hint class="mb-4"></v-select>
           <v-text-field v-model="sellValueAcu" label="Sell Value" suffix="ACU" hint='How much ACU you wish to sell at this price.' persistent-hint class="mb-4"></v-text-field>
-          <v-text-field v-model="buyAddressEth" label="Buy Account" hint='The ETH account to receive payment.' persistent-hint class="mb-4" disabled></v-text-field>
+          <v-text-field v-model="activeAddressEth" label="Buy Account" hint='The ETH account to receive payment.' persistent-hint class="mb-4" disabled></v-text-field>
           <v-text-field v-model="price" label="Price" suffix="ETH" hint='Amount of ETH to receive per 1 ACU.' persistent-hint class="mb-4"></v-text-field>
           <v-btn @click="addSellOrder" class="mt-4">Create Sell Order</v-btn>
         </v-form>
@@ -76,7 +76,7 @@
       accountsAcu() {
         return this.$store.state.accountsAcu;
       },
-      buyAddressEth() {
+      activeAddressEth() {
         return this.$store.state.addressEth;
       },
     },
@@ -88,11 +88,11 @@
     methods: {
       async addSellOrder(event: any) {
         let price = this.$ethClient.web3.utils.toWei(this.price);
-        let buy_address = this.$ethClient.web3.utils.padLeft(this.buyAddressEth, 64);
+        let foreignAddress = this.$ethClient.web3.utils.padLeft(this.activeAddressEth, 64);
         let value = this.$ethClient.web3.utils.toWei(this.sellValueAcu);
         const injector = await web3FromAddress(this.sellAddressAcu);
         this.$acuityClient.api.tx.atomicSwap
-          .addToOrder(60, 0, '0x0000000000000000', price, buy_address, value)
+          .addToOrder(60, 0, '0x0000000000000000', price, foreignAddress, value)
           .signAndSend(this.sellAddressAcu, { signer: injector.signer }, (status: any) => {
             console.log(status)
           });
