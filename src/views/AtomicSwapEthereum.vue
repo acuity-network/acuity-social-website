@@ -43,9 +43,9 @@
         <div class="body-2 mb-4">Acuity accounts are managed by the <a target="_blank" href="https://polkadot.js.org/extension/">Polkadot</a> browser extension.</div>
         <div class="body-2 mb-4">Ethereum accounts are managed by the <a target="_blank" href="https://metamask.io/">Metamask</a> browser extension.</div>
         <v-form>
-          <v-text-field v-model="sellAddress" label="Sell Account" hint='The ETH account you wish to sell from.' persistent-hint class="mb-4" disabled></v-text-field>
-          <v-text-field v-model="sellValue" label="Sell Value" suffix="ETH" hint='How much ETH you wish to sell at this price.' persistent-hint class="mb-4"></v-text-field>
-          <v-select v-model="buyAddress" :items="accountsAcu" label="Buy Account" hint='The ACU account to receive payment.' persistent-hint class="mb-4"></v-select>
+          <v-text-field v-model="sellAddressEth" label="Sell Account" hint='The ETH account you wish to sell from.' persistent-hint class="mb-4" disabled></v-text-field>
+          <v-text-field v-model="sellValueEth" label="Sell Value" suffix="ETH" hint='How much ETH you wish to sell at this price.' persistent-hint class="mb-4"></v-text-field>
+          <v-select v-model="buyAddressAcu" :items="accountsAcu" label="Buy Account" hint='The ACU account to receive payment.' persistent-hint class="mb-4"></v-select>
           <v-text-field v-model="price" label="Price" suffix="ACU" hint='Amount of ACU to receive per 1 ETH.' persistent-hint class="mb-4"></v-text-field>
           <v-btn @click="addSellOrder" class="mt-4">Create Sell Order</v-btn>
         </v-form>
@@ -63,8 +63,8 @@
 
     data () {
       return {
-        sellValue: '',
-        buyAddress: '',
+        sellValueEth: '',
+        buyAddressAcu: '',
         price: '',
       }
     },
@@ -76,7 +76,7 @@
       accountsAcu() {
         return this.$store.state.accountsAcu;
       },
-      sellAddress() {
+      sellAddressEth() {
         return this.$store.state.addressEth;
       },
     },
@@ -92,11 +92,11 @@
         let assetId = this.$ethClient.web3.utils.padLeft((0).toString(16), 16);
         let price = this.$ethClient.web3.utils.padLeft(BigInt(this.$ethClient.web3.utils.toWei(this.price)).toString(16), 32);
         let chainIdAdapterIdAssetIdPrice = '0x' + chainId + adapterId + assetId + price;
-        let foreignAddress = this.$ethClient.web3.utils.bytesToHex(decodeAddress(this.buyAddress));
-        let value = this.$ethClient.web3.utils.toWei(this.sellValue);
+        let foreignAddress = this.$ethClient.web3.utils.bytesToHex(decodeAddress(this.buyAddressAcu));
+        let value = this.$ethClient.web3.utils.toWei(this.sellValueEth);
         this.$ethClient.atomicSwapSell.methods
           .addToOrder(chainIdAdapterIdAssetIdPrice, foreignAddress)
-          .send({from: this.sellAddress, value: value});
+          .send({from: this.sellAddressEth, value: value});
       },
     }
   })
