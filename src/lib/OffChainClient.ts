@@ -53,7 +53,15 @@ export default class OffChainClient {
           break;
 
         case 'order':
-          this.vue.$store.commit('orderAcuSet', message);
+          switch(message.sellChainId) {
+            case 76:
+              this.vue.$store.commit('orderAcuSet', message);
+              break;
+            case 60:
+              message.order.seller = '0x' + message.order.seller.slice(24);
+              this.vue.$store.commit('orderEthSet', message);
+              break;
+          }
           break;
       }
     }

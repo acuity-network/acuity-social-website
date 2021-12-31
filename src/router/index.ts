@@ -15,6 +15,7 @@ import AtomicSwap from '../views/AtomicSwap.vue'
 import AtomicSwapPolkadot from '../views/AtomicSwapPolkadot.vue'
 import AtomicSwapPolkadotBuy from '../views/AtomicSwapPolkadotBuy.vue'
 import AtomicSwapEthereum from '../views/AtomicSwapEthereum.vue'
+import AtomicSwapEthereumBuy from '../views/AtomicSwapEthereumBuy.vue'
 import Blog from '../views/Blog.vue'
 import Accounts from '../views/Accounts.vue'
 
@@ -107,6 +108,13 @@ const routes: Array<RouteConfig> = [
     name: 'atomic-swap-ethereum',
     component: AtomicSwapEthereum,
     meta: { title: 'Atomic Swap' },
+  },
+  {
+    path: '/atomic-swap/ethereum/buy/:orderId',
+    name: 'atomic-swap-ethereum-buy',
+    component: AtomicSwapEthereumBuy,
+    meta: { title: 'Atomic Swap' },
+    props: true,
   },
   {
     path: '/blog',

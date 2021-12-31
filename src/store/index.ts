@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { encodeAddress } from '@polkadot/keyring';
 
 Vue.use(Vuex)
 
@@ -8,6 +9,7 @@ export default new Vuex.Store({
     orderBookAcu: [],
     orderBookEth: [],
     ordersAcu: {},
+    ordersEth: {},
     accountsAcu: [],
     addressesAcu: [],
     addressEth: "",
@@ -22,6 +24,9 @@ export default new Vuex.Store({
     orderAcuSet(state: any, order: any) {
       order.order.seller = encodeAddress('0x' + order.order.seller);
       Vue.set(state.ordersAcu, order.order.orderId, order);
+    },
+    orderEthSet(state: any, order: any) {
+      Vue.set(state.ordersEth, order.order.orderId, order);
     },
     accountsAcuSet(state: any, accounts: any[]) {
       state.accountsAcu = [];
