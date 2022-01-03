@@ -119,12 +119,6 @@
         "internalType": "bytes32",
         "name": "secret",
         "type": "bytes32"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "buyer",
-        "type": "address"
       }
     ],
     "name": "UnlockSell",
@@ -428,11 +422,6 @@
         "internalType": "bytes32",
         "name": "secret",
         "type": "bytes32"
-      },
-      {
-        "internalType": "address",
-        "name": "buyer",
-        "type": "address"
       },
       {
         "internalType": "uint256",

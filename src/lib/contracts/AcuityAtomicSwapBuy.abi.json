@@ -81,12 +81,6 @@
         "internalType": "bytes32",
         "name": "secret",
         "type": "bytes32"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "seller",
-        "type": "address"
       }
     ],
     "name": "UnlockBuy",
