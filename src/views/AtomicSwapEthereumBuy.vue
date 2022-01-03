@@ -100,16 +100,16 @@
           for (let lock of this.$store.state.ordersEth[this.orderId].locks) {
             locks.push({
               hashedSecret: lock.hashedSecret,
-              buyer: encodeAddress('0x' + lock.buyer).substr(0, 8),
+              buyer: encodeAddress('0x' + lock.buyer).substr(0, 8),   // ACU address of the buyer (first 8 chars)
               buyLockValue: this.$ethClient.web3.utils.fromWei(lock.buyLockValue.toString()),
               valueWei: lock.buyLockValue,
               buyLockState: lock.buyLockState,
-              buyLockTimeout: new Date(lock.buyLockTimeout * 1000).toLocaleString(),
+              buyLockTimeout: new Date(lock.buyLockTimeout).toLocaleString(),
               valueEth: this.$ethClient.web3.utils.fromWei((BigInt(this.$ethClient.web3.utils.toWei(lock.buyLockValue.toString())) / BigInt(this.priceWei)).toString()),
 //              valueEth: parseFloat(lock.buyLockValue.toString()) / parseFloat(this.priceWei),
               sellLockState: lock.sellLockState,
               sellLockTimeout: (lock.sellLockTimeout == 0) ? "" : new Date(lock.sellLockTimeout).toLocaleString(),
-              buyerAddress: '0x' + lock.buyLockForeignAddress.slice(24),
+              buyerAddress: '0x' + lock.buyLockForeignAddress.slice(24),    // Address for the buyer to receive their ETH
               raw: lock,
             })
           }
@@ -152,9 +152,9 @@
           return '';
         }
       },
-      buyAddressAcu(): string {
+      buyAddressAcu(): string {    // Address for the seller to receive their ACU (hex)
         if (this.orderId in this.$store.state.ordersEth) {
-          return this.$store.state.ordersEth[this.orderId].order.foreignAddress;
+          return '0x' + this.$store.state.ordersEth[this.orderId].order.foreignAddress;
         }
         else {
           return '';
@@ -168,16 +168,8 @@
           return '';
         }
       },
-      foreignAddress(): string {
-        if (this.orderId in this.$store.state.ordersEth) {
-          return '0x' + this.$store.state.ordersEth[this.orderId].order.foreignAddress.slice(24);
-        }
-        else {
-          return '';
-        }
-      },
-      buyerAvailable(): boolean {
-        return this.$store.state.addressesAcu.includes(encodeAddress('0x' + this.buyAddressAcu));
+      buyerAvailable(): boolean {   // Whether the sellers ACU account is available to sign
+        return this.$store.state.addressesAcu.includes(encodeAddress(this.buyAddressAcu));
       },
       activeAddressEth(): string {
         return this.$store.state.addressEth;
@@ -202,8 +194,8 @@
         let chainId = 60;
         let adapterId = 0;
         let orderId = '0x' + this.orderId;
-        let seller = '0x' + this.buyAddressAcu;
-        let timeout = Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 3;
+        let seller = this.buyAddressAcu;
+        let timeout = Date.now() + 60 * 60 * 24 * 3 * 1000;
         let value = this.$ethClient.web3.utils.fromWei((BigInt(this.$ethClient.web3.utils.toWei(this.value)) * BigInt(this.priceWei)).toString()).split('.')[0];
         let foreignAddress = this.$ethClient.web3.utils.padLeft(this.activeAddressEth, 64);
 
@@ -237,25 +229,24 @@
       async unlockSellLock(lock: any) {
         let orderId = '0x' + this.orderId;
         let secret = localStorage.getItem('0x' + lock.hashedSecret);
-        let buyer = '0x' + lock.raw.buyer.slice(24);
         let timeout = lock.raw.sellLockTimeout;
 
-        console.log(orderId, secret, buyer, timeout);
+        console.log(orderId, secret, timeout);
 
         this.$ethClient.atomicSwapSell.methods
-          .unlockSell(orderId, secret, buyer, timeout)
+          .unlockSell(orderId, secret, timeout)
           .send({from: this.activeAddressEth});
       },
       async unlockBuyLock(lock: any) {
-        let buyer = '0x' + lock.raw.buyer.slice(24);
+        let buyer = encodeAddress('0x' + lock.raw.buyer);
         let secret = '0x' + lock.raw.secret;
 
         console.log(buyer, secret);
 
-        const injector = await web3FromAddress(encodeAddress('0x' + this.buyAddressAcu));
+        const injector = await web3FromAddress(encodeAddress(this.buyAddressAcu));
         this.$acuityClient.api.tx.atomicSwap
           .unlockBuy(buyer, secret)
-          .signAndSend(encodeAddress('0x' + this.buyAddressAcu), { signer: injector.signer }, (status: any) => {
+          .signAndSend(encodeAddress(this.buyAddressAcu), { signer: injector.signer }, (status: any) => {
             console.log(status)
           });
       },
