@@ -16,6 +16,9 @@ Vue.prototype.$acuityClient = new AcuityClient();
 import EthClient from './lib/EthClient';
 Vue.prototype.$ethClient = new EthClient();
 
+import ArbitrumClient from './lib/ArbitrumClient';
+Vue.prototype.$arbitrumClient = new ArbitrumClient();
+
 import OffChainClient from './lib/OffChainClient';
 Vue.prototype.$offChainClient = new OffChainClient();
 

@@ -185,6 +185,7 @@ export default Vue.extend({
 
     await this.$acuityClient.init(this.$root);
     await this.$ethClient.init(this.$root);
+    await this.$arbitrumClient.init(this.$root);
     await this.$offChainClient.init(this.$root);
     this.$acuityClient.api.rpc.chain.subscribeNewHeads((lastHeader: any) => {
       this.blockNumber = lastHeader.number.toString();

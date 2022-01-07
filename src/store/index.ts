@@ -8,8 +8,10 @@ export default new Vuex.Store({
   state: {
     orderBookAcu: [],
     orderBookEth: [],
+    orderBookArb: [],
     ordersAcu: {},
     ordersEth: {},
+    ordersArb: {},
     accountsAcu: [],
     addressesAcu: [],
     addressEth: "",
@@ -21,12 +23,18 @@ export default new Vuex.Store({
     orderBookEthSet(state: any, orders: []) {
       state.orderBookEth = orders;
     },
+    orderBookArbSet(state: any, orders: []) {
+      state.orderBookArb = orders;
+    },
     orderAcuSet(state: any, order: any) {
       order.order.seller = encodeAddress('0x' + order.order.seller);
       Vue.set(state.ordersAcu, order.order.orderId, order);
     },
     orderEthSet(state: any, order: any) {
       Vue.set(state.ordersEth, order.order.orderId, order);
+    },
+    orderArbSet(state: any, order: any) {
+      Vue.set(state.ordersArb, order.order.orderId, order);
     },
     accountsAcuSet(state: any, accounts: any[]) {
       state.accountsAcu = [];

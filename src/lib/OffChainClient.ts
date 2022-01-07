@@ -48,6 +48,20 @@ export default class OffChainClient {
 
               this.vue.$store.commit('orderBookEthSet', orders);
               break;
+
+            case 9001:
+              for (let order of message.orderBook) {
+                orders.push({
+                  orderId: order.orderId,
+                  price: this.vue.$ethClient.web3.utils.fromWei(order.price.toString()),
+                  value: this.vue.$ethClient.web3.utils.fromWei(order.value.toString()),
+                  seller: '0x' + order.seller.slice(24),
+                  raw: order,
+                })
+              }
+
+              this.vue.$store.commit('orderBookArbSet', orders);
+              break;
           }
 
           break;
@@ -60,6 +74,10 @@ export default class OffChainClient {
             case 60:
               message.order.seller = '0x' + message.order.seller.slice(24);
               this.vue.$store.commit('orderEthSet', message);
+              break;
+            case 9001:
+              message.order.seller = '0x' + message.order.seller.slice(24);
+              this.vue.$store.commit('orderArbSet', message);
               break;
           }
           break;
