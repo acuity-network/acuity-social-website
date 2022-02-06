@@ -9,6 +9,51 @@
       <v-col cols="12" md="10">
         <v-card elevation="10" outlined>
           <v-card-text>
+            <div class="text-h5 mb-1">Architectural changes to Acuity Atomic Swap DEX</div>
+            <div class="subtitle-2 mb-4">5th February 2022 by Jonathan Brown</div>
+            <div class="body-2 mb-4">
+              <p>The Acuity DEX has been making a huge amount of progress towards launching an MVP, as can be seen from the recent videos on the Acuity YouTube channel.</p>
+              <p>A major goal in the design of the exchange has been to make it as autonomous as possible with all of the critical functionality written smart contracts or Substrate pallets. This has had to be balanced against other concerns such as transaction fees. To this end it was decided to have an offchain indexer component written in Rust. It listens to relevent events on participating blockchains, indexes the data in a centralized database, and responds to websocket queries from the exchange app running in the browser.</p>
+              <p>This worked extremely well, although it did add a lot of complexity to the system. While the indexer is read-only and does not have any control over the exchange it is still a central point of failure.</p>
+              <p>During testing it became apparent that the system could be simplified even further, removing the off chain indexer, and reducing gas costs at the same time. This will make the Acuity DEX fully autonomous.</p>
+              <p>Here's how it works:</p>
+              <p>
+                <ul>
+                  <li>The seller must link their ACU account to the account on the blockchain they are selling from. They do this by publishing the other adddress on both blockchains.</li>
+                  <li>The seller locks up funds in the Acuity smart contract on the blockchain they are selling from. In the transaction they indicate which asset they wish to buy. The smart contract maintains a singly-linked list for each pair with the largest deposits at the top. This is an anti-spam measure. The seller can add / remove funds at any time or change the asset to be bought.</li>
+                  <li>The seller can then create sell orders on the Acuity blockchain for the pair they have funds locked up for. Sell orders can be modified very cheaply because they are maintained in a dedicated pallet on the Acuity blockchain.</li>
+                  <li>For any given pair the front end (hosted on IPFS) can query the selling blockchain directly and get a list of the top deposits. It will then query the Acuity blockchain for each of these deposits to get sell orders that can then be sorted and presented in the UI.</li>
+                  <li>The buyer can then lock up funds to purchase from a specific sell order. The atomic swap proceeds in the same manner as the current implementation.</li>
+                </ul>
+              </p>
+              <p>Advantages:</p>
+              <p>
+                <ul>
+                  <li>No central point of failure. The whole system is fully autonomous.</li>
+                  <li>Lower transaction fees - with the current implementation you have to pay for transactions on the selling blockchain even to change the price you wish to sell at. Now the orderbook is maintained in a native pallet on the Acuity blockchain.
+                  <li>We can deploy sooner.</li>
+                </ul>
+              </p>
+              <p>
+                Just about any EVM compatible blockchain will be able to join the exchange, including Ethereum, Optimism, Arbitrum, Ethereum Classic, Moonbeam, Avalanche Solana. Initially only the base blockchain cryptocurrencies will be supported. Later an improved version of the EVM smart contract will be deployed to all chains to enable crosschain trading of all ERC20 tokens on all EVM blockchains.
+              </p>
+            </div>
+            <div class="text-h6 mb-1">Staking</div>
+            <div class="body-2 mb-4">
+              <p>
+                Staking has been re-enabled on the Acuity blockchain. Become a nomninator or validator to increase your ACU holdings.
+              </p>
+            </div>
+            <div class="text-h6 mb-1">Trading</div>
+              ACU can currently be traded on STEX or OTC on Discord.
+            <div class="body-2 mb-4">
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="10">
+        <v-card elevation="10" outlined>
+          <v-card-text>
             <div class="text-h5 mb-1">Hard Spoon Completed</div>
             <div class="subtitle-2 mb-4">14th December 2021 by Jonathan Brown</div>
             <div class="body-2 mb-4">
@@ -18,7 +63,7 @@
               <p>The Polkadot <a target="_blank" href="https://polkadot.acuity.social/">web interface</a> for Acuity has been updated to the latest version and is now connected to the new blockchain. You might need to give it a hard refresh.</p>
               <p>All balances have been brought over to the new blockchain. Our exchange partner <a target="_blank" href="https://app.stex.com/en/trading/pair/ETH/ACU/1D">STEX</a> has already updated their platform.</p>
               <p>If you were staking, either as a nominator or a validator, you will need to <a target="_blank" href="https://www.youtube.com/watch?v=M8Cju6M06MQ">set this up</a> again.</p>
-              <p>We can now move forward with launching the Acuity Atomic Swap Exchange that will enable full decentralized trade between many different blockchains.</p>
+              <p>We can now move forward with launching the Acuity Atomic Swap Exchange that will enable fully decentralized trade between many different blockchains.</p>
             </div>
           </v-card-text>
         </v-card>
