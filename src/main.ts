@@ -13,9 +13,6 @@ Vue.prototype.$activeAccount = activeAccount
 import AcuityClient from './lib/AcuityClient'
 Vue.prototype.$acuityClient = new AcuityClient()
 
-import EthClient from './lib/EthClient'
-Vue.prototype.$ethClient = new EthClient()
-
 new Vue({
   router,
   store,
