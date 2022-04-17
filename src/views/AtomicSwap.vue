@@ -160,6 +160,13 @@
           coins: 'SOL and tokens',
           connector: 'Rust on-chain program',
         },
+        {
+          logo: 'coin_logos/bitcoin-cash-circle.svg',
+          name: 'SmartBCH',
+          link: 'https://build.cash/smartbchstart/',
+          coins: 'BCH and tokens',
+          connector: 'Smart contracts (Solidity) => EVM',
+        },
       ],
       items: [
         {
