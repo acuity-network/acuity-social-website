@@ -53,18 +53,6 @@
     </v-row>
 
     <v-row>
-      <!--
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title><router-link to="/atomic-swap/polkadot">Create Polkadot Sell Order</router-link></v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title><router-link to="/atomic-swap/ethereum">Create Ethereum Sell Order</router-link></v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-    -->
       <v-col cols="12" md="10" class="pt-0">
         <v-timeline :dense="true" style="margin: 0 20px;">
           <v-timeline-item v-for="(item, i) in items" :key="i"
@@ -171,42 +159,47 @@
       items: [
         {
           title: 'Design system',
-          text: 'Perform detailed research and analysis to determine how ACU can utilize <a target="_blank" href="https://en.bitcoin.it/wiki/Atomic_swap"atomic swaps</a> to trade with Ethereum blockchains.',
+          text: 'Perform detailed research and analysis to determine how ACU can trade <a target="_blank" href="https://en.bitcoin.it/wiki/Atomic_swap">autonomously</a> with Ethereum blockchains.',
           completed: true,
         },
         {
-          title: 'Write Solidity smart contracts',
+          title: 'Write Atomic Swap Solidity smart contracts',
           text: '<a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-solidity">Two solidity smart contracts</a> have been written: one for selling and one for buying. Both contracts will be deployed on each participating blockchain.',
           completed: true,
         },
         {
-          title: 'Unit tests',
-          text: 'Write unit tests for the smart contracts using the <a target="_blank" href="https://dapp.tools/dapp/">Dapp</a> framework.',
-          completed: true,
-        },
-        {
-          title: 'Write Substrate pallet',
+          title: 'Write Atomic Swap Substrate pallet',
           text: 'A <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-pallet">Substrate pallet</a> has been written for interfacing with the exchange. All Substrate chains can use this instead of the smart contracts.',
           completed: true,
         },
         {
-          title: 'Off-chain worker to index order book',
-          text: 'Only data required for consensus is stored in contract state. An <a target="_blank" href="https://substrate.dev/docs/en/knowledgebase/learn-substrate/off-chain-features#off-chain-workers">off-chain worker</a> needs to be written to index information such as the order book.',
+          title: 'Write Trusted Accounts Substrate pallet',
+          text: '<a target="_blank" href="https://github.com/acuity-social/acuity-trusted-accounts-pallet">This pallet</a> enables users to publish their order book on Acuity.',
           completed: true,
+        },
+        {
+          title: 'Write Order Book Substrate pallet',
+          text: '<a target="_blank" href="https://github.com/acuity-social/acuity-orderbook-pallet">This pallet</a> enables Substrate based chains, such as ACU to maintain a network of trusted accounts.',
+          completed: true,
+        },
+        {
+          title: 'Improve smart contracts and pallets',
+          text: 'Further work needs to be done to ensure all the smart contracts and pallets are mature and unit tested.',
+          completed: false,
         },
         {
           title: 'Create basic frontend',
           text: 'A simple user interface will be created using <a target="_blank" href="https://vuetifyjs.com/">Vuetify</a>.',
-          completed: true,
+          completed: false,
         },
         {
-          title: 'Upgrade the Acuity runtime with the atomic swap pallet.',
+          title: 'Upgrade the Acuity runtime.',
           text: 'Once the exchange is ready to go live, the Acuity blockchain will need to be upgraded.',
           completed: false,
         },
         {
-          title: 'Deploy contracts on Ethereum',
-          text: 'While it is quite expensive to deploy contracts on Ethereum, this only has to be done once.',
+          title: 'Deploy contracts on Arbitrum',
+          text: 'We will start with trading Arbitrum ETH against ACU.',
           completed: false,
         },
         {
@@ -215,13 +208,13 @@
           completed: false,
         },
         {
-          title: 'Price and volume service',
-          text: 'A service will be written to monitor the blockchains and maintain price and volume information. This will be able to be queried by external services such as Coin Gecko, etc',
+          title: 'Add more blockchains',
+          text: 'All of the blockchains in the table above will be added to the platform.',
           completed: false,
         },
         {
-          title: 'Add more coins',
-          text: 'All of the coins in the table above will be added to the platform.',
+          title: 'Add support for ERC20 tokens on all chains',
+          text: 'The solidity smart contracts will be improved to support atomic swap of ERC20 tokens.',
           completed: false,
         },
         {

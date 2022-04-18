@@ -5,7 +5,7 @@ export default class MixClient {
 
 	async init(vue: any) {
 
-    let acuityEndpoint = (process.env.NODE_ENV == 'development') ? 'ws://127.0.0.1:9946' : 'wss://acuity.social:9961';
+    let acuityEndpoint = (process.env.NODE_ENV == 'development') ? 'ws://127.0.0.1:9944' : 'wss://acuity.social:9961';
     let wsProvider = new WsProvider(acuityEndpoint);
     await ApiPromise.create({
       provider: wsProvider,

@@ -184,7 +184,6 @@ export default Vue.extend({
     this.darkMode = this.$vuetify.theme.dark = true;
 
     await this.$acuityClient.init(this.$root);
-    await this.$ethClient.init(this.$root);
     this.$acuityClient.api.rpc.chain.subscribeNewHeads((lastHeader: any) => {
       this.blockNumber = lastHeader.number.toString();
     });

@@ -12,8 +12,6 @@ import Parachains from '../views/Parachains.vue'
 import Regenesis from '../views/Regenesis.vue'
 import ACU from '../views/ACU.vue'
 import AtomicSwap from '../views/AtomicSwap.vue'
-import AtomicSwapPolkadot from '../views/AtomicSwapPolkadot.vue'
-import AtomicSwapEthereum from '../views/AtomicSwapEthereum.vue'
 import Blog from '../views/Blog.vue'
 import Accounts from '../views/Accounts.vue'
 
@@ -86,18 +84,6 @@ const routes: Array<RouteConfig> = [
     path: '/atomic-swap',
     name: 'atomic-swap',
     component: AtomicSwap,
-    meta: { title: 'Atomic Swap' },
-  },
-  {
-    path: '/atomic-swap/polkadot',
-    name: 'atomic-swap-polkadot',
-    component: AtomicSwapPolkadot,
-    meta: { title: 'Atomic Swap' },
-  },
-  {
-    path: '/atomic-swap/ethereum',
-    name: 'atomic-swap-ethereum1',
-    component: AtomicSwapEthereum,
     meta: { title: 'Atomic Swap' },
   },
   {
