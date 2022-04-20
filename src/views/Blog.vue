@@ -29,7 +29,7 @@
                 </ul>
               </p>
               <p>
-                To connect with the Acuity please join <a target="_blank" href="https://t.me/acuity_social">Telegram</a> &amp; <a target="_blank" href="https://discord.com/invite/GxD7adN">Discord</a>.
+                To connect with the Acuity please join <a target="_blank" href="https://t.me/acuity_social">Telegram</a> or <a target="_blank" href="https://discord.com/invite/GxD7adN">Discord</a>.
                 Until the DEX launches, ACU can be traded on <a target="_blank" href="https://app.stex.com/en/trading/pair/ETH/ACU/1D">STEX</a> or OTC on Discord.
               </p>
             </div>
