@@ -21,7 +21,7 @@
               <div class="body-2 mb-4">Another popular form of social network is discussions around certain topics, e.g. Reddit. This parachain will enable user to create topics for discussion that other users can participate in.</div>
             </div>
             <div class="text-h5 mb-1">Where should I store my ACU to ensure I receive the airdrop?</div>
-            <div class="body-2 mb-4">Make sure you are holding your ACU in the <a target="_blank" href="https://polkadot.acuity.social/">Acuity Polkadot App</a>. If you are holding ACU in STEX, make sure you withdraw it.</div>
+            <div class="body-2 mb-4">Make sure you are holding your ACU in the <a target="_blank" href="https://polkadot.acuity.social/">Acuity Polkadot App</a></div>
             <div class="text-h5 mb-1">Does it matter if my ACU is staked or locked during the airdrop?</div>
             <div class="body-2 mb-4">No, you will be awarded ACR, ACF and ACT each in equal quantity to the total ACU held including staked and locked.</div>
             <div class="text-h5 mb-1">Do I need to convert my MIX to ACU before the airdrop?</div>

@@ -9,6 +9,37 @@
       <v-col cols="12" md="10">
         <v-card elevation="10" outlined>
           <v-card-text>
+            <div class="text-h5 mb-1">DEX Development Update</div>
+            <div class="subtitle-2 mb-4">14th June 2022 by Jonathan Brown</div>
+            <div class="body-2 mb-4">
+              <p>The Acuity DEX will be a fully autonomous and decentralized atomic swap cross-chain cryptocurrency exchange. It will support both base coins and ERC20 tokens on all EVM compatible chains. It has a number of advantages over other cross-chain exchanges &amp; bridges:</p>
+              <p>
+                <ul>
+                  <li>Many cross-chain exchanges have centralized components, such as offchain indexing and order matching. This leads to exchanges being required by authorities to require identity information of users. Because Acuity has has on-chain order discovery and is a fully autonomous peer-to-peer system there is no means by which it can be required to do anything.</li>
+                  <li>Bridges are an alternative to cross-chain trading where tokens can be "teleported" between blockchains and traded on regular on-chain exchanges. These typically have one of three problems: they are very complicated and can fail catastrophically; they are controlled by a small number of key holders; or they require both blockchains to be connected to the same "relay chain".</li>
+                </ul>
+              </p>
+              <div class="text-h6 mb-1">Chains</div>
+              <p>Acuity DEX is a webapp that uses browser wallets such as Polkadot.js and MetaMask for account management and writing transactions to blockchains. It will be able to trade between many different blockchains. Users can add many different chains to the webapp. It will monitor all of them for events relevant to the user.</p>
+              <p>In order to connect to each chain the user must select an endpoint URI. These can be either http(s):// or ws(s):// . wss is best becuase it is both encrypted and enables subscriptions, athough not all wss endpoints have subscriptions enabled. Acuity will use polling in this case. Additionally, some endpoints do not support event scanning which is necessary for the webapp to operate.
+              <p>For each chain, the user can select from a predefined list of URIs, or enter a custom one. The predefined URIs are typically provided for free by organizations or companies. If an appropriate URI cannot be found the user will need to either run their own node for the chain and use the URI for that, or pay for access to a high quality endpoint from a private company, such as Infura, blastapi, pokt cloudflare, etc.</p>
+              <v-img src="/images/chains.png" class="mb-4"></v-img>
+              <div class="text-h6 mb-1">Stashes</div>
+              <p>The DEX uses an on-chain order book on the Acuity blockchain. In order for seller's orders to be discoverable, funds need to be stashed in the Acuity atomic swap smart contract in the selling chain. The contract records in an ordered linked list how much has been stashed by each seller for each trading pair. Funds can be stashed and unstashed at any time.</p>
+              <p>The on-chain ordered linked list means that the DEX webapp can instantly and without a centralized database obtain a list of sellers for each trading pair. Each seller's sell price can then be queried on the Acuity blockchain.</p>
+              <v-img src="/images/stashes.png" class="mb-4"></v-img>
+              <div class="text-h6 mb-1">Trusted Accounts</div>
+              <p>As ACU is an Acuity social parachain, it utilizes Trusted Accounts (blog post "Social Trading" below is now slightly outdated).</p>
+              <p>Trusted Accounts on the DEX can be used to see who trusts potential trading partners and for obtaining reliable price / volume trading data.</p>
+              <v-img src="/images/trusted-accounts.png" class="mb-4"></v-img>
+              <p></p>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="10">
+        <v-card elevation="10" outlined>
+          <v-card-text>
             <div class="text-h5 mb-1">ACU is becoming a DeFi-only coin</div>
             <div class="subtitle-2 mb-4">2nd June 2022 by Jonathan Brown</div>
             <div class="body-2 mb-4">
