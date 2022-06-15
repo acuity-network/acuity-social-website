@@ -10,26 +10,26 @@
         <v-card elevation="10" outlined>
           <v-card-text>
             <div class="text-h5 mb-1">DEX Development Update</div>
-            <div class="subtitle-2 mb-4">14th June 2022 by Jonathan Brown</div>
+            <div class="subtitle-2 mb-4">15th June 2022 by Jonathan Brown</div>
             <div class="body-2 mb-4">
-              <p>The Acuity DEX will be a fully autonomous and decentralized atomic swap cross-chain cryptocurrency exchange. It will support both base coins and ERC20 tokens on all EVM compatible chains. It has a number of advantages over other cross-chain exchanges &amp; bridges:</p>
+              <p>The <router-link to="/atomic-swap">Acuity DEX</router-link> will be a fully autonomous and decentralized atomic swap cross-chain cryptocurrency exchange. It will support ACU, and both base coins and ERC20 tokens on all EVM compatible chains. It has a number of advantages over other cross-chain exchanges &amp; bridges:</p>
               <p>
                 <ul>
-                  <li>Many cross-chain exchanges have centralized components, such as offchain indexing and order matching. This leads to exchanges being required by authorities to require identity information of users. Because Acuity has has on-chain order discovery and is a fully autonomous peer-to-peer system there is no means by which it can be required to do anything.</li>
-                  <li>Bridges are an alternative to cross-chain trading where tokens can be "teleported" between blockchains and traded on regular on-chain exchanges. These typically have one of three problems: they are very complicated and can fail catastrophically; they are controlled by a small number of key holders; or they require both blockchains to be connected to the same "relay chain".</li>
+                  <li>Many cross-chain exchanges have centralized components, such as off-chain indexing and order matching. This leads to exchanges being required by authorities to require identity information of users. Because Acuity has has on-chain order discovery and is a fully autonomous peer-to-peer system there is no means by which it can be required to do anything.</li>
+                  <li>Bridges are an alternative to cross-chain trading where tokens can be "teleported" between blockchains and traded on regular on-chain exchanges. These typically have one of three problems: they are very complicated and can fail catastrophically; they are controlled by a small number of key holders; or they require both blockchains to be connected to the same "relay chain". Acuity DEX is a very simple peer-to-peer system that is not exposed to these issues.</li>
                 </ul>
               </p>
               <div class="text-h6 mb-1">Chains</div>
-              <p>Acuity DEX is a webapp that uses browser wallets such as Polkadot.js and MetaMask for account management and writing transactions to blockchains. It will be able to trade between many different blockchains. Users can add many different chains to the webapp. It will monitor all of them for events relevant to the user.</p>
-              <p>In order to connect to each chain the user must select an endpoint URI. These can be either http(s):// or ws(s):// . wss is best becuase it is both encrypted and enables subscriptions, athough not all wss endpoints have subscriptions enabled. Acuity will use polling in this case. Additionally, some endpoints do not support event scanning which is necessary for the webapp to operate.
-              <p>For each chain, the user can select from a predefined list of URIs, or enter a custom one. The predefined URIs are typically provided for free by organizations or companies. If an appropriate URI cannot be found the user will need to either run their own node for the chain and use the URI for that, or pay for access to a high quality endpoint from a private company, such as Infura, blastapi, pokt cloudflare, etc.</p>
+              <p>Acuity DEX is a webapp that uses browser wallets such as <a target="_blank" href="https://polkadot.js.org/extension/">Polkadot.js</a> and <a target="_blank" href="https://metamask.io/">MetaMask</a> for account management and writing transactions to blockchains. It will be able to trade between many different blockchains. It will monitor all of them for events relevant to the user.</p>
+              <p>In order to connect to each chain the user must select an endpoint URI. These can be either http(s):// or ws(s):// . wss is best because it is both encrypted and enables event subscriptions, athough not all wss endpoints have subscriptions enabled. Acuity will use polling in this case. Additionally, some endpoints do not support past event scanning which is necessary for the webapp to operate.
+              <p>For each chain, the user can select from a predefined list of public URIs, or enter a custom one. Public URIs are typically provided for free by organizations or companies. If an appropriate URI cannot be found the user will need to either run their own node for the chain, or pay for access to a high quality endpoint from a private company, such as <a target="_blank" href="https://blastapi.io/">Blast API</a>, <a target="_blank" href="https://infura.io/">Infura</a>, <a target="_blank" href="https://www.pokt.network/">Pocket</a>, <a target="_blank" href="https://www.cloudflare.com/en-gb/web3/">Cloudflare</a>, <a target="_blank" href="https://www.ankr.com/">Ankr</a>, etc.</p>
               <v-img src="/images/chains.png" class="mb-4"></v-img>
               <div class="text-h6 mb-1">Stashes</div>
-              <p>The DEX uses an on-chain order book on the Acuity blockchain. In order for seller's orders to be discoverable, funds need to be stashed in the Acuity atomic swap smart contract in the selling chain. The contract records in an ordered linked list how much has been stashed by each seller for each trading pair. Funds can be stashed and unstashed at any time.</p>
+              <p>The DEX uses an on-chain order book on the Acuity blockchain. In order for seller's orders to be discoverable, funds need to be stashed in the <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-solidity/blob/main/src/AcuityAtomicSwap.sol">AcuityAtomicSwap.sol</a> smart contract in the selling chain. The contract records in an ordered linked list how much has been stashed by each seller for each trading pair. Funds can be stashed and unstashed at any time.</p>
               <p>The on-chain ordered linked list means that the DEX webapp can instantly and without a centralized database obtain a list of sellers for each trading pair. Each seller's sell price can then be queried on the Acuity blockchain.</p>
               <v-img src="/images/stashes.png" class="mb-4"></v-img>
               <div class="text-h6 mb-1">Trusted Accounts</div>
-              <p>As ACU is an Acuity social parachain, it utilizes Trusted Accounts (blog post "Social Trading" below is now slightly outdated).</p>
+              <p>As ACU is an Acuity Social Parachain, it utilizes Trusted Accounts (blog post "Social Trading" below is now slightly outdated).</p>
               <p>Trusted Accounts on the DEX can be used to see who trusts potential trading partners and for obtaining reliable price / volume trading data.</p>
               <v-img src="/images/trusted-accounts.png" class="mb-4"></v-img>
               <p></p>
@@ -77,7 +77,7 @@
               </p>
               <p>
                 To connect with the Acuity please join <a target="_blank" href="https://t.me/acuity_social">Telegram</a> or <a target="_blank" href="https://discord.com/invite/GxD7adN">Discord</a>.
-                Until the DEX launches, ACU can be traded on <a target="_blank" href="https://app.stex.com/en/trading/pair/ETH/ACU/1D">STEX</a> or OTC on Discord.
+                Until the DEX launches, ACU can be traded OTC on Discord.
               </p>
             </div>
           </v-card-text>
@@ -90,7 +90,7 @@
             <div class="subtitle-2 mb-4">6th February 2022 by Jonathan Brown</div>
             <div class="body-2 mb-4">
               <p>The Acuity DEX has been making a huge amount of progress towards launching an MVP, as can be seen from recent <a target="_blank" href="https://www.youtube.com/channel/UCkvRVEWnTPWWYJQqPbYwyiw/videos">videos</a>.</p>
-              <p>A major goal in the design of the exchange has been to make it as autonomous as possible with all of the critical functionality written in <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-solidity">smart contracts</a> and Substrate <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-pallet">pallets</a>. This has had to be balanced against other concerns such as transaction fees. To this end it was decided to have an <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-offchain">off-chain indexer</a> component written in Rust. It listens to relevent events on participating blockchains, indexes the data in a centralized database, and responds to WebSocket queries from the exchange app running in the browser.</p>
+              <p>A major goal in the design of the exchange has been to make it as autonomous as possible with all of the critical functionality written in <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-solidity">smart contracts</a> and Substrate <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-pallet">pallets</a>. This has had to be balanced against other concerns such as transaction fees. To this end it was decided to have an <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-off-chain">off-chain indexer</a> component written in Rust. It listens to relevent events on participating blockchains, indexes the data in a centralized database, and responds to WebSocket queries from the exchange app running in the browser.</p>
               <p>This works extremely well, although it did add a lot of complexity to the system. While the indexer is read-only and does not have any control over the exchange it is still a central point of failure.</p>
               <p>During testing it became apparent that the system could be simplified even further, removing the off-chain indexer, and reducing gas costs at the same time. This will make the Acuity DEX fully autonomous.</p>
               <p class="text-h6 mb-1">Autonomous Cross-chain Trading Protocol</p>
@@ -124,7 +124,7 @@
                 <a target="_blank" href="https://polkadot.acuity.social/#/staking">Staking</a> has been re-enabled on the Acuity blockchain. Become a nominator or validator to secure the network and increase your ACU holdings.
               </p>
               <p>
-                Until the DEX launches, ACU can be traded on <a target="_blank" href="https://app.stex.com/en/trading/pair/ETH/ACU/1D">STEX</a> or OTC on <a target="_blank" href="https://discord.com/invite/GxD7adN">Discord</a>.
+                Until the DEX launches, ACU can be traded OTC on <a target="_blank" href="https://discord.com/invite/GxD7adN">Discord</a>.
               </p>
             </div>
           </v-card-text>
@@ -229,7 +229,7 @@
             <div class="subtitle-2 mb-4">23rd July 2021 by Jonathan Brown</div>
             <div class="text-h6 mb-1">Acuity atomic swap decentralized exchange gears up for alpha testing</div>
             <div class="body-2 mb-4">
-              <p>The <router-link to="/atomic-swap">Acuity DEX</router-link> is approaching minimum viable product. To begin with it will have a simple pair ACU / ETH. It will be possible to trade ETH stored in <a target="_blank" href="https://metamask.io/">Metamask</a> for ACU stored in the <a target="_blank" href="https://polkadot.js.org/extension/">Polkadot browser extension</a>. The <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-solidity">Solidity smart contracts</a> and the <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-pallet">Substrate pallet</a> are both mature. Development of a Rust-based <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-offchain">off-chain worker</a> to index the order book continues. Basic UI is coming together.</p>
+              <p>The <router-link to="/atomic-swap">Acuity DEX</router-link> is approaching minimum viable product. To begin with it will have a simple pair ACU / ETH. It will be possible to trade ETH stored in <a target="_blank" href="https://metamask.io/">Metamask</a> for ACU stored in the <a target="_blank" href="https://polkadot.js.org/extension/">Polkadot browser extension</a>. The <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-solidity">Solidity smart contracts</a> and the <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-pallet">Substrate pallet</a> are both mature. Development of a Rust-based <a target="_blank" href="https://github.com/acuity-social/acuity-atomic-swap-off-chain">off-chain worker</a> to index the order book continues. Basic UI is coming together.</p>
               <p>We will be adding many more pairs in future, including all ERC20 tokens, Avalanche, and Substrate chains that have enabled a supported pallet (Acuity, Contracts, or EVM).</p>
               <p>Support for trading with Ethereum via new layer 2 technologies like <a target="_blank" href="https://optimism.io/">Optimism</a> and <a target="_blank" href="https://arbitrum.io/">Abritrum</a> is a major priority to reduce transaction fees.</p>
             </div>
