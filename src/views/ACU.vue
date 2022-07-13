@@ -8,21 +8,20 @@
             <div class="text-h4 mb-1">Publishing Transactions</div>
             <div class="body-2 mb-4">A very small network fee to needs to be paid for each transaction. Publishing content on Acuity is a transaction like any other. This is why you can always publish - you are paying to write to a permissionless database.</div>
             <div class="text-h4 mb-1">Funding</div>
-            <div class="body-2 mb-4">Revenue for the project is provided by a 2000 day slow release of the ACU cryptocurrency ending on October 18th 2022. This is a continuation of the <a href="https://docs.mix-blockchain.org/en/latest/issuance.html" target="_blank">issuance model</a> on MIX.</div>
-            <div class="body-2 mb-4">Content creators will also be able to be crowdfunded through the issuance of a brand token that can be conspicuously burned by fans - <a href="https://www.youtube.com/watch?v=wY8pAahyIw4" target="_blank">see video</a>.</div>
+            <div class="body-2 mb-4">Revenue for the project is provided by a 2000 day slow release of the ACU cryptocurrency ending on October 18th 2022. This is a continuation of the <a href="https://docs.mix-blockchain.org/en/latest/issuance.html" target="_blank">issuance model</a> on MIX. ACU can currently be purchased from the project revenue at price of 0.01 USD. Email <a href="mailto:purchase@acuity.social?subject=ACU Purchase">purchase@acuity.social</a> to participate.</p></div>
             <div class="body-2 mb-4"></div>
-            <div class="text-h4 mb-1">Trading</div>
-            <div class="body-2 mb-4">Acuity has the currency code ACU and can be freely transferred and traded. Until the DEX is operational you can find someone to trade with OTC on <a target="_blank" href="https://matrix.to/#/!kfaMBmYfTFkOzPtvdH:matrix.org?via=matrix.org">Element</a>, <a href="https://discord.gg/ekuJCWQeGz" target="_blank">Discord</a>, or <a target="_blank" href="https://t.me/Acuity_Trading">Telegram</a></div>
-            <div class="text-h6 mb-1">Atomic Swap</div>
+            <div class="text-h4 mb-1">Atomic Swap</div>
             <div class="body-2 mb-4">An important feature in the Acuity Roadmap is to have an <router-link to="/atomic-swap">atomic swap</router-link> exchange. It will be possible trade ACU against many other assets without a third party. This will involve the simultaneous use of both the Polkadot and Metamask browser plugins.</div>
             <div class="text-h4 mb-1">Governance</div>
             <div class="body-2 mb-4">ACU is the governance token for Acuity. It uses standard <a href="https://wiki.polkadot.network/docs/en/learn-governance" target="_blank">Polkadot Governance</a>. This is a hierarchical system of checks and balances that enables the community to collaboratively decide how to make automated changes to the blockchain including replacing the runtime, retrieving lost funds and spending treasury funds.</div>
+            <div class="body-2 mb-4"><a target="_blank" href="https://acuity.polkassembly.io/">Polkassembly</a> provides a user interface for managing governance on Acuity.</div>
             <div class="text-h4 mb-1">Cash</div>
             <div class="body-2 mb-4">Because Acuity is a social media platform, ACU is ideally placed to be a form of cash. Cash cannot exist without a social network.</div>
             <div class="text-h4 mb-1">Civil Guarantee</div>
             <div class="body-2 mb-4">Users will be able to individually or collectively lock up funds as a guarantee for future behaviour. Other users will have the opportuntity to sue to obtain some of the locked funds. An on-chain court system will make such judgements.</div>
             <div class="text-h4 mb-1">Staking</div>
             <div class="body-2 mb-4">Acuity uses standard <a href="https://wiki.polkadot.network/docs/en/learn-consensus" target="_blank">Polkadot Consensus</a>, AKA <a href="https://wiki.polkadot.network/docs/en/learn-staking" target="_blank">Nominated Proof-of-Stake</a>.</div>
+            <div class="body-2 mb-4">ACU has an annual inflation rate of 8.5%.</div>
             <div class="text-h6 mb-1">Nominators</div>
             <div class="body-2 mb-4"><a href="https://wiki.polkadot.network/docs/en/learn-nominator" target="_blank">Nominators</a> vote for which potential validators get to produce blocks. This is a much less involved process than running a validator. A nominator that does a good job of choosing validators will be rewarded with more ACU. A nominator that does a bad job will loose some of their stake.</div>
             <div class="text-h6 mb-1">Validators</div>

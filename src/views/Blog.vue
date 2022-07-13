@@ -9,6 +9,63 @@
       <v-col cols="12" md="10">
         <v-card elevation="10" outlined>
           <v-card-text>
+            <div class="text-h5 mb-1">Acuity Atomic Swap DEX now available for testing</div>
+            <div class="subtitle-2 mb-4">12th July 2022 by Jonathan Brown</div>
+            <div class="body-2 mb-4">
+              <p>On July 12th 2022 the <a target="_blank" href="https://twitter.com/phukestcom/status/1546160700422225924">first</a> cross-chain trade on Acuity Testnet occurred between Estonia and Vietnam. 0.02 Rinkeby was bought with 0.002 Ropsten. The Acuity Atomic Swap DEX is ready for general testing.</p>
+              <v-img src="/images/first-trade.png" class="mb-4"></v-img>
+              <p>The DEX has a unique design in that it is a cross-chain exchange that is fully autonomous. Typically cross-chain exchanges require centralized coordination systems to operate. This leads to various problems such as downtime and increased attack surface.</p>
+              <p>Because Acuity DEX is fully autonomous (like an on-chain smart contract) it is not susceptible to these issues.</p>
+              <div class="text-h6 mb-1">How does it work?</div>
+              <p>There is no backend whatsoever. The web app connects to the Acuity blockchain and all the chains you wish to trade on. It maintains permanent connections for monitoring via Websockets. Transactions are broadcast via the Polkadot and Metamask browser extensions.</p>
+              <p>Traders set their account name on the Acuity blockchain.</p>
+              <p>Traders prove that they are in control of their accounts on other blockchains by publishing those account addresses on the Acuity blockchain and publishing their Acuity address on the other blockchains.</p>
+              <p>The seller must stash what they want to sell in the Acuity Atomic Swap contract on the selling chain. If they wanted to sell ETH for AVAX, they stash their ETH in the ETH / AVAX pair. For each pair the contract maintains a linked list of stashes with the largest first. This is the decentralized sell order discoverability mechanism. With a simple query to the smart contract the app can find the largest sellers for a pair. Spammers will be relegated to the bottom of the list and ignored.</p>
+              <p>The seller publishes their sell quantity and price for the pair on the Acuity blockchain. ACU transactions are extremely cheap so the sell order can be modified very cheaply.</p>
+              <p>When a buyer wishes to purchase from the sell order they create a buy lock in the smart contract on the buy chain for the correct amount. Only the buyer knows the secret. The hash of the secret is known publically.</p>
+              <p>The seller then creates a buy lock in the smart contract on the selling chain using the hash of the secret, moving the funds from the stash.</p>
+              <p>Both the buyer and the seller have now created their locks, but only the buyer knows the secret.</p>
+              <p>The buyer then unlocks the sell lock with the secret, taking what has been sold. In doing so they reveal the secret meaning that the seller can then unlock the buy lock, taking what was used to pay for the purchase.</p>
+              <p>At no point was there any counterparty risk because if either party fails to fulfill their part of the deal, the other party can just wait for the lock to time out and get their funds back.</p>
+              <p>The whole process can be seen in this <a target="_blank" href="https://www.youtube.com/watch?v=hfVbQ_59O6E">technology preview video</a>.</p>
+              <div class="text-h6 mb-1">Help us test the app</div>
+              <p>Before we can launch with mainnet trading, the web app requires testing and further development. If you would like to test the DEX web app and experience the future of fully decentralized autonomous cross-chain trading, please join our <a target="_blank" href="https://t.me/Acuity_Trading">Acuity Trading</a> Telegram group and let yourself be known. You will be provided with some Test ACU. Visit the web app at: <a target="_blank" href="https://dex.acuity.social/">https://dex.acuity.social/</a>. You'll need to install both the <a target="_blank" href="https://polkadot.js.org/extension/">Polkadot</a> and <a target="_blank" href="https://metamask.io/download/">MetaMask</a> browser extensions. The following testnets are currently supported:</p>
+              <p>
+                <ul>
+                  <li>Ropsten</li>
+                  <li>Rinkeby</li>
+                  <li>Gorli</li>
+                  <li>Kovan</li>
+                  <li>Moonbase Alpha</li>
+                  <li>Avalanche Fuji</li>
+                  <li>Polygon Mumbai</li>
+                  <li>Arbitrum Nitro</li>
+                </ul>
+              </p>
+              <p>The extensive list of blockchains that added to the platform after launch can be seen on the <router-link to="/atomic-swap">Acuity DEX</router-link> page.</p>
+              <div class="text-h6 mb-1">Future features</div>
+              <p>
+                <ul>
+                  <li>Enable trading of ACU. As Acuity is a Substrate blockchain the Acuity Atomic Swap pallet needs to be updated before ACU can be traded on the DEX.</li>
+                  <li>ERC20 support: currently only the base coin of each blockchain can be traded. The ERC20 variant of our atomic swap smart contract will need to be finished. This will enable all tokens on all Ethereum-compatible blockchains to be traded autonomously.</li>
+                  <li>There needs to be a hot wallet within the web app. This will automate the whole trading process, creating and unlocking locks as necessary.</li>
+                  <li>Market price determination. The app needs to be able to determine the current market price of an asset by examining recent trades within the user's trust network.</li>
+                  <li>The web app will be available via IPFS.</li>
+                  <li>The app will also be available as a desktop app.</li>
+                  <li>Intra-chain trading.</li>
+                  <li>NFT trading.</li>
+                </ul>
+              </p>
+              <div class="text-h6 mb-1">ACU Purchase</div>
+              <p>As <router-link to="/acu">ACU</router-link> is a DeFi-only coin it is not possible to trade it currently. Once the DEX is operational it will be possible to trade ACU directly. ACU can currently be purchased at a price of 0.01 USD from the 2000 day project revenue that ends on 18th October 2022. Email <a href="mailto:purchase@acuity.social?subject=ACU Purchase">purchase@acuity.social</a> to participate.</p>
+              <p>ACU has an annual inflation rate of 8.5%.</p>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="10">
+        <v-card elevation="10" outlined>
+          <v-card-text>
             <div class="text-h5 mb-1">DEX Development Update</div>
             <div class="subtitle-2 mb-4">15th June 2022 by Jonathan Brown</div>
             <div class="body-2 mb-4">
