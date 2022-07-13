@@ -21,7 +21,7 @@
             <div class="body-2 mb-4">Users will be able to individually or collectively lock up funds as a guarantee for future behaviour. Other users will have the opportuntity to sue to obtain some of the locked funds. An on-chain court system will make such judgements.</div>
             <div class="text-h4 mb-1">Staking</div>
             <div class="body-2 mb-4">Acuity uses standard <a href="https://wiki.polkadot.network/docs/en/learn-consensus" target="_blank">Polkadot Consensus</a>, AKA <a href="https://wiki.polkadot.network/docs/en/learn-staking" target="_blank">Nominated Proof-of-Stake</a>.</div>
-            <div class="body-2 mb-4">ACU has an annual inflation rate of 8.5%.</div>
+            <div class="body-2 mb-4">ACU currently has a supply of 82m an annual inflation rate of 8.5%.</div>
             <div class="text-h6 mb-1">Nominators</div>
             <div class="body-2 mb-4"><a href="https://wiki.polkadot.network/docs/en/learn-nominator" target="_blank">Nominators</a> vote for which potential validators get to produce blocks. This is a much less involved process than running a validator. A nominator that does a good job of choosing validators will be rewarded with more ACU. A nominator that does a bad job will loose some of their stake.</div>
             <div class="text-h6 mb-1">Validators</div>

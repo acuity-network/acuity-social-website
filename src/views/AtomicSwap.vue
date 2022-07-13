@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12" md="10">
-        <v-alert type="info">The Acuity DEX is currently under development.</v-alert>
+        <v-alert type="info">Acuity DEX is in the public testing phase. Please see the <router-link style="color: white;" to="/blog">blog</router-link> to participate.</v-alert>
       </v-col>
     </v-row>
 
