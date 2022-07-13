@@ -10,7 +10,7 @@
         <v-card elevation="10" outlined>
           <v-card-text>
             <div class="text-h5 mb-1">Acuity Atomic Swap DEX begins public testing</div>
-            <div class="subtitle-2 mb-4">12th July 2022 by Jonathan Brown</div>
+            <div class="subtitle-2 mb-4">13th July 2022 by Jonathan Brown</div>
             <div class="body-2 mb-4">
               <p>On July 11th 2022 the <a target="_blank" href="https://twitter.com/phukestcom/status/1546160700422225924">first</a> cross-chain trade on Acuity Testnet occurred between Estonia and Vietnam. 0.02 Rinkeby was bought with 0.002 Ropsten. The <router-link to="/atomic-swap">Acuity Atomic Swap DEX</router-link> is ready for general testing.</p>
               <v-img src="/images/first-trade.png" class="mb-4"></v-img>
@@ -56,7 +56,7 @@
                 </ul>
               </p>
               <div class="text-h6 mb-1">ACU Purchase</div>
-              <p>As <router-link to="/acu">ACU</router-link> is a DeFi-only coin it is not possible to trade it currently. Once the DEX is operational it will be possible to trade ACU directly. ACU can currently be purchased at a price of 0.01 USD from the 2000 day project revenue that ends on 18th October 2022. Email <a href="mailto:purchase@acuity.social?subject=ACU Purchase">purchase@acuity.social</a> to participate.</p>
+              <p><router-link to="/acu">ACU</router-link> is not currently trading on any exchanges because it is migrating to being exclusively DeFi. This is to prevent centralized exchanges from having the ability to print extra ACU via fractional reserve. Once the DEX is operational it will be possible to trade ACU directly with thousands of other cryptocurrencies. ACU can currently be purchased at a price of 0.01 USD from the 2000 day project revenue that ends on 18th October 2022. Email <a href="mailto:purchase@acuity.social?subject=ACU Purchase">purchase@acuity.social</a> to participate.</p>
               <p>ACU currently has a supply of 82m an annual inflation rate of 8.5%.</p>
             </div>
           </v-card-text>
