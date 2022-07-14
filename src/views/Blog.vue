@@ -10,7 +10,7 @@
         <v-card elevation="10" outlined>
           <v-card-text>
             <div class="text-h5 mb-1">Acuity Atomic Swap DEX begins public testing</div>
-            <div class="subtitle-2 mb-4">13th July 2022 by Jonathan Brown</div>
+            <div class="subtitle-2 mb-4">14th July 2022 by Jonathan Brown</div>
             <div class="body-2 mb-4">
               <p>On July 11th 2022 the <a target="_blank" href="https://twitter.com/phukestcom/status/1546160700422225924">first</a> cross-chain trade on Acuity Testnet occurred between Estonia and Vietnam. 0.02 Rinkeby was bought with 0.002 Ropsten. The <router-link to="/atomic-swap">Acuity Atomic Swap DEX</router-link> is ready for general testing.</p>
               <v-img src="/images/first-trade.png" class="mb-4"></v-img>
@@ -28,6 +28,16 @@
               <p>The buyer then unlocks the sell lock with the secret, taking what has been sold. In doing so they reveal the secret meaning that the seller can then unlock the buy lock, taking what was used to pay for the purchase.</p>
               <p>At no point was there any counterparty risk because if either party fails to fulfill their part of the deal, the other party can just wait for the lock to time out and get their funds back.</p>
               <p>The whole process can be seen in this <a target="_blank" href="https://www.youtube.com/watch?v=hfVbQ_59O6E">technology preview video</a>.</p>
+              <div class="text-h6 mb-1">Fees</div>
+              <p>Because the DEX is fully autonomous, there are no fees being paid out to centralized entities. Blockchain transaction fees need to be paid for:</p>
+              <p>
+                <ul>
+                  <li>Stashing on the sell chain.</li>
+                  <li>Setting sell orders on Acuity.</li>
+                  <li>Creating and unlocking locks on the buy chain.</li>
+                  <li>Creating and unlocking locks on the sell chain.</li>
+                </ul>
+              </p>
               <div class="text-h6 mb-1">Help us test the DEX</div>
               <p>Before we can launch with mainnet trading, the web app requires testing and further development. If you would like to test the DEX web app and experience the future of fully decentralized autonomous cross-chain trading, please join our <a target="_blank" href="https://t.me/Acuity_Trading">Acuity Trading</a> Telegram group and let yourself be known. You will be provided with some Test ACU. Visit the web app at: <a target="_blank" href="https://dex.acuity.social/">https://dex.acuity.social/</a>. You'll need to install both the <a target="_blank" href="https://polkadot.js.org/extension/">Polkadot</a> and <a target="_blank" href="https://metamask.io/download/">MetaMask</a> browser extensions. The following testnets are currently supported:</p>
               <p>
