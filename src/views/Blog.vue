@@ -44,7 +44,7 @@
                 <ul>
                   <li>Ropsten</li>
                   <li>Rinkeby</li>
-                  <li>Gorli</li>
+                  <li>Görli</li>
                   <li>Kovan</li>
                   <li>Moonbase Alpha</li>
                   <li>Avalanche Fuji</li>
@@ -66,7 +66,7 @@
                 </ul>
               </p>
               <div class="text-h6 mb-1">ACU Purchase</div>
-              <p><router-link to="/acu">ACU</router-link> is not currently trading on any exchanges because it is migrating to being exclusively DeFi. This is to prevent centralized exchanges from having the ability to print extra ACU via fractional reserve. Once the DEX is operational it will be possible to trade ACU directly with thousands of other cryptocurrencies. ACU can currently be purchased at a price of 0.01 USD from the 2000 day project revenue that ends on 18th October 2022. Email <a href="mailto:purchase@acuity.social?subject=ACU Purchase">purchase@acuity.social</a> to participate.</p>
+              <p><router-link to="/acu">ACU</router-link> is not currently trading on any exchanges because it is migrating to being exclusively DeFi. This is to prevent centralized exchanges from having the ability to print extra ACU via fractional reserve. Once the DEX is operational it will be possible to trade ACU directly with thousands of other cryptocurrencies. ACU can currently be purchased from the 2000 day project revenue that ends on 18th October 2022. Email <a href="mailto:purchase@acuity.social?subject=ACU Purchase">purchase@acuity.social</a> to participate.</p>
               <p>ACU currently has a supply of 82m an annual inflation rate of 8.5%.</p>
             </div>
           </v-card-text>
