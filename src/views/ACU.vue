@@ -39,7 +39,7 @@
               </ul>
             </div>
             <div class="body-2 mb-4">In order to run a validator you will need to download the Acuity binary from the <a href="https://github.com/acuity-social/acuity-substrate" target="_blank">acuity-substrate</a> repo.</div>
-            <div class="body-2 mb-4">Please join the <a target="_blank" href="https://matrix.to/#/!uvBQLOQZzBidUJYjWK:matrix.org?via=matrix.org">Staking</a> room on Acuity Matrix</a> to discuss.</div>
+            <!--<div class="body-2 mb-4">Please join the <a target="_blank" href="https://matrix.to/#/!uvBQLOQZzBidUJYjWK:matrix.org?via=matrix.org">Staking</a> room on Acuity Matrix</a> to discuss.</div>-->
             <div class="text-h4 mb-1">Anything else...</div>
           </v-card-text>
         </v-card>

@@ -149,11 +149,11 @@ export default Vue.extend({
       },
 */
     ],
-    socialLinks: [
+    socialLinks: [/*
       {
         icon: 'mdi-alpha-m-box',
         url: 'https://matrix.to/#/+acuity:matrix.org',
-      },
+      },*/
       {
         icon: 'mdi-twitter',
         url: 'https://twitter.com/acuity_social',
