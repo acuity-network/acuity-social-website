@@ -14,7 +14,7 @@
               <div class="text-h6 mb-1">Acuity Relay <span style="color: #3cc3db; font-family: Raleway; font-size: 14px;">ACR</span></div>
               <div class="body-2 mb-4">If you are familiar with the Polkadot or Kusama relay chain, you will know that they provide shared security for their respective parachains and enable message passing between parachains. Acuity Relay will be the relay chains for all the Acuity parachains (detailed below).</div>
               <div class="text-h6 mb-1">Acuity DeFi <span style="color: #3cc3db; font-family: Raleway; font-size: 14px;">ACU</span></div>
-              <div class="body-2 mb-4">This is the current Acuity blockchain. It will serve as the DeFi hub for the Acuity ecosystem. Initially it will run the Acuity Atomic Swap DEX. It will also have private transfers similar to <a target="_blank" href="https://tornado.cash/">Tornado Cash</a>.</div>
+              <div class="body-2 mb-4">This is the current Acuity blockchain. It will serve as the DeFi hub for the Acuity ecosystem. Initially it will run the Acuity Atomic Swap DEX.</div>
               <div class="text-h6 mb-1">Acuity Feeds <span style="color: #3cc3db; font-family: Raleway; font-size: 14px;">ACF</span></div>
               <div class="body-2 mb-4">Many social networks are based around the concept of "feeds", e.g. Twitter, YouTube. This parachain will enable users to create multiple feeds and post content in them. Here is a video of the <a target="_blank" href="https://www.youtube.com/watch?v=KJs0dI0ep2w">content feed functionality</a> on the previous implementation.</div>
               <div class="text-h6 mb-1">Acuity Topics <span style="color: #3cc3db; font-family: Raleway; font-size: 14px;">ACT</span></div>
