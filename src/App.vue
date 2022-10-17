@@ -27,7 +27,7 @@
         <v-btn block color="rgb(33, 150, 243)" href="" target="_blank" style="margin-bottom: 10px;">Trade ACU</v-btn>
       -->
         <v-btn block color="rgb(1, 76, 100)" href="https://polkadot.acuity.social/" target="_blank" style="margin-bottom: 10px;">Access Blockchain</v-btn>
-        <v-btn block href="https://telemetry.polkadot.io/#list/Acuity" target="_blank" style="margin-bottom: 10px;">View Telemetry</v-btn>
+        <v-btn block href="https://telemetry.polkadot.io/#list/0xde04252745148abbd99d2f1d5aeed331e780926c82cbc3f093f45c90d3bedbc7" target="_blank" style="margin-bottom: 10px;">View Telemetry</v-btn>
         <v-btn block color="rgb(157, 0, 78)" href="https://acuity.polkassembly.io/" target="_blank" style="margin-bottom: 10px;">Governance</v-btn>
         <v-switch v-model="darkMode" label="Dark mode"></v-switch>
         <v-btn
