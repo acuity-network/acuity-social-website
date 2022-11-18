@@ -434,21 +434,21 @@
         {
           title: 'Upgrade the Acuity runtime.',
           text: 'Once the exchange is ready to go live, the Acuity blockchain will need to be upgraded.',
-          completed: false,
-        },
-        {
-          title: 'Launch exchange',
-          text: 'A rudimentary version of the exchange will be launched.',
-          completed: false,
-        },
-        {
-          title: 'Add more blockchains',
-          text: 'All of the blockchains in the table above will be added to the platform.',
-          completed: false,
+          completed: true,
         },
         {
           title: 'Add support for ERC20s on all chains',
           text: 'The solidity smart contracts will be improved to support atomic swap of ERC20s.',
+          completed: true,
+        },
+        {
+          title: 'Launch exchange',
+          text: 'A rudimentary version of the exchange will be launched.',
+          completed: true,
+        },
+        {
+          title: 'Add more blockchains',
+          text: 'All of the blockchains in the table above will be added to the platform.',
           completed: false,
         },
         {
