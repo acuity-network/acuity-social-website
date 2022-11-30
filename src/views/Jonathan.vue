@@ -4,8 +4,11 @@
       <v-col cols="12" md="10">
         <v-card>
           <v-card-title class="text-h5">
-              Jonathan Brown - Acuity Founder
+            Jonathan Brown
           </v-card-title>
+          <v-card-subtitle class="text-h6">
+            Acuity Founder
+          </v-card-subtitle>
           <v-avatar
             class="ma-3"
             size="200"
@@ -26,6 +29,7 @@
               GitHub: @<a target="_blank" href="https://github.com/ethernomad">ethernomad</a><br />
               Twitter: @<a target="_blank" href="https://twitter.com/bluedroplet">bluedroplet</a><br />
               Telegram: @<a target="_blank" href="https://t.me/ethernomad">ethernomad</a><br />
+              YouTube: @<a target="_blank" href="https://www.youtube.com/@acuitysocial4537">acuitysocial4537</a>
             </div>
 
             <div class="text-h6 mb-1">Technology Experience</div>
