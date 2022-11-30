@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import goTo from 'vuetify/es5/services/goto'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
+import Jonathan from '../views/Jonathan.vue'
 import Features from '../views/Features.vue'
 import TechStack from '../views/TechStack.vue'
 //import Comparison from '../views/Comparison.vue'
@@ -23,6 +24,12 @@ const routes: Array<RouteConfig> = [
     name: 'home',
     component: Home,
     meta: { title: '' },
+  },
+  {
+    path: '/jonathan',
+    name: 'jonathan',
+    component: Jonathan,
+    meta: { title: 'Jonathan Brown' },
   },
   {
     path: '/about',
