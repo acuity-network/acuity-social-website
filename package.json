@@ -49,5 +49,6 @@
     "@polkadot/x-textencoder": "8.2.2",
     "@polkadot/x-fetch": "8.2.2",
     "@polkadot/x-ws": "8.2.2"
-  }
+  },
+  "packageManager": "yarn@3.4.1"
 }
