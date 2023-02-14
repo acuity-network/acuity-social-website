@@ -168,10 +168,6 @@ export default Vue.extend({
         url: 'https://github.com/acuity-social',
       },
       {
-        icon: 'mdi-telegram',
-        url: 'https://t.me/acuity_social',
-      },
-      {
         icon: 'mdi-discord',
         url: 'https://discordapp.com/invite/GxD7adN',
       },
