@@ -169,7 +169,7 @@ export default Vue.extend({
       },
       {
         icon: 'mdi-discord',
-        url: 'https://discordapp.com/invite/GxD7adN',
+        url: 'https://discord.gg/5UdzH5q',
       },
       {
         icon: 'mdi-reddit',
